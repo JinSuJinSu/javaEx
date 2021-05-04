@@ -48,6 +48,7 @@ public class JavaProblem8 {
 			case 4:
 				System.out.print("프로그램종료>");
 				running = false;
+				break;
 			default:
 				System.out.print("다시 입력해주세요");
 }
