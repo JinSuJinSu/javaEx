@@ -1,13 +1,20 @@
 package com.javaex.basics;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class LoopEx {
 
 	public static void main(String[] args) {
 //		whileEx();
 //		whileGugu();
-		doWhileEx();
+//		doWhileEx();
+//		forEx();
+//		continueEx();
+		guGu();
+//		numberJudge();
+//		lotoCreation();
+		starEx();
 	}
 
 	private static void doWhileEx() {
@@ -44,8 +51,9 @@ public class LoopEx {
 			System.out.println(dan + "*" + i + "=" + (dan * i));
 			//	제어변수 증가\
 			i++;
-		} 
+		}
 		scanner.close();
+		
 	}
 
 	private static void whileEx() {
@@ -66,5 +74,68 @@ public class LoopEx {
 		System.out.println("합산값:" + total);
 
 	}
+	private static void forEx() {
+		Scanner scanner = new Scanner(System.in);
+		int number = scanner.nextInt();
+		for(int i=1; i<10; i++) {
+			System.out.println(number + " * " + i + " = " + (number*i));
+		}
+		
+		
+		scanner.close();
+		
+	}
+	
+	public static void continueEx() {
+		for(int i=1; i<=20; i++) {
+		if(i%2==0 || i%3==0) {
+				continue;
+			}
+			else {
+				System.out.println(i);
+			}
+		}
+	}
+	
+	public static void guGu(){
+		for(int i=1; i<=9; i++) {
+			for(int j=1; j<=9; j++) {
+				System.out.println(i + " * " + j + " = " + (i*j));
+			}
+		}
+		
+	}
+	
+	public static void numberJudge(){
+		int i=14;
+	
+		while(true) {
+			if(i%6==0 && i%14==0) {
+				break;
+			}
+			else {
+				i++;
+			}
+			
+		}
+		System.out.println(i);
+	}
+	public static void lotoCreation() {
+	for(int i=1; i<=6; i++) {
+		int num = (int)(Math.random()*45)+1;
+		System.out.println(num);
+	}
+	
 
 }
+	
+	public static void starEx() {
+		for(int i=1;i<6;i++){
+			for(int j=0;j<i;j++){
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+
+}
+	}
