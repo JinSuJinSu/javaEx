@@ -10,8 +10,13 @@ public class JavaProblem6 {
 		// ex) 5 = 1+3+5=9
 		// ex) 4 = 1+2+4=7
 		
+		System.out.println("숫자를 입력하세요");
+		
+		
 		Scanner scan = new Scanner(System.in);
 		int number = scan.nextInt();
+		
+		
 		
 		int total=0;
 		
@@ -26,7 +31,7 @@ public class JavaProblem6 {
 			}
 		}
 		
-		System.out.println(total);
+		System.out.println("결과값: " + total);
 		scan.close();
 
 	}

@@ -11,7 +11,7 @@ public class JavaProblem8 {
 		// ex) 4 = 1+2+4=7
 		
 		Scanner scan = new Scanner(System.in);
-		int money = scan.nextInt();
+		int money = 0;
 		String gameEndLine = "";
 		for(int i=1; i<=20; i++) {
 			gameEndLine+="-";
@@ -23,7 +23,6 @@ public class JavaProblem8 {
 			System.out.println();
 			System.out.print("선택>");
 			int bankNumber = scan.nextInt();
-			System.out.println();
 			
 			
 			switch(bankNumber) {
@@ -43,14 +42,16 @@ public class JavaProblem8 {
 			case 3:
 				System.out.print("잔고액>");
 				System.out.print(money);
+				System.out.println();
 				break;
 			
 			case 4:
-				System.out.print("프로그램종료>");
+				System.out.print("프로그램종료");
 				running = false;
 				break;
 			default:
 				System.out.print("다시 입력해주세요");
+				System.out.println();
 }
 		}
 

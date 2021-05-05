@@ -1,5 +1,5 @@
 package com.javaex.basics.javaproject;
-import java.util.Scanner;
+import java.util.*;
 
 public class JavaProblem7 {
 
@@ -11,13 +11,14 @@ public class JavaProblem7 {
 		// ex) 4 = 1+2+4=7
 		
 		Scanner scan = new Scanner(System.in);
-		int number = scan.nextInt();
+		int number =  (int)(Math.random()*100)+1;
 		String gameEndLine = "";
 		for(int i=1; i<=20; i++) {
 			gameEndLine+="-";
 		}
 		
 		while(true) {
+			System.out.print(">>");
 			int inputNumber = scan.nextInt();
 			if(inputNumber>number) {
 				System.out.println("´õ ³·°Ô");
@@ -42,7 +43,7 @@ public class JavaProblem7 {
 					
 				}
 				else if(condition.equals("n")){
-					number = scan.nextInt();
+					number = (int)(Math.random()*100)+1;
 					
 				}
 				else {

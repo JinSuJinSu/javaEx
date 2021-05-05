@@ -18,7 +18,7 @@ public class JavaProblem5 {
 			
 		}
 		
-		System.out.print(Collections.max(numArray));
+		System.out.print("최대값은 " + Collections.max(numArray) + "입니다.");
 		scan.close();
 		
 		

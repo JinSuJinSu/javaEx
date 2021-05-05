@@ -1,31 +1,34 @@
 package com.javaex.basics.javaproject;
-
-
+import java.util.ArrayList;
 
 public class JavaProblem13 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//문자열의 공백을 ,로 바꿔서 출력하세요
 		
-		char[] array = {'T','h','i','s',' ','i','s',' ','a',' ','p','e','n','c','i','l'};
+		// 배열 내에서 85점 이상인 점수만 뽑아 총 합과 평균 값을 구하라
+		int[][] scoreboards = {{80,75,90,95,78},{92,88,89,92,70},{78,80,85,86,63},{83,84,89,87,75},{89,83,93,94,78}};
 		
-		for(char letter:array) {
-			System.out.print(letter);
+		int count=0;
+		int sum=0;
+		
+		ArrayList<Integer> numArray = new ArrayList<Integer>();
+		for(int i=0; i<scoreboards.length; i++) {
+			for(int j=0; j<scoreboards[i].length; j++) {
+				if(scoreboards[i][j]>=85) {
+					count+=1;
+					sum+=scoreboards[i][j];
+				}
+			}
 		}
-		System.out.println();
 		
-		String str = new String(array);
-		str= str.replace(" ", ",");
+		System.out.println("총합: "+sum);
+		System.out.println("평균: "+String.format("%.2f", (float)sum/count));
 		
-		System.out.println(str);
-
-		
-		
-		
-		
+	}
+	
 
 	}
 
-}
+
