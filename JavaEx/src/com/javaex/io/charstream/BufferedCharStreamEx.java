@@ -15,7 +15,7 @@ public class BufferedCharStreamEx {
 	static String target = rootPath + "last-leaf-filtered.txt";
 
 	//	leaf, leaves가 포함된 라인을 -> last-leaf-filtered.txt로 저장
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		try {
 			//	주스트림
 			Reader fr = new FileReader(source);
@@ -44,10 +44,9 @@ public class BufferedCharStreamEx {
 			System.out.println("필터링 완료!");
 		} catch (FileNotFoundException e) {
 			System.err.println("파일을 찾지 못했습니다.");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+
 
 	}
-
+	}
 }
+

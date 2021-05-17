@@ -34,8 +34,7 @@ public class StringTokenizerEx {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		String jinsu = null;
-		System.out.println(jinsu.length());
+
 	}
 
 }
