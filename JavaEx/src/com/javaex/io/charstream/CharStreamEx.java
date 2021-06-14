@@ -12,31 +12,31 @@ public class CharStreamEx {
 	static String filename = rootPath + "test.txt";
 
 	public static void main(String[] args) {
-		// ÅØ½ºÆ® ±â·Ï (Writer)
+		// í…ìŠ¤íŠ¸ ê¸°ë¡ (Writer)
 		try {
 			Writer fw = new FileWriter(filename);
 			fw.write("Bit Computer\r\n");
 			fw.write("Java Programming\r\n");
 			fw.write("2021.05");
-			fw.flush();  //	¹öÆÛ ºñ¿ì±â
+			fw.flush();  //	ë²„í¼ ë¹„ìš°ê¸°
 			fw.close();
 
-			System.out.println("ÆÄÀÏ ±â·Ï ¿Ï·á!");
+			System.out.println("íŒŒì¼ ê¸°ë¡ ì™„ë£Œ!");
 
-			//	ÅØ½ºÆ® ÆÄÀÏ ÀĞ¾î¿À±â
+			//	í…ìŠ¤íŠ¸ íŒŒì¼ ì½ì–´ì˜¤ê¸°
 			Reader fr = new FileReader(filename);
 
 			System.out.println("----------");
 			int data = 0;
 			while((data = fr.read()) != -1) {
-				//	int ÀĞ°í -> ³»ºÎ µ¥ÀÌÅÍ´Â ¸¶Áö¸· 2¹ÙÀÌÆ®
+				//	int ì½ê³  -> ë‚´ë¶€ ë°ì´í„°ëŠ” ë§ˆì§€ë§‰ 2ë°”ì´íŠ¸
 				System.out.print((char)data);
 			}
 			System.out.println();
 			fr.close();
-			System.out.println("ÆÄÀÏ ÀĞ±â ¿Ï·á!");
+			System.out.println("íŒŒì¼ ì½ê¸° ì™„ë£Œ!");
 		} catch (FileNotFoundException e) { 
-			System.err.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾ø¾î¿ä!");
+			System.err.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ì–´ìš”!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

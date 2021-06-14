@@ -8,22 +8,22 @@ import java.sql.Statement;
 import java.util.Date;
 import java.util.Scanner;
 
-//	Scanner·Î Å°¿öµå ÀÔ·Â
-//	first_name, last_name ÇÊµå ´ë»ó ºÎºĞ °Ë»ö
-//	ÀÌ¸§ ¼º, Email, ÀüÈ­¹øÈ£, ÀÔ»çÀÏ Ãâ·Â
+//	Scannerë¡œ í‚¤ì›Œë“œ ì…ë ¥
+//	first_name, last_name í•„ë“œ ëŒ€ìƒ ë¶€ë¶„ ê²€ìƒ‰
+//	ì´ë¦„ ì„±, Email, ì „í™”ë²ˆí˜¸, ì…ì‚¬ì¼ ì¶œë ¥
 public class HRSearchEmployeesPSTMT {
 
 	public static void main(String[] args) {
-		Connection conn = null;	//	Ä¿³Ø¼Ç
-//		Statement stmt = null;	//	¹®¸Æ
+		Connection conn = null;	//	ì»¤ë„¥ì…˜
+//		Statement stmt = null;	//	ë¬¸ë§¥
 		PreparedStatement pstmt = null;	
-		ResultSet rs = null;	//	°á°ú ¼Â
+		ResultSet rs = null;	//	ê²°ê³¼ ì…‹
 		Scanner scanner = new Scanner(System.in);
 
 		try {
 			conn = DBConfig.getConnection();
 
-			System.out.print("°Ë»ö¾î:");
+			System.out.print("ê²€ìƒ‰ì–´:");
 			String keyword = scanner.next();
 
 			//
@@ -37,12 +37,12 @@ public class HRSearchEmployeesPSTMT {
 					" FROM employees " +
 					" WHERE lower(first_name) LIKE ? OR lower(last_name) LIKE ?";
 			System.out.println("Template:" + sql);
-			//	½ÇÇà °èÈ¹ ¸¶·Ã -> LIKE °Ë»ö½ÃÀÇ Tip
+			//	ì‹¤í–‰ ê³„íš ë§ˆë ¨ -> LIKE ê²€ìƒ‰ì‹œì˜ Tip
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + keyword.toLowerCase() + "%");	//	¹ÙÀÎµùÇÒ °ª¿¡ ¿ÍÀÏµå Ä«µå¸¦ Æ÷ÇÔ Àü´Ş
+			pstmt.setString(1, "%" + keyword.toLowerCase() + "%");	//	ë°”ì¸ë”©í•  ê°’ì— ì™€ì¼ë“œ ì¹´ë“œë¥¼ í¬í•¨ ì „ë‹¬
 			pstmt.setString(2, "%" + keyword.toLowerCase() + "%");
 
-			//	Äõ¸® ¼öÇà
+			//	ì¿¼ë¦¬ ìˆ˜í–‰
 //			rs = pstmt.executeQuery(sql);
 			rs = pstmt.executeQuery();
 			//	Loop
@@ -53,7 +53,7 @@ public class HRSearchEmployeesPSTMT {
 				String phoneNumber = rs.getString("phone_number");
 				String hireDate = rs.getString("hire_date");	
 
-				//	Ãâ·Â
+				//	ì¶œë ¥
 				System.out.printf("%s %s: %s, %s, %s%n", 
 						firstName, lastName, email, phoneNumber, hireDate);
 			}

@@ -16,21 +16,21 @@ public class HREmpList {
 		
 		
 		try {
-			// Ä¿³Ø¼Ç È¹µæ
+			// ì»¤ë„¥ì…˜ íšë“
 			conn = DBConfig.getConnection();
-			// statement »ı¼º
+			// statement ìƒì„±
 			stmt = conn.createStatement();
-			// Äõ¸® ½ÇÇà
+			// ì¿¼ë¦¬ ì‹¤í–‰
 			String sql = "select emp.first_name||' '|| emp.last_name, "
 					+ "man.first_name||' '|| man.last_name "
 					+ "from employees emp "
 					+ "inner join employees man "
 					+ "on emp.manager_id = man.employee_id "
 					+ "order by emp.first_name||' '|| emp.last_name";
-			// °á°ú °´Ã¼ ¹Ş¾Æ¿À±â
+			// ê²°ê³¼ ê°ì²´ ë°›ì•„ì˜¤ê¸°
 			rs = stmt.executeQuery(sql);
 			
-			// °á°ú Ãâ·Â
+			// ê²°ê³¼ ì¶œë ¥
 			while(rs.next()) {
 				String employeeName = rs.getString(1);
 				String ManagerName = rs.getString(2);

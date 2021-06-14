@@ -11,19 +11,19 @@ public class StringTokenizerEx {
 	static String rootPath = System.getProperty("user.dir") + "\\files\\";
 	static String filename = rootPath + "thieves.txt";
 
-	//	FileReader, BufferedReader, StringTokenizerÀÇ Á¶ÇÕÀ¸·Î ¸¸µé¾î º¾½Ã´Ù
+	//	FileReader, BufferedReader, StringTokenizerì˜ ì¡°í•©ìœ¼ë¡œ ë§Œë“¤ì–´ ë´…ì‹œë‹¤
 	public static void main(String[] args) {
 		try {
 			Reader fr = new FileReader(filename);
 			BufferedReader br = new BufferedReader(fr);
 
-			String line = "";	//	ÁÙ´ÜÀ§ µ¥ÀÌÅÍ ÀúÀå º¯¼ö
+			String line = "";	//	ì¤„ë‹¨ìœ„ ë°ì´í„° ì €ì¥ ë³€ìˆ˜
 
 			while((line = br.readLine()) != null) {
-				//	ºĞÀı
-				StringTokenizer st = new StringTokenizer(line, " "); // °ø¹éÀ¸·Î ºĞÀı
+				//	ë¶„ì ˆ
+				StringTokenizer st = new StringTokenizer(line, " "); // ê³µë°±ìœ¼ë¡œ ë¶„ì ˆ
 
-				while (st.hasMoreTokens()) {	//	³²¾ÆÀÖ´Â ÅäÅ« È®ÀÎ
+				while (st.hasMoreTokens()) {	//	ë‚¨ì•„ìˆëŠ” í† í° í™•ì¸
 					String token = st.nextToken();
 					System.out.print(token + " ");
 				}

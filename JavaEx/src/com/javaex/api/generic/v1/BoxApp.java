@@ -3,27 +3,27 @@ package com.javaex.api.generic.v1;
 public class BoxApp {
 
 	public static void main(String[] args) {
-		//	Box »ı¼º int °ªÀ» ¼³Á¤
+		//	Box ìƒì„± int ê°’ì„ ì„¤ì •
 		Box intBox = new Box();
 		intBox.setContent(2021);  //	intBox.setContent(Integer.valueOf(2021));
 
-		//	³»¿ë¹°À» ²¨³» º¾½Ã´Ù
+		//	ë‚´ìš©ë¬¼ì„ êº¼ë‚´ ë´…ì‹œë‹¤
 		int retVal = (int)intBox.getContent();
-		System.out.println("³»¿ë¹°:" + retVal);
+		System.out.println("ë‚´ìš©ë¬¼:" + retVal);
 
-		//	Box »ı¼º String °ªÀ» ¼³Á¤
+		//	Box ìƒì„± String ê°’ì„ ì„¤ì •
 		Box strBox = new Box();
 		strBox.setContent("Java");
 
 		String strVal = (String)strBox.getContent();
-		System.out.println("strBox ³»¿ë¹°:" + strVal);
+		System.out.println("strBox ë‚´ìš©ë¬¼:" + strVal);
 
-		//	¸¸¾à¿¡ Ä³½ºÆÃ Àß¸ø Çß´Ù¸é
+		//	ë§Œì•½ì— ìºìŠ¤íŒ… ì˜ëª» í–ˆë‹¤ë©´
 //		strVal = (String)intBox.getContent();
 
-		//	1. Object¸¦ ´Ù·ê ¼ö ÀÖ´Â Å¬·¡½º¸¦ »ı¼ºÇÏ¸é
-		//		Ä³½ºÆÃÀ» ÇØ¾ß ÇÏ´Â ºÒÆíÇÔ
-		//	2. Ä³½ºÆÃ ¿À·ù¸¦ ÄÄÆÄÀÏ Å¸ÀÓ¿¡¼­ Ã¼Å©ÇÒ ¼ö ¾ø´Ù
+		//	1. Objectë¥¼ ë‹¤ë£° ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ë¥¼ ìƒì„±í•˜ë©´
+		//		ìºìŠ¤íŒ…ì„ í•´ì•¼ í•˜ëŠ” ë¶ˆí¸í•¨
+		//	2. ìºìŠ¤íŒ… ì˜¤ë¥˜ë¥¼ ì»´íŒŒì¼ íƒ€ì„ì—ì„œ ì²´í¬í•  ìˆ˜ ì—†ë‹¤
 	}
 
 }

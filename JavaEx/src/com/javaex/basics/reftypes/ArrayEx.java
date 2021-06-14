@@ -10,23 +10,23 @@ public class ArrayEx {
 	}
 
 	private static void arrayCopySystem() {
-		//	System °´Ã¼¸¦ ÀÌ¿ëÇÑ ¹è¿­ÀÇ º¹»ç
+		//	System ê°ì²´ë¥¼ ì´ìš©í•œ ë°°ì—´ì˜ ë³µì‚¬
 		int source[] = { 1, 2, 3 };
 		int target[] = new int[10];
 
-		System.arraycopy(source,	//	¿øº» ¹è¿­ÀÇ ½Äº°ÀÚ
-				0,	//	 º¹»ç ½ÃÀÛ ÀÎµ¦½º(¿øº» ¹è¿­ÀÇ)
-				target, 	//	º¹»ç ´ë»ó ¹è¿­
-				3,	//	º¹»ç ½ÃÀÛ ÀÎµ¦½º(´ë»ó ¹è¿­ÀÇ)
-				source.length);	//	º¹»çÇÒ ±æÀÌ
+		System.arraycopy(source,	//	ì›ë³¸ ë°°ì—´ì˜ ì‹ë³„ì
+				0,	//	 ë³µì‚¬ ì‹œì‘ ì¸ë±ìŠ¤(ì›ë³¸ ë°°ì—´ì˜)
+				target, 	//	ë³µì‚¬ ëŒ€ìƒ ë°°ì—´
+				3,	//	ë³µì‚¬ ì‹œì‘ ì¸ë±ìŠ¤(ëŒ€ìƒ ë°°ì—´ì˜)
+				source.length);	//	ë³µì‚¬í•  ê¸¸ì´
 
-		//	Ãâ·Â
+		//	ì¶œë ¥
 		for (int i = 0; i < target.length; i++) {
 			System.out.print(target[i] + "\t");
 		}
 		System.out.println();
 
-		//	Enhanced For: ¼øÂ÷ °´Ã¼·ÎºÎÅÍ °ªÀ» ÇÏ³ª¾¿ ÃßÃâÇÏ¿© ÇÒ´ç
+		//	Enhanced For: ìˆœì°¨ ê°ì²´ë¡œë¶€í„° ê°’ì„ í•˜ë‚˜ì”© ì¶”ì¶œí•˜ì—¬ í• ë‹¹
 		for (int value: target) {
 			System.out.print(value + "\t");
 		}
@@ -34,13 +34,13 @@ public class ArrayEx {
 	}
 
 	private static void arrayCopyFor() {
-		//	¹è¿­Àº Å©±â º¯°æÀÌ ¾ÈµÇ´Ï
-		//	»õ ¹è¿­À» »ı¼º -> º¹»ç
+		//	ë°°ì—´ì€ í¬ê¸° ë³€ê²½ì´ ì•ˆë˜ë‹ˆ
+		//	ìƒˆ ë°°ì—´ì„ ìƒì„± -> ë³µì‚¬
 		int source[] = { 1, 2, 3 };
 		int target[] = new int[10];
 
 		for (int i = 0; i < source.length; i++) {
-			//	º¹»ç
+			//	ë³µì‚¬
 			target[i] = source[i];
 		}
 
@@ -51,9 +51,9 @@ public class ArrayEx {
 	}
 
 	private static void multiDimArray() {
-		//	2Â÷¿ø ¹è¿­ new type[Çà¼ö][¿­¼ö]
-		//	3Â÷¿ø ¹è¿­ new type[¸é][Çà¼ö][¿­¼ö]
-		int[][] twoDimen = new int[5][10];	//	5Çà 10¿­ÀÇ ¹è¿­
+		//	2ì°¨ì› ë°°ì—´ new type[í–‰ìˆ˜][ì—´ìˆ˜]
+		//	3ì°¨ì› ë°°ì—´ new type[ë©´][í–‰ìˆ˜][ì—´ìˆ˜]
+		int[][] twoDimen = new int[5][10];	//	5í–‰ 10ì—´ì˜ ë°°ì—´
 
 		int table[][] = {
 				{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 },	
@@ -61,12 +61,12 @@ public class ArrayEx {
 				{ 3, 4, 5, 6, 7, 8, 9, 0, 1, 2 },
 				{ 4, 5, 6, 7, 8, 9, 0, 1, 2, 3 },
 				{ 5, 6, 7, 8, 9, 0, 1, 2, 3, 4 }
-		};	//	¹è¿­ÀÇ ¹è¿­
+		};	//	ë°°ì—´ì˜ ë°°ì—´
 
-		//	¹è¿­ ³»ºÎÀÇ ¸ğµç °ªÀ» ÇÕ»ê
+		//	ë°°ì—´ ë‚´ë¶€ì˜ ëª¨ë“  ê°’ì„ í•©ì‚°
 		int total = 0;
 
-		System.out.println("table ¹è¿­ÀÇ Çà¼ö:" + table.length);
+		System.out.println("table ë°°ì—´ì˜ í–‰ìˆ˜:" + table.length);
 		for (int row = 0; row < table.length; row++) {
 			for (int col = 0; col < table[row].length; col++) {
 				System.out.print(table[row][col] + "\t");
@@ -74,34 +74,34 @@ public class ArrayEx {
 			}
 			System.out.println();
 		}
-		System.out.println("ÃÑ°è:" + total);
+		System.out.println("ì´ê³„:" + total);
 	}
 
 	private static void arrayBasic() {
-		//	¼±¾ğ°ú ÃÊ±âÈ­, »ç¿ë
-		//	¼±¾ğ 
+		//	ì„ ì–¸ê³¼ ì´ˆê¸°í™”, ì‚¬ìš©
+		//	ì„ ì–¸ 
 		String[] names;	//	Type[]
-		int scores[];	//	½Äº°ÀÚ[]
+		int scores[];	//	ì‹ë³„ì[]
 
-		//	ÃÊ±âÈ­
+		//	ì´ˆê¸°í™”
 		names = new String[] {
-				"È«±æµ¿",
-				"Àå±æ»ê",
-				"Àü¿ìÄ¡",
-				"ÀÓ²©Á¤"
+				"í™ê¸¸ë™",
+				"ì¥ê¸¸ì‚°",
+				"ì „ìš°ì¹˜",
+				"ì„êº½ì •"
 		};
 
-		//	¹è¿­ »ı¼º
+		//	ë°°ì—´ ìƒì„±
 		scores = new int[4];
-		//	ÀÎµ¦½º¸¦ ÀÌ¿ëÇÑ Á¢±Ù : 0 ~ .length - 1
+		//	ì¸ë±ìŠ¤ë¥¼ ì´ìš©í•œ ì ‘ê·¼ : 0 ~ .length - 1
 		scores[0] = 80;
 		scores[1] = 90;
 		scores[2] = 85;
 		scores[3] = 88;
-//		scores[4] = 100;	//	ÀÎµ¦½º ¹üÀ§¸¦ ¹ş¾î³­ Á¢±ÙÀº ¿¡·¯
+//		scores[4] = 100;	//	ì¸ë±ìŠ¤ ë²”ìœ„ë¥¼ ë²—ì–´ë‚œ ì ‘ê·¼ì€ ì—ëŸ¬
 
-		//	°ª ¸ñ·ÏÀÌ ÀÖÀ» °æ¿ì
-		//	¼±¾ğ°ú µ¿½Ã¿¡ ÇÒ ¶§¸¸ À¯È¿
+		//	ê°’ ëª©ë¡ì´ ìˆì„ ê²½ìš°
+		//	ì„ ì–¸ê³¼ ë™ì‹œì— í•  ë•Œë§Œ ìœ íš¨
 		float heights[] = {
 				175.3f,
 				178.2f,
@@ -116,18 +116,18 @@ public class ArrayEx {
 					scores[i]);
 		}
 
-		//	ÁÖÀÇ
-		int scores2[] = scores;	//	ÂüÁ¶ º¹»ç -> À¯ÀÇ
+		//	ì£¼ì˜
+		int scores2[] = scores;	//	ì°¸ì¡° ë³µì‚¬ -> ìœ ì˜
 		System.out.println("scores == scores2 : " + (scores == scores2));
-		//	µÎ °´Ã¼´Â °°Àº °´Ã¼´Ù(°°Àº ÁÖ¼Ò¸¦ °¡¸®Å°°í ÀÖ´Ù)
-		//	scores -> ³»¿ë È®ÀÎ
+		//	ë‘ ê°ì²´ëŠ” ê°™ì€ ê°ì²´ë‹¤(ê°™ì€ ì£¼ì†Œë¥¼ ê°€ë¦¬í‚¤ê³  ìˆë‹¤)
+		//	scores -> ë‚´ìš© í™•ì¸
 		for (int i = 0; i < scores.length; i++) {
 			System.out.print(scores[i] + "\t");
 		}
 		System.out.println();
-		//	scores2 º¯°æ
+		//	scores2 ë³€ê²½
 		scores2[2] = 100;
-//		scores -> ³»¿ë È®ÀÎ
+//		scores -> ë‚´ìš© í™•ì¸
 		for (int i = 0; i < scores.length; i++) {
 			System.out.print(scores[i] + "\t");
 		}

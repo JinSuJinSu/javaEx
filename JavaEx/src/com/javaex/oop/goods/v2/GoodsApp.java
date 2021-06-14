@@ -4,7 +4,7 @@ public class GoodsApp {
 
 	public static void main(String[] args) {
 		Goods notebook = new Goods();
-		//	setter¸¦ ÀÌ¿ëÇÑ ¿ìÈ¸ ¼³Á¤
+		//	setterë¥¼ ì´ìš©í•œ ìš°íšŒ ì„¤ì •
 		notebook.setName("LG Gram");
 		notebook.setPrice(1500000);
 
@@ -12,14 +12,14 @@ public class GoodsApp {
 		smartphone.setName("iPhone");
 		smartphone.setPrice(1000000);
 
-		System.out.printf("%s, %d¿ø%n", 
+		System.out.printf("%s, %dì›%n", 
 				notebook.getName(),
 				notebook.getPrice());
-		System.out.printf("%s, %d¿ø%n", 
+		System.out.printf("%s, %dì›%n", 
 				smartphone.getName(),
 				smartphone.getPrice());
 
-		//	³»Àå ¸Ş¼­µå È£Ãâ
+		//	ë‚´ì¥ ë©”ì„œë“œ í˜¸ì¶œ
 		notebook.showInfo();
 		smartphone.showInfo();
 	}

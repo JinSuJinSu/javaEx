@@ -1,3 +1,4 @@
+  
 package com.javaex.api.objectclass.v1;
 
 public class LangClassTest {
@@ -7,13 +8,13 @@ public class LangClassTest {
 		
 		Point p = new Point(10,10);
 		
-		System.out.println("Å¬·¡½ºÀÌ¸§:" + p.getClass().getName());
-		System.out.println("°´Ã¼ ½Äº° Á¤º¸:" + p.hashCode());
-		System.out.println("°´Ã¼ Ãâ·Â:" + p);
-		System.out.println("°´Ã¼ ½Äº° Á¤º¸:" + p.toString());
+		System.out.println("í´ë˜ìŠ¤ì´ë¦„:" + p.getClass().getName());
+		System.out.println("ê°ì²´ ì‹ë³„ ì •ë³´:" + p.hashCode());
+		System.out.println("ê°ì²´ ì¶œë ¥:" + p);
+		System.out.println("ê°ì²´ ì‹ë³„ ì •ë³´:" + p.toString());
 		
-		//°´Ã¼ pÀÇ ºÎ¸ğ Å¬·¡½º È®ÀÎ
-		System.out.println("ºÎ¸ğ Á¤º¸:" + p.getClass().getSuperclass().getName());
+		//ê°ì²´ pì˜ ë¶€ëª¨ í´ë˜ìŠ¤ í™•ì¸
+		System.out.println("ë¶€ëª¨ ì •ë³´:" + p.getClass().getSuperclass().getName());
 
 	}
 

@@ -14,72 +14,72 @@ public class DateEx {
 	}
 
 	private static void calendarEx() {
-		//	Ä¶¸°´õ ºÒ·¯¿À±â
+		//	ìº˜ë¦°ë” ë¶ˆëŸ¬ì˜¤ê¸°
 		Calendar now = Calendar.getInstance();
 //		System.out.println("NOW:" + now);
 		Calendar custom = Calendar.getInstance();
-		custom.set(1999, 11, 31); //	1999³â 12¿ù 31ÀÏ (¿ùÁ¤º¸´Â 0ºÎÅÍ ½ÃÀÛ)
+		custom.set(1999, 11, 31); //	1999ë…„ 12ì›” 31ì¼ (ì›”ì •ë³´ëŠ” 0ë¶€í„° ì‹œì‘)
 
-		//	Á¤º¸ ¹Ş¾Æ¿À±â .get(Ä¶¸°´õ »ó¼ö)
-		System.out.printf("¿À´ÃÀº %d³â %d¿ù %dÀÏÀÔ´Ï´Ù.%n", 
+		//	ì •ë³´ ë°›ì•„ì˜¤ê¸° .get(ìº˜ë¦°ë” ìƒìˆ˜)
+		System.out.printf("ì˜¤ëŠ˜ì€ %dë…„ %dì›” %dì¼ì…ë‹ˆë‹¤.%n", 
 				now.get(Calendar.YEAR),
-				now.get(Calendar.MONTH) + 1,	//	¿ùÀº 0ºÎÅÍ
+				now.get(Calendar.MONTH) + 1,	//	ì›”ì€ 0ë¶€í„°
 				now.get(Calendar.DATE));
 
-		Calendar future = Calendar.getInstance();	//	ÇöÀç ³¯Â¥ 
-		//	100ÀÏ µÚ·Î ÀÌµ¿
+		Calendar future = Calendar.getInstance();	//	í˜„ì¬ ë‚ ì§œ 
+		//	100ì¼ ë’¤ë¡œ ì´ë™
 		future.add(Calendar.DATE, 100); 
-		System.out.printf("100ÀÏ ÈÄ future: %d³â %d¿ù %dÀÏ%n", 
+		System.out.printf("100ì¼ í›„ future: %dë…„ %dì›” %dì¼%n", 
 				future.get(Calendar.YEAR),
 				future.get(Calendar.MONTH) + 1,
 				future.get(Calendar.DATE));
-		//	ÀÌ ³¯Àº ¹«½¼ ¿äÀÏ?
+		//	ì´ ë‚ ì€ ë¬´ìŠ¨ ìš”ì¼?
 		int dow = future.get(Calendar.DAY_OF_WEEK);
-		System.out.println("100ÀÏ ÈÄ ¿äÀÏ:" + dow);
+		System.out.println("100ì¼ í›„ ìš”ì¼:" + dow);
 
 		String dowStr = "?";
 		switch(dow) {
 		case Calendar.SUNDAY:	//	1
-			dowStr = "ÀÏ¿äÀÏ";
+			dowStr = "ì¼ìš”ì¼";
 			break;
 		case Calendar.MONDAY:	//	2
-			dowStr = "¿ù¿äÀÏ";
+			dowStr = "ì›”ìš”ì¼";
 			break;
 		case Calendar.TUESDAY:	
-			dowStr = "È­¿äÀÏ";
+			dowStr = "í™”ìš”ì¼";
 			break;
 		case Calendar.WEDNESDAY:
-			dowStr = "¼ö¿äÀÏ";
+			dowStr = "ìˆ˜ìš”ì¼";
 			break;
 		case Calendar.THURSDAY:
-			dowStr = "¸ñ¿äÀÏ";
+			dowStr = "ëª©ìš”ì¼";
 			break;
 		case Calendar.FRIDAY:
-			dowStr = "±İ¿äÀÏ";
+			dowStr = "ê¸ˆìš”ì¼";
 			break;
 		case Calendar.SATURDAY:
-			dowStr = "Åä¿äÀÏ";
+			dowStr = "í† ìš”ì¼";
 		}
-		//	¿äÀÏ Á¤º¸: SUNDAY (1) ~ SATURDAY (7)
+		//	ìš”ì¼ ì •ë³´: SUNDAY (1) ~ SATURDAY (7)
 		System.out.println(dowStr);
 	}
 
 	private static void dateEx() {
-		//	³¯Â¥ ¾ò¾î¿À±â
+		//	ë‚ ì§œ ì–»ì–´ì˜¤ê¸°
 		Date now = new Date();
 		
 		System.out.println(now);
 		
-		//	Çü½ÄÈ­ Ãâ·Â : DateFormat °´Ã¼
-		//	FULL, LONG, MEDIUM, SHORT -> ¹Ù²ã°¡¸ç Ãâ·ÂÇØ º¸ÀÚ
+		//	í˜•ì‹í™” ì¶œë ¥ : DateFormat ê°ì²´
+		//	FULL, LONG, MEDIUM, SHORT -> ë°”ê¿”ê°€ë©° ì¶œë ¥í•´ ë³´ì
 		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
 		System.out.println("FULL:" + df.format(now));
 		df = DateFormat.getDateInstance(DateFormat.MEDIUM);
 		System.out.println("MEDIUM:" + df.format(now));
 		
-		//	SimpleDateFormat -> Æ÷¸Ë ¹®ÀÚ¿­À» ÀÌ¿ë, ÀÚÀ¯·Ó°Ô ³¯Â¥ Æ÷¸Ë
+		//	SimpleDateFormat -> í¬ë§· ë¬¸ìì—´ì„ ì´ìš©, ììœ ë¡­ê²Œ ë‚ ì§œ í¬ë§·
 		SimpleDateFormat sdf = 
-				new SimpleDateFormat("yyyy³â MM¿ù ddÀÏ HH½Ã mmºĞ ssÃÊ");
+				new SimpleDateFormat("yyyyë…„ MMì›” ddì¼ HHì‹œ mmë¶„ ssì´ˆ");
 		System.out.println("SDF:" + sdf.format(now));
 	}
 }

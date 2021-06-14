@@ -18,38 +18,38 @@ public class LoopEx {
 	}
 
 	private static void doWhileEx() {
-		//	while ¹®ÀÇ ¹İº¹ Á¶°ÇÀ» µÚ¿¡¼­ È®ÀÎ
-		//	ÃÖ¼Ò 1È¸´Â ½ÇÇàÇØ¾ß ÇÏ´Â °æ¿ì do ~ while ¹® »ç¿ë
-		//	»ç¿ëÀÚ¿¡°Ô ¼ıÀÚ ÀÔ·Â ¹Ş¾Æ ¸ğµÎ ÇÕ»êÇÏ´Â ÄÚµå
-		//	»ç¿ëÀÚ°¡ 0À» ÀÔ·ÂÇÏ¸é ¹İº¹ Á¾·á
+		//	while ë¬¸ì˜ ë°˜ë³µ ì¡°ê±´ì„ ë’¤ì—ì„œ í™•ì¸
+		//	ìµœì†Œ 1íšŒëŠ” ì‹¤í–‰í•´ì•¼ í•˜ëŠ” ê²½ìš° do ~ while ë¬¸ ì‚¬ìš©
+		//	ì‚¬ìš©ìì—ê²Œ ìˆ«ì ì…ë ¥ ë°›ì•„ ëª¨ë‘ í•©ì‚°í•˜ëŠ” ì½”ë“œ
+		//	ì‚¬ìš©ìê°€ 0ì„ ì…ë ¥í•˜ë©´ ë°˜ë³µ ì¢…ë£Œ
 		int total = 0;
 		int value = 0;
 
 		Scanner scanner = new Scanner(System.in);
 
-		do {	//	ÀÏ´Ü ½ÇÇà ÈÄ µÚ¿¡¼­ Ã¼Å©
-			System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: [0ÀÌ¸é Á¾·á]:");
+		do {	//	ì¼ë‹¨ ì‹¤í–‰ í›„ ë’¤ì—ì„œ ì²´í¬
+			System.out.print("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”: [0ì´ë©´ ì¢…ë£Œ]:");
 			value = scanner.nextInt();
 			total += value;
-		} while (value != 0);	//	0ÀÌ ¾Æ´Ï¸é ¹İº¹
+		} while (value != 0);	//	0ì´ ì•„ë‹ˆë©´ ë°˜ë³µ
 
-		System.out.println("ÇÕ°è:" + total);
+		System.out.println("í•©ê³„:" + total);
 		scanner.close();
 	}
 
 
 	private static void whileGugu() {
-		//	while ¹®À» ÀÌ¿ëÇÑ ±¸±¸Ç¥ Ãâ·Â
+		//	while ë¬¸ì„ ì´ìš©í•œ êµ¬êµ¬í‘œ ì¶œë ¥
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.print("´ÜÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ë‹¨ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		int dan = scanner.nextInt();
 
-		int i = 1;	//	·çÇÁ Á¦¾î º¯¼ö
+		int i = 1;	//	ë£¨í”„ ì œì–´ ë³€ìˆ˜
 
 		while(i <= 9) {	
 			System.out.println(dan + "*" + i + "=" + (dan * i));
-			//	Á¦¾îº¯¼ö Áõ°¡\
+			//	ì œì–´ë³€ìˆ˜ ì¦ê°€\
 			i++;
 		}
 		scanner.close();
@@ -57,21 +57,21 @@ public class LoopEx {
 	}
 
 	private static void whileEx() {
-		//	1ºÎÅÍ 10±îÁö ¹İº¹ÇÏ¸é¼­ ÇÕ»ê ÈÄ °á°ú Ãâ·Â
-		//	Á¦¾î º¯¼ö 
+		//	1ë¶€í„° 10ê¹Œì§€ ë°˜ë³µí•˜ë©´ì„œ í•©ì‚° í›„ ê²°ê³¼ ì¶œë ¥
+		//	ì œì–´ ë³€ìˆ˜ 
 		int num = 1;
-		int total = 0;	//	ÇÕ»ê º¯¼ö
+		int total = 0;	//	í•©ì‚° ë³€ìˆ˜
 
-		//	·çÇÁ
+		//	ë£¨í”„
 		while(num <= 10) {
 //			total = total + num;
 			total += num;	
-			//	while¹®Àº ¹«ÇÑ ·çÇÁ¿¡ ºüÁö±â ½¬¿ì¹Ç·Î
-			//	Á¦¾îº¯¼ö¸¦ ÀûÀıÈ÷ º¯°æÇØ Áà¾ß ÇÑ´Ù
+			//	whileë¬¸ì€ ë¬´í•œ ë£¨í”„ì— ë¹ ì§€ê¸° ì‰¬ìš°ë¯€ë¡œ
+			//	ì œì–´ë³€ìˆ˜ë¥¼ ì ì ˆíˆ ë³€ê²½í•´ ì¤˜ì•¼ í•œë‹¤
 			num++;
 		}
 
-		System.out.println("ÇÕ»ê°ª:" + total);
+		System.out.println("í•©ì‚°ê°’:" + total);
 
 	}
 	private static void forEx() {

@@ -5,49 +5,49 @@ import java.util.Vector;
 public class VectorEx {
 
 	public static void main(String[] args) {
-		// º¤ÅÍÀÇ ¼±¾ğ - ¹öÆÛ ±â¹İÀÇ ¿¬¼Ó µ¥ÀÌÅÍ Ã³¸®
+		// ë²¡í„°ì˜ ì„ ì–¸ - ë²„í¼ ê¸°ë°˜ì˜ ì—°ì† ë°ì´í„° ì²˜ë¦¬
 		Vector<Integer> v = new Vector();
 		System.out.println("Size:" + v.size() + 
 				", Capacity:" + v.capacity());
 
-		//	1ºÎÅÍ 10±îÁöÀÇ °ªÀ» ´ã¾Æº¾½Ã´Ù
+		//	1ë¶€í„° 10ê¹Œì§€ì˜ ê°’ì„ ë‹´ì•„ë´…ì‹œë‹¤
 		for (int i = 1; i <= 10; i++) {
-			//	°ªÀÇ Ãß°¡: °´Ã¼¸¸ ´ãÀ» ¼ö ÀÖ´Ù
+			//	ê°’ì˜ ì¶”ê°€: ê°ì²´ë§Œ ë‹´ì„ ìˆ˜ ìˆë‹¤
 			v.addElement(i);
 			//	= v.addElement(Integer.valueOf(i));	
 		}
 		System.out.println("Size:" + v.size() + 
 				", Capacity:" + v.capacity());
 
-		v.addElement(11);	//	Çã¿ë·® ÀÚµ¿ Áõ°¡
+		v.addElement(11);	//	í—ˆìš©ëŸ‰ ìë™ ì¦ê°€
 		System.out.println("Size:" + v.size() + 
 				", Capacity:" + v.capacity());
 
 		System.out.println("v:" + v);
 
-		v.insertElementAt(12, 5); //	12°´Ã¼¸¦ 5¹ø ÀÎµ¦½º¿¡ Ãß°¡
+		v.insertElementAt(12, 5); //	12ê°ì²´ë¥¼ 5ë²ˆ ì¸ë±ìŠ¤ì— ì¶”ê°€
 		System.out.println("v:" + v);
 
-		//	°´Ã¼ Á¶È¸: Æ¯Á¤ ÀÎµ¦½ºÀÇ °´Ã¼ Á¶È¸
-		System.out.println("ÀÎµ¦½º 5ÀÇ °´Ã¼:" + v.elementAt(5));
+		//	ê°ì²´ ì¡°íšŒ: íŠ¹ì • ì¸ë±ìŠ¤ì˜ ê°ì²´ ì¡°íšŒ
+		System.out.println("ì¸ë±ìŠ¤ 5ì˜ ê°ì²´:" + v.elementAt(5));
 
-		//	°´Ã¼ ÀÎµ¦½º Á¶È¸:
-		System.out.println("°´Ã¼ 12ÀÇ ÀÎµ¦½º:" + v.indexOf(12));
-		//	¾ø´Â °´Ã¼ÀÇ ÀÎµ¦½º Á¶È¸: -1
-		System.out.println("¾ø´Â °´Ã¼ÀÇ ÀÎµ¦½º:" + v.indexOf(0));
+		//	ê°ì²´ ì¸ë±ìŠ¤ ì¡°íšŒ:
+		System.out.println("ê°ì²´ 12ì˜ ì¸ë±ìŠ¤:" + v.indexOf(12));
+		//	ì—†ëŠ” ê°ì²´ì˜ ì¸ë±ìŠ¤ ì¡°íšŒ: -1
+		System.out.println("ì—†ëŠ” ê°ì²´ì˜ ì¸ë±ìŠ¤:" + v.indexOf(0));
 
-		//	Æ÷ÇÔ ¿©ºÎ È®ÀÎ
-		System.out.println("v°¡ 10À» Æ÷ÇÔ? " + v.contains(10));
+		//	í¬í•¨ ì—¬ë¶€ í™•ì¸
+		System.out.println("vê°€ 10ì„ í¬í•¨? " + v.contains(10));
 
-		//	³»ºÎ ¿ä¼Òµå¸¦ ·çÇÁ·Î Á¢±Ù
+		//	ë‚´ë¶€ ìš”ì†Œë“œë¥¼ ë£¨í”„ë¡œ ì ‘ê·¼
 		for (int i = 0; i < v.size(); i++) {
 			Integer item = (Integer)v.elementAt(i);
 			System.out.print(item + " ");
 		}
 		System.out.println();
-		//	TODO: Loop °³¼±
+		//	TODO: Loop ê°œì„ 
 
-		//	¹öÆÛ ºñ¿ì±â
+		//	ë²„í¼ ë¹„ìš°ê¸°
 		v.clear();
 		System.out.println("v:" + v);
 		System.out.println("Size:" + v.size() + 

@@ -21,7 +21,7 @@ public class Point {
 	}
 	
 	public void draw() {
-		System.out.printf("��[x=%d, y=%d]�� �׷Ƚ��ϴ�.%n", x,y);
+		System.out.printf("Á¡[x=%d, y=%d]À» ±×·È½À´Ï´Ù.%n", x,y);
 	}
 
 }

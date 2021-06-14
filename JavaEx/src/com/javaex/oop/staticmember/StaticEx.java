@@ -1,35 +1,35 @@
 package com.javaex.oop.staticmember;
 
 public class StaticEx {
-	public static int refCount;	//	Å¬·¡½º ¸â¹ö - ÂüÁ¶ Ä«¿îÆ®
-	public static String classVar;	//	Å¬·¡½º ¸â¹ö
-	public String instanceVar;	//	ÀÎ½ºÅÏ½º ¸â¹ö
+	public static int refCount;	//	í´ë˜ìŠ¤ ë©¤ë²„ - ì°¸ì¡° ì¹´ìš´íŠ¸
+	public static String classVar;	//	í´ë˜ìŠ¤ ë©¤ë²„
+	public String instanceVar;	//	ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„
 
-	//	ÀÎ½ºÅÏ½º ¿µ¿ª -> Å¬·¡½º ¿µ¿ª Á¢±ÙÀº °¡´É
-	//	Å¬·¡½º ¿µ¿ª -> ÀÎ½ºÅÏ½º ¿µ¿ª Á¢±ÙÀº ºÒ°¡
+	//	ì¸ìŠ¤í„´ìŠ¤ ì˜ì—­ -> í´ë˜ìŠ¤ ì˜ì—­ ì ‘ê·¼ì€ ê°€ëŠ¥
+	//	í´ë˜ìŠ¤ ì˜ì—­ -> ì¸ìŠ¤í„´ìŠ¤ ì˜ì—­ ì ‘ê·¼ì€ ë¶ˆê°€
 
-	//	Å¬·¡½º ¿µ¿ªÀÇ ÃÊ±âÈ­´Â static ºí·Ï¿¡¼­ ¼öÇà
+	//	í´ë˜ìŠ¤ ì˜ì—­ì˜ ì´ˆê¸°í™”ëŠ” static ë¸”ë¡ì—ì„œ ìˆ˜í–‰
 	static {
 		refCount = 0;
 		classVar = "Static Member";
-//		instanceVar = "Instance Member";  //	static -> instance Á¢±Ù ºÒ°¡
+//		instanceVar = "Instance Member";  //	static -> instance ì ‘ê·¼ ë¶ˆê°€
 		System.out.println("Static Block");
 	}
 
-	//	»ı¼ºÀÚ : ÀÎ½ºÅÏ½º ÃÊ±âÈ­
+	//	ìƒì„±ì : ì¸ìŠ¤í„´ìŠ¤ ì´ˆê¸°í™”
 	public StaticEx() {
-		refCount++;	//	ÂüÁ¶ Ä«¿îÆ® Áõ°¡
+		refCount++;	//	ì°¸ì¡° ì¹´ìš´íŠ¸ ì¦ê°€
 		System.out.println("refCount:" + refCount);
-		System.out.println("»õ ÀÎ½ºÅÏ½º°¡ »ı¼º!");
+		System.out.println("ìƒˆ ì¸ìŠ¤í„´ìŠ¤ê°€ ìƒì„±!");
 	}
 
-	//	¼Ò¸êÀÚ: °´Ã¼°¡ ÇØÁ¦µÉ ¶§ È£Ãâ
+	//	ì†Œë©¸ì: ê°ì²´ê°€ í•´ì œë  ë•Œ í˜¸ì¶œ
 	@Override
 	protected void finalize() throws Throwable {
-		//	ÂüÁ¶ Ä«¿îÆ® ÁÙÀÌ±â
+		//	ì°¸ì¡° ì¹´ìš´íŠ¸ ì¤„ì´ê¸°
 		refCount--;
 		super.finalize();
-		System.out.println("¼Ò¸êÀÚ È£Ãâ");
+		System.out.println("ì†Œë©¸ì í˜¸ì¶œ");
 	}
 
 }

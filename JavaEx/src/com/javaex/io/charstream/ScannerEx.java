@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class ScannerEx {
 	static String rootPath = System.getProperty("user.dir") + "\\files\\";
 	static String filename = rootPath + "thieves.txt";
-	//	Scanner´Â ¿©·¯°¡Áö ÀÔ·Â ¼Ò½º·ÎºÎÅÍ µ¥ÀÌÅÍ ÀÔ·Â ¹Ş´Â Å¬·¡½º
+	//	ScannerëŠ” ì—¬ëŸ¬ê°€ì§€ ì…ë ¥ ì†ŒìŠ¤ë¡œë¶€í„° ë°ì´í„° ì…ë ¥ ë°›ëŠ” í´ë˜ìŠ¤
 
 	public static void main(String[] args) {
-		// ÆÄÀÏ Á¤º¸ ¼³Á¤
+		// íŒŒì¼ ì •ë³´ ì„¤ì •
 		File file = new File(filename);
 
 		try {
@@ -21,13 +21,13 @@ public class ScannerEx {
 			float height;
 			float weight;
 
-			//	ÁÙ ´ÜÀ§ ÀĞ¾î¿À±â
+			//	ì¤„ ë‹¨ìœ„ ì½ì–´ì˜¤ê¸°
 			while(scanner.hasNextLine()) {
-				name = scanner.next(); // ¹®ÀÚ¿­
-				height = scanner.nextFloat(); // ½Ç¼ö
-				weight = scanner.nextFloat(); // ½Ç¼ö
+				name = scanner.next(); // ë¬¸ìì—´
+				height = scanner.nextFloat(); // ì‹¤ìˆ˜
+				weight = scanner.nextFloat(); // ì‹¤ìˆ˜
 
-				System.out.printf("%s, Å°:%f, Ã¼Áß:%f%n",
+				System.out.printf("%s, í‚¤:%f, ì²´ì¤‘:%f%n",
 						name, height, weight);
 				scanner.nextLine();
 			}

@@ -1,10 +1,10 @@
 package com.javaex.oop.shape.v1;
 
 public class Circle extends Shape {
-	//	ÇÊµå
-	protected double radius;	//	¹İÁö¸§
+	//	í•„ë“œ
+	protected double radius;	//	ë°˜ì§€ë¦„
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public Circle(int x, int y, double radius) {
 		super(x, y);
 		this.radius = radius;
@@ -13,7 +13,7 @@ public class Circle extends Shape {
 	@Override
 	public void draw() {
 		System.out.printf(
-				"¿ø[x=%d, y=%d, area=%.2f]À» ±×·È½À´Ï´Ù.%n",
+				"ì›[x=%d, y=%d, area=%.2f]ì„ ê·¸ë ¸ìŠµë‹ˆë‹¤.%n",
 				x, y, area());
 	}
 

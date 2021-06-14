@@ -1,8 +1,8 @@
 package com.javaex.oop.goods.v2;
 
-//Á¤º¸¿¡ Á¢±ÙÇÒ ¼ö ÀÖ´Â Æ¯¼ö ¸Ş¼­µå : getter / setter ¼³Á¤
+//ì •ë³´ì— ì ‘ê·¼í•  ìˆ˜ ìˆëŠ” íŠ¹ìˆ˜ ë©”ì„œë“œ : getter / setter ì„¤ì •
 public class Goods {
-//	ÇÊµå
+//	í•„ë“œ
 private String name;
 private int price;
 
@@ -23,10 +23,10 @@ public void setPrice(int price) {
 this.price = price;
 }
 
-//	¸Ş¼­µå
+//	ë©”ì„œë“œ
 public void showInfo() {
-System.out.println("»óÇ°¸í:" + name);
-System.out.println("°¡°İ:" + price);
+System.out.println("ìƒí’ˆëª…:" + name);
+System.out.println("ê°€ê²©:" + price);
 }
 
 }

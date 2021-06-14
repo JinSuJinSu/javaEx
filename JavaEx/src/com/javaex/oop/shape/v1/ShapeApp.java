@@ -3,7 +3,7 @@ package com.javaex.oop.shape.v1;
 public class ShapeApp {
 
 	public static void main(String[] args) {
-//		Shape s = new Shape();	//	Ãß»ó Å¬·¡½º´Â ÀÎ½ºÅÏ½ºÈ­ ºÒ°¡
+//		Shape s = new Shape();	//	ì¶”ìƒ í´ë˜ìŠ¤ëŠ” ì¸ìŠ¤í„´ìŠ¤í™” ë¶ˆê°€
 
 		Shape r = new Rectangle(10, 20, 100, 50);
 		Shape c = new Circle(30, 40, 30);

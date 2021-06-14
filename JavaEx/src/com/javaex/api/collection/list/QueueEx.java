@@ -4,23 +4,23 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class QueueEx {
-	//	ÀÔ·Â ¹æÇâ°ú Ãâ·Â ¹æÇâÀÌ ¹İ´ë
+	//	ì…ë ¥ ë°©í–¥ê³¼ ì¶œë ¥ ë°©í–¥ì´ ë°˜ëŒ€
 	//	First Input First Output(FIFO)
 	public static void main(String[] args) {
-		//	½ÇÃ¼ Å¬·¡½º°¡ ¾ø´Ù
+		//	ì‹¤ì²´ í´ë˜ìŠ¤ê°€ ì—†ë‹¤
 		Queue<Integer> queue = new LinkedList<>();
 
-		//	µ¥ÀÌÅÍÀÇ Á¦°ø
+		//	ë°ì´í„°ì˜ ì œê³µ
 		for (int i = 1; i <= 10; i++) {
 			queue.offer(i);
 			System.out.println("OFFER:" + queue);
 		}
 
-		System.out.println("PEEK:" + queue.peek());	//	Á¶È¸¸¸
+		System.out.println("PEEK:" + queue.peek());	//	ì¡°íšŒë§Œ
 		System.out.println("QUEUE:" + queue);
 
-		while(!queue.isEmpty()) {	//	Å¥°¡ ºñ¾îÀÖÁö ¾ÊÀ¸¸é ÀÎÃâ
-			System.out.println("POLL:" + queue.poll());	//	ÀÎÃâ ÈÄ »èÁ¦
+		while(!queue.isEmpty()) {	//	íê°€ ë¹„ì–´ìˆì§€ ì•Šìœ¼ë©´ ì¸ì¶œ
+			System.out.println("POLL:" + queue.poll());	//	ì¸ì¶œ í›„ ì‚­ì œ
 			System.out.println("QUEUE:" + queue);
 		}
 	}

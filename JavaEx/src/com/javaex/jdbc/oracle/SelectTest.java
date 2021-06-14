@@ -13,16 +13,16 @@ public class SelectTest {
 		
 		
 		try {
-			// Ä¿³Ø¼Ç È¹µæ
+			// ì»¤ë„¥ì…˜ íšë“
 			conn = DBConfig.getConnection();
-			// statement »ı¼º
+			// statement ìƒì„±
 			stmt = conn.createStatement();
-			// Äõ¸® ½ÇÇà
+			// ì¿¼ë¦¬ ì‹¤í–‰
 			String sql = "SELECT department_id, department_name " + " from departments";
-			// °á°ú °´Ã¼ ¹Ş¾Æ¿À±â
+			// ê²°ê³¼ ê°ì²´ ë°›ì•„ì˜¤ê¸°
 			rs = stmt.executeQuery(sql);
 			
-			// °á°ú Ãâ·Â
+			// ê²°ê³¼ ì¶œë ¥
 			while(rs.next()) {
 				Long deptId = rs.getLong(1);
 				String deptName = rs.getString("department_name");

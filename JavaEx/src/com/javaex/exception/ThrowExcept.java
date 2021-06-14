@@ -3,33 +3,33 @@ package com.javaex.exception;
 import java.io.IOException;
 
 
-//	¿¹¿ÜÀÇ µÎ Á¾·ù
-//	Á¾·ù 1. checked Exception -> ¹İµå½Ã ¿¹¿ÜÃ³¸®¸¦ ÇØÁà¾ß ÇÑ´Ù
-//	Á¾·ù 2. runtime Exception -> ¿¹¿Ü Ã³¸®¸¦ ÇØ ÁÖÁö ¾Ê¾Æµµ µÈ´Ù
+//	ì˜ˆì™¸ì˜ ë‘ ì¢…ë¥˜
+//	ì¢…ë¥˜ 1. checked Exception -> ë°˜ë“œì‹œ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•´ì¤˜ì•¼ í•œë‹¤
+//	ì¢…ë¥˜ 2. runtime Exception -> ì˜ˆì™¸ ì²˜ë¦¬ë¥¼ í•´ ì£¼ì§€ ì•Šì•„ë„ ëœë‹¤
 public class ThrowExcept {
 	//	Checked Exception
 	public void executeException() throws IOException {
-		System.err.println("°­Á¦ ¿¹¿Ü ¹ß»ı");
-		throw new IOException("°­Á¦¿¹¿Ü");
+		System.err.println("ê°•ì œ ì˜ˆì™¸ ë°œìƒ");
+		throw new IOException("ê°•ì œì˜ˆì™¸");
 	}
 
 	//	Unchecked Exception
 	public void executeRuntimeException() {
-		System.err.println("°­Á¦ ·±Å¸ÀÓ ¿¹¿Ü");
-		throw new RuntimeException("·±Å¸ÀÓ ¿¹¿Ü");
+		System.err.println("ê°•ì œ ëŸ°íƒ€ì„ ì˜ˆì™¸");
+		throw new RuntimeException("ëŸ°íƒ€ì„ ì˜ˆì™¸");
 	}
 
 	public double divide(int num1, int num2) {
 		double result = 0;
 
 		try {
-			//	ÀÏ¹İÀûÀÎ ¿¹¿Ü -> ±¸Ã¼ÀûÀÎ "¿¹¿Ü ÀüÈ¯"ÇØ¼­
-			//	¿¹¿Ü »óÈ²¿¡¼­ÀÇ »óÈ² Á¤º¸¸¦ ´ã°í ÀÖ´Â °ÍÀÌ ÁÁ´Ù
+			//	ì¼ë°˜ì ì¸ ì˜ˆì™¸ -> êµ¬ì²´ì ì¸ "ì˜ˆì™¸ ì „í™˜"í•´ì„œ
+			//	ì˜ˆì™¸ ìƒí™©ì—ì„œì˜ ìƒí™© ì •ë³´ë¥¼ ë‹´ê³  ìˆëŠ” ê²ƒì´ ì¢‹ë‹¤
 			result = num1 / num2;
 		} catch (ArithmeticException e) {
-			//	±¸Ã¼ÀûÀÎ ¿¹¿Ü ÀüÈ¯ ¹Ù±ùÀ¸·Î throw
-			System.err.print("¿¹¿ÜÀÇ ÀüÈ¯");
-			throw new CustomArithmeticException("»ç¿ëÀÚ Á¤ÀÇ ¿¹¿Ü", 
+			//	êµ¬ì²´ì ì¸ ì˜ˆì™¸ ì „í™˜ ë°”ê¹¥ìœ¼ë¡œ throw
+			System.err.print("ì˜ˆì™¸ì˜ ì „í™˜");
+			throw new CustomArithmeticException("ì‚¬ìš©ì ì •ì˜ ì˜ˆì™¸", 
 					num1, num2);
 		}
 		return result;

@@ -10,22 +10,22 @@ import java.util.Arrays;
 public class ByteArrayStreamEx {
 
 	public static void main(String[] args) {
-		//	ÀÔ·Â ¼Ò½º
+		//	ì…ë ¥ ì†ŒìŠ¤
 		byte[] insrc = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		//	Ãâ·Â Å¸°Ù
+		//	ì¶œë ¥ íƒ€ê²Ÿ
 		byte[] target = null;
 
-		System.out.println("ÀÔ·Â ¼Ò½º:" + Arrays.toString(insrc));
+		System.out.println("ì…ë ¥ ì†ŒìŠ¤:" + Arrays.toString(insrc));
 
 		try {
 			InputStream bis = new ByteArrayInputStream(insrc);
 			OutputStream bos = new ByteArrayOutputStream();
 
-			int data = 0;	//	µ¥ÀÌÅÍ ÀúÀå º¯¼ö
+			int data = 0;	//	ë°ì´í„° ì €ì¥ ë³€ìˆ˜
 
-			while((data = bis.read()) != -1) {	//	-1ÀÌ¸é ÀĞÀ» µ¥ÀÌÅÍ ¾øÀ½
+			while((data = bis.read()) != -1) {	//	-1ì´ë©´ ì½ì„ ë°ì´í„° ì—†ìŒ
 				System.out.println("Read Data:" + data);
-				bos.write(data); //	µ¥ÀÌÅÍ Ãâ·Â
+				bos.write(data); //	ë°ì´í„° ì¶œë ¥
 			}
 
 			target = ((ByteArrayOutputStream)bos).toByteArray();
@@ -34,10 +34,10 @@ public class ByteArrayStreamEx {
 			bos.close();
 			bis.close();
 		} catch (IOException e) {
-			//	ÀÔÃâ·Â ¿¹¿Ü´Â ÀÌ°÷¿¡¼­ Ã³¸®
+			//	ì…ì¶œë ¥ ì˜ˆì™¸ëŠ” ì´ê³³ì—ì„œ ì²˜ë¦¬
 			e.printStackTrace();
 		} catch (Exception e) {
-			//	À§¿¡¼­ Ã³¸® µÇÁö ¾ÊÀº ¿¹¿Ü¸¦ Ã¶
+			//	ìœ„ì—ì„œ ì²˜ë¦¬ ë˜ì§€ ì•Šì€ ì˜ˆì™¸ë¥¼ ì² 
 		}
 	}
 

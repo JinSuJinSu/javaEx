@@ -1,4 +1,5 @@
-package com.javaex.api.arrayclass;
+
+ package com.javaex.api.arrayclass;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -13,75 +14,75 @@ public class ArrayClassEx {
 		searchEx();
 	}
 
-	//	¹è¿­ ³» °Ë»ö
+	//	ë°°ì—´ ë‚´ ê²€ìƒ‰
 	private static void searchEx() {
 		Integer num2[] = { 5, 6, 3, 2, 4, 1, 7, 9, 8, 10 };
-		//	ÀÚ¹Ù´Â ±âº»ÀûÀ¸·Î ÀÌÁø °Ë»ö
-		//	ÀÌÁø °Ë»öÀº °Ë»ö ÀÌÀü¿¡ ¸ÕÀú ¹è¿­ÀÌ Á¤·ÄµÇ¾î ÀÖ¾î¾ß ÇÑ´Ù
+		//	ìë°”ëŠ” ê¸°ë³¸ì ìœ¼ë¡œ ì´ì§„ ê²€ìƒ‰
+		//	ì´ì§„ ê²€ìƒ‰ì€ ê²€ìƒ‰ ì´ì „ì— ë¨¼ì € ë°°ì—´ì´ ì •ë ¬ë˜ì–´ ìˆì–´ì•¼ í•œë‹¤
 		Arrays.sort(num2);
-		System.out.println("Á¤·ÄµÈ ¿øº»:" + Arrays.toString(num2));
+		System.out.println("ì •ë ¬ëœ ì›ë³¸:" + Arrays.toString(num2));
 		int index = Arrays.binarySearch(num2, 8);
-		System.out.println("8ÀÇ ÀÎµ¦½º:" + index);
+		System.out.println("8ì˜ ì¸ë±ìŠ¤:" + index);
 
-		//	String ¹è¿­ÀÇ °Ë»ö
+		//	String ë°°ì—´ì˜ ê²€ìƒ‰
 		String[] str = { "Java", "C", "C++", "Python", "Linux" };
-		Arrays.sort(str); //	ÀÌÁø °Ë»ö ÀÌÀü¿¡ Á¤·Ä ¿ì¼±
-		System.out.println("¿øº»:" + Arrays.toString(str));
+		Arrays.sort(str); //	ì´ì§„ ê²€ìƒ‰ ì´ì „ì— ì •ë ¬ ìš°ì„ 
+		System.out.println("ì›ë³¸:" + Arrays.toString(str));
 		index = Arrays.binarySearch(str, "Python");
-		System.out.println("PythonÀÇ ÀÎµ¦½º:" + index);
+		System.out.println("Pythonì˜ ì¸ë±ìŠ¤:" + index);
 
-		//	»ç¿ëÀÚ Á¤ÀÇ °´Ã¼ÀÇ °Ë»ö
+		//	ì‚¬ìš©ì ì •ì˜ ê°ì²´ì˜ ê²€ìƒ‰
 		Member[] members = {
-			new Member("È«±æµ¿"),
-			new Member("°í±æµ¿"),
-			new Member("Àå±æ»ê")
+			new Member("í™ê¸¸ë™"),
+			new Member("ê³ ê¸¸ë™"),
+			new Member("ì¥ê¸¸ì‚°")
 		};
 		Arrays.sort(members);
-		System.out.println("¿øº»:" + Arrays.toString(members));
-		index = Arrays.binarySearch(members, new Member("È«±æµ¿"));
-		System.out.println("È«±æµ¿ÀÇ ÀÎµ¦½º:" + index);
+		System.out.println("ì›ë³¸:" + Arrays.toString(members));
+		index = Arrays.binarySearch(members, new Member("í™ê¸¸ë™"));
+		System.out.println("í™ê¸¸ë™ì˜ ì¸ë±ìŠ¤:" + index);
 	}
 
-	//	Á¤·Ä(»ç¿ëÀÚ Á¤ÀÇ Å¬·¡½º)
+	//	ì •ë ¬(ì‚¬ìš©ì ì •ì˜ í´ë˜ìŠ¤)
 	private static void sortCustomEx() {
 		Member[] members = {
-			new Member("È«±æµ¿"),
-			new Member("°í±æµ¿"),
-			new Member("Àå±æ»ê")
+			new Member("í™ê¸¸ë™"),
+			new Member("ê³ ê¸¸ë™"),
+			new Member("ì¥ê¸¸ì‚°")
 		};
-		System.out.println("¿øº»:" + Arrays.toString(members));
+		System.out.println("ì›ë³¸:" + Arrays.toString(members));
 		Arrays.sort(members);
-		System.out.println("Á¤·Ä:" + Arrays.toString(members));
-		Arrays.sort(members, Collections.reverseOrder());	//	³»¸²Â÷¼ø Á¤·Ä
-		System.out.println("Á¤·Ä(³»¸²Â÷¼ø):" + Arrays.toString(members));
+		System.out.println("ì •ë ¬:" + Arrays.toString(members));
+		Arrays.sort(members, Collections.reverseOrder());	//	ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
+		System.out.println("ì •ë ¬(ë‚´ë¦¼ì°¨ìˆœ):" + Arrays.toString(members));
 	}
 
-	//	Á¤·Ä
+	//	ì •ë ¬
 	private static void sortEx() {
-		//	±âº»Çü °Ë»ö
+		//	ê¸°ë³¸í˜• ê²€ìƒ‰
 		int[] nums = { 5, 6, 3, 2, 4, 1, 7, 9, 8, 10 }; 
 		
-		System.out.println("¿øº»:" + Arrays.toString(nums));
-		//	Á¤·Ä
+		System.out.println("ì›ë³¸:" + Arrays.toString(nums));
+		//	ì •ë ¬
 		Arrays.sort(nums);
-		System.out.println("Á¤·Ä ÈÄ(¿À¸§Â÷¼ø):" + Arrays.toString(nums));
+		System.out.println("ì •ë ¬ í›„(ì˜¤ë¦„ì°¨ìˆœ):" + Arrays.toString(nums));
 
 //		nums = new int[] { 5, 6, 3, 2, 4, 1, 7, 9, 8, 10 }; 
-//		System.out.println("¿øº»:" + Arrays.toString(nums));
+//		System.out.println("ì›ë³¸:" + Arrays.toString(nums));
 //		
-//		//	Á¤·Ä ³»¸²Â÷¼ø
+//		//	ì •ë ¬ ë‚´ë¦¼ì°¨ìˆœ
 //		Arrays.sort(nums, Collections.reverseOrder());
 
 	}
 
-	//	¹è¿­ ³» °Ë»ö
+	//	ë°°ì—´ ë‚´ ê²€ìƒ‰
 	private static void searchEx1() {
 		Integer num2[] = { 5, 6, 3, 2, 4, 1, 7, 9, 8, 10 }; 
-		System.out.println("¿øº»:" + Arrays.toString(num2));
+		System.out.println("ì›ë³¸:" + Arrays.toString(num2));
 
-		//	Á¤·Ä(³»¸²Â÷¼ø)
+		//	ì •ë ¬(ë‚´ë¦¼ì°¨ìˆœ)
 		Arrays.sort(num2, Collections.reverseOrder());
-		System.out.println("Á¤·Ä ÈÄ(³»¸²Â÷¼ø):" + Arrays.toString(num2));
+		System.out.println("ì •ë ¬ í›„(ë‚´ë¦¼ì°¨ìˆœ):" + Arrays.toString(num2));
 	}
 
 	private static void copyArrayEx() {
@@ -90,27 +91,27 @@ public class ArrayClassEx {
 		};
 		
 		int target[] = new int[arr.length];
-		//	¹æ¹ı 1. ·çÇÁ µ¹¸é¼­ º¹»ç
+		//	ë°©ë²• 1. ë£¨í”„ ëŒë©´ì„œ ë³µì‚¬
 		for (int i = 0; i < arr.length; i++) {
-			target[i] = arr[i];	//	º¹»ç
+			target[i] = arr[i];	//	ë³µì‚¬
 		}
-		System.out.println("¹è¿­ º¹»ç(for):" + Arrays.toString(target));
-		//	¹æ¹ı 2. System °´Ã¼ ÀÌ¿ëº¹»ç
-		System.arraycopy(arr,	//	¿øº» ¹è¿­ 
-				0,	 //	º¹»ç ½ÃÀÛ À§Ä¡(¿øº» ¹è¿­)
-				target, //	¸ñÀûÁö
-				0,	//	º¹»ç ½ÃÀÛ À§Ä¡(¸ñÀûÁö¿¡¼­) 
-				arr.length);	//	º¹»çÇÒ ±æÀÌ
-		System.out.println("¹è¿­ º¹»ç(System):" + Arrays.toString(target));
-		//	¹æ¹ı 3. Arrays.copyOf
-		target = Arrays.copyOf(arr,	//	¿øº» ¹è¿­ 
-				arr.length);	//	º¹»çÇÒ ±æÀÌ
-		System.out.println("¹è¿­ º¹»ç(Arrays.copyOf):" + Arrays.toString(target));
-		//	¹æ¹ı 4. Arrays.copyOfRange(ºÎºĞ º¹»ç)
+		System.out.println("ë°°ì—´ ë³µì‚¬(for):" + Arrays.toString(target));
+		//	ë°©ë²• 2. System ê°ì²´ ì´ìš©ë³µì‚¬
+		System.arraycopy(arr,	//	ì›ë³¸ ë°°ì—´ 
+				0,	 //	ë³µì‚¬ ì‹œì‘ ìœ„ì¹˜(ì›ë³¸ ë°°ì—´)
+				target, //	ëª©ì ì§€
+				0,	//	ë³µì‚¬ ì‹œì‘ ìœ„ì¹˜(ëª©ì ì§€ì—ì„œ) 
+				arr.length);	//	ë³µì‚¬í•  ê¸¸ì´
+		System.out.println("ë°°ì—´ ë³µì‚¬(System):" + Arrays.toString(target));
+		//	ë°©ë²• 3. Arrays.copyOf
+		target = Arrays.copyOf(arr,	//	ì›ë³¸ ë°°ì—´ 
+				arr.length);	//	ë³µì‚¬í•  ê¸¸ì´
+		System.out.println("ë°°ì—´ ë³µì‚¬(Arrays.copyOf):" + Arrays.toString(target));
+		//	ë°©ë²• 4. Arrays.copyOfRange(ë¶€ë¶„ ë³µì‚¬)
 		target = Arrays.copyOfRange(arr, 
-				5,	//	½ÃÀÛ ÀÎµ¦½º 
-				arr.length);	//	³¡ ÀÎµ¦½º
-		System.out.println("ÀÏºÎ º¹»ç(copyOfRange):" + Arrays.toString(target));
+				5,	//	ì‹œì‘ ì¸ë±ìŠ¤ 
+				arr.length);	//	ë ì¸ë±ìŠ¤
+		System.out.println("ì¼ë¶€ ë³µì‚¬(copyOfRange):" + Arrays.toString(target));
 	}
 	
 	private static void printArrayEx() {
@@ -118,7 +119,7 @@ public class ArrayClassEx {
 				1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		};
 		
-		//	Ãâ·Â
+		//	ì¶œë ¥
 		System.out.println("arr[]: " + arr);
 		
 		for (int i = 0; i < arr.length; i++) {

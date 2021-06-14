@@ -7,34 +7,34 @@ public class FileClassEx {
 	static String rootPath = System.getProperty("user.dir") + "\\files\\";
 
 	public static void main(String[] args) {
-		// ÆÄÀÏ °´Ã¼ÀÇ »ı¼º
+		// íŒŒì¼ ê°ì²´ì˜ ìƒì„±
 		File root = new File(rootPath);
-		//	ÆÄÀÏÀÌ ½ÇÁ¦ Á¸ÀçÇÏ´Â°¡ ?
+		//	íŒŒì¼ì´ ì‹¤ì œ ì¡´ì¬í•˜ëŠ”ê°€ ?
 		System.out.println(rootPath + ":" + root.exists());
-		//	ÆÄÀÏ Á¤º¸ Ãâ·Â
+		//	íŒŒì¼ ì •ë³´ ì¶œë ¥
 		printInfo(root);
 
-		//	µğ·ºÅÍ¸® »ı¼º : subdir
+		//	ë””ë ‰í„°ë¦¬ ìƒì„± : subdir
 		File child = new File(rootPath + "\\subdir");	
 
-		if (!child.exists()) {	//	»ı¼ºÇÒ µğ·ºÅÍ¸®°¡ ¾øÀ¸¸é
+		if (!child.exists()) {	//	ìƒì„±í•  ë””ë ‰í„°ë¦¬ê°€ ì—†ìœ¼ë©´
 			child.mkdirs();
-			System.out.println("subdir »ı¼º!");
+			System.out.println("subdir ìƒì„±!");
 		}
 
-		//	ÆÄÀÏ »ı¼º : myFile.txt
-		File newFile = new File(rootPath + "myFile.txt");	//	ÆÄÀÏ Á¤º¸¸¸ »ı¼º
+		//	íŒŒì¼ ìƒì„± : myFile.txt
+		File newFile = new File(rootPath + "myFile.txt");	//	íŒŒì¼ ì •ë³´ë§Œ ìƒì„±
 		if (!newFile.exists()) {
 			try {
-				newFile.createNewFile();// ½ÇÁ¦ ÆÄÀÏ »ı¼º
-				System.out.println("myFile.txt »ı¼º!");
+				newFile.createNewFile();// ì‹¤ì œ íŒŒì¼ ìƒì„±
+				System.out.println("myFile.txt ìƒì„±!");
 			} catch (IOException e) {
-				System.err.println("ÆÄÀÏÀ» ¸¸µéÁö ¸øÇß¾î¿ä!");
+				System.err.println("íŒŒì¼ì„ ë§Œë“¤ì§€ ëª»í–ˆì–´ìš”!");
 			}
 		}
 		printInfo(root);
 
-		//	ÆÄÀÏ Áö¿ì±â
+		//	íŒŒì¼ ì§€ìš°ê¸°
 		newFile.delete();
 		printInfo(root);
 	}
@@ -42,16 +42,16 @@ public class FileClassEx {
 	private static void printInfo(File f) {
 		System.out.println("--------------------");
 		
-		//	ÆÄÀÏ °´Ã¼°¡ µğ·ºÅÍ¸®ÀÎ°¡?
+		//	íŒŒì¼ ê°ì²´ê°€ ë””ë ‰í„°ë¦¬ì¸ê°€?
 		if (f.isDirectory()) {
 			System.out.println("Directory: " + f.getName());
-			//	ÆÄÀÏ ¸ñ·Ï È®ÀÎ
+			//	íŒŒì¼ ëª©ë¡ í™•ì¸
 			File[] files = f.listFiles();
 			for (File file: files) {
-				if (file.isFile()) {	//	ÆÄÀÏÀÌ¸é
+				if (file.isFile()) {	//	íŒŒì¼ì´ë©´
 					System.out.printf("    f %s - %d%n", 
 							file.getName(), file.length());
-				} else {	//	µğ·ºÅÍ¸®¸é
+				} else {	//	ë””ë ‰í„°ë¦¬ë©´
 					System.out.printf("    d %s%n", 
 							file.getName());					
 				}

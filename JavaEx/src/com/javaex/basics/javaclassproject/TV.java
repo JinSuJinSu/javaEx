@@ -22,11 +22,11 @@ public class TV {
 	
 	public void power(boolean on) {
 		if(on==true) {
-			System.out.println("TV¸¦ Å°°Ú½À´Ï´Ù.");
+			System.out.println("TVë¥¼ í‚¤ê² ìŠµë‹ˆë‹¤.");
 			power=true;
 		}
 		else {
-			System.out.println("TV¸¦ ²ô°Ú½À´Ï´Ù.");
+			System.out.println("TVë¥¼ ë„ê² ìŠµë‹ˆë‹¤.");
 			power=false;
 		}
 	}
@@ -36,7 +36,7 @@ public class TV {
 			this.channel = channel;
 		}
 		else {
-			System.out.println("TV Ã¤³Î ¿¡·¯ ¹ß»ı!! Ã¤³ÎÀº Á¤È®ÇÏ°Ô ÀÔ·ÂÇÏ¼¼¿ä!!");
+			System.out.println("TV ì±„ë„ ì—ëŸ¬ ë°œìƒ!! ì±„ë„ì€ ì •í™•í•˜ê²Œ ì…ë ¥í•˜ì„¸ìš”!!");
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class TV {
 			this.volume = volume;
 		}
 		else {
-			System.out.println("TV º¼·ı ¿¡·¯ ¹ß»ı!! º¼·ıÀº Á¤È®ÇÏ°Ô ÀÔ·ÂÇÏ¼¼¿ä!!");
+			System.out.println("TV ë³¼ë¥¨ ì—ëŸ¬ ë°œìƒ!! ë³¼ë¥¨ì€ ì •í™•í•˜ê²Œ ì…ë ¥í•˜ì„¸ìš”!!");
 		}
 	}
 	
@@ -94,11 +94,11 @@ public class TV {
 	
 	public void status() {
 		if(power==true) {
-			System.out.println("Ã¤³Î : "+channel);
-			System.out.println("º¼·ı : "+volume);
+			System.out.println("ì±„ë„ : "+channel);
+			System.out.println("ë³¼ë¥¨ : "+volume);
 		}
 		else {
-			System.out.println("TV´Â ÇöÀç ²¨Á®ÀÖ½À´Ï´Ù.");
+			System.out.println("TVëŠ” í˜„ì¬ êº¼ì ¸ìˆìŠµë‹ˆë‹¤.");
 		}
 		
 		

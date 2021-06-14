@@ -1,12 +1,12 @@
 package com.javaex.exception;
 
-//	»ç¿ëÀÚ Á¤ÀÇ ¿¹¿Ü
+//	ì‚¬ìš©ì ì •ì˜ ì˜ˆì™¸
 public class CustomArithmeticException extends ArithmeticException {
-	//	»óÈ² Á¤º¸¸¦ ´ãÀ» ÇÊµå
+	//	ìƒí™© ì •ë³´ë¥¼ ë‹´ì„ í•„ë“œ
 	private int num1;
 	private int num2;
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public CustomArithmeticException(String message, int num1, int num2) {
 		super(message);
 		this.num1 = num1;

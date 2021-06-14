@@ -1,23 +1,23 @@
 package com.javaex.oop.goods.v3;
 
-//	v3. »ý¼ºÀÚ : °´Ã¼¸¦ ÀÎ½ºÅÏ½ºÈ­ ÇÒ ¶§ ÃÊ±âÈ­¸¦ ´ã´ç
-//		¸®ÅÏ Å¸ÀÔÀº ¾øÀ¸¸ç, Å¬·¡½º ¸í°ú °°¾Æ¾ß ÇÑ´Ù
+//	v3. ìƒì„±ìž : ê°ì²´ë¥¼ ì¸ìŠ¤í„´ìŠ¤í™” í•  ë•Œ ì´ˆê¸°í™”ë¥¼ ë‹´ë‹¹
+//		ë¦¬í„´ íƒ€ìž…ì€ ì—†ìœ¼ë©°, í´ëž˜ìŠ¤ ëª…ê³¼ ê°™ì•„ì•¼ í•œë‹¤
 public class Goods {
-	//	ÇÊµå
+	//	í•„ë“œ
 	private String name;
 	private int price;
 
-	//	»ý¼ºÀÚ
-	//	1. »ç¿ëÀÚ°¡ Á¤ÀÇÇÑ »ý¼ºÀÚ°¡ ÇÏ³ªµµ ¾øÀ» °æ¿ì, ÄÄÆÄÀÏ·¯°¡ ±âº» »ý¼ºÀÚ¸¦ Ãß°¡
-	//	2. »ç¿ëÀÚ°¡ »ý¼ºÀÚ¸¦ ¼±¾ðÇÒ °æ¿ì, ÄÄÆÄÀÏ·¯´Â ±âº» »ý¼ºÀÚ¸¦ Ãß°¡ÇÏÁö ¾Ê´Â´Ù
+	//	ìƒì„±ìž
+	//	1. ì‚¬ìš©ìžê°€ ì •ì˜í•œ ìƒì„±ìžê°€ í•˜ë‚˜ë„ ì—†ì„ ê²½ìš°, ì»´íŒŒì¼ëŸ¬ê°€ ê¸°ë³¸ ìƒì„±ìžë¥¼ ì¶”ê°€
+	//	2. ì‚¬ìš©ìžê°€ ìƒì„±ìžë¥¼ ì„ ì–¸í•  ê²½ìš°, ì»´íŒŒì¼ëŸ¬ëŠ” ê¸°ë³¸ ìƒì„±ìžë¥¼ ì¶”ê°€í•˜ì§€ ì•ŠëŠ”ë‹¤
 	public Goods(String name, int price) {
-		//	ÃÊ±âÈ­ ÄÚµå
+		//	ì´ˆê¸°í™” ì½”ë“œ
 		this.name = name;
 		this.price = price;
 	}
 
 	//	Getter
-	//		Setter °¡ ¾øÀ» °æ¿ì, ÀÐ±â Àü¿ëÀÌ µÈ´Ù
+	//		Setter ê°€ ì—†ì„ ê²½ìš°, ì½ê¸° ì „ìš©ì´ ëœë‹¤
 	public String getName() {
 		return name;
 	}
@@ -34,10 +34,10 @@ public class Goods {
 //		this.price = price;
 //	}
 
-	//	¸Þ¼­µå
+	//	ë©”ì„œë“œ
 	public void showInfo() {
-		System.out.println("»óÇ°¸í:" + name);
-		System.out.println("°¡°Ý:" + price);
+		System.out.println("ìƒí’ˆëª…:" + name);
+		System.out.println("ê°€ê²©:" + price);
 	}
 
 }

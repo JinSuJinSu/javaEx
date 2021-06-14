@@ -19,16 +19,16 @@ public class AuthorApp {
 	}
 	private static void getAuthorInfo() {
 		selectAll();
-		//	½ºÄ³³Ê·ÎºÎÅÍ PK ÀÔ·Â ¹Ş¾Æ ÀúÀÚ Á¤º¸ Ãâ·Â
+		//	ìŠ¤ìºë„ˆë¡œë¶€í„° PK ì…ë ¥ ë°›ì•„ ì €ì ì •ë³´ ì¶œë ¥
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("ÀúÀÚ¾ÆÀÌµğ:");
+		System.out.print("ì €ìì•„ì´ë””:");
 		int id = scanner.nextInt();
 
 		AuthorDAO dao = new AuthorDAOImpl();
 
 		AuthorVO vo = dao.get(Long.valueOf(id)); 
 
-		if (vo != null) {	//	°Ë»ö
+		if (vo != null) {	//	ê²€ìƒ‰
 			System.out.printf("%d\t%s\t%s%n", 
 					vo.getId(), vo.getAuthorName(), vo.getAuthorDesc());
 		} else {	//	Not Found
@@ -38,10 +38,10 @@ public class AuthorApp {
 	}
 	
 	private static void searchAuthor() {
-		//	Scanner¿¡¼­ Å°¿öµå ÀÔ·Â -> ºÎºĞ °Ë»ö
+		//	Scannerì—ì„œ í‚¤ì›Œë“œ ì…ë ¥ -> ë¶€ë¶„ ê²€ìƒ‰
 		Scanner scanner = new Scanner(System.in);
 //		selectAll();
-		System.out.print("°Ë»ö¾î:");
+		System.out.print("ê²€ìƒ‰ì–´:");
 		String keyword = scanner.next();
 
 		AuthorDAO dao = new AuthorDAOImpl();
@@ -61,10 +61,10 @@ public class AuthorApp {
 	
 	
 	private static void deleteAuthor() {
-		// scanner¿¡¼­ ÀúÀÛ PK ÀÔ·Â ¹Ş¾Æ deleteÇÑ´Ù.
+		// scannerì—ì„œ ì €ì‘ PK ì…ë ¥ ë°›ì•„ deleteí•œë‹¤.
 		Scanner scanner = new Scanner(System.in);
 		selectAll();
-		System.out.println("»èÁ¦ÇÒ ÀúÀÚ:");
+		System.out.println("ì‚­ì œí•  ì €ì:");
 		int id = scanner.nextInt();
 		
 		
@@ -72,18 +72,18 @@ public class AuthorApp {
 		
 		boolean sucess = dao.delete(Long.valueOf(id));
 		
-		System.out.println("DELETE" + (sucess? "¼º°ø":"½ÇÆĞ"));
+		System.out.println("DELETE" + (sucess? "ì„±ê³µ":"ì‹¤íŒ¨"));
 		
 		selectAll();
 	}
 	
 	private static void updateAuthor() {
-		// scanner¿¡¼­ ÀúÀÚ pk, ÀúÀÚ ¼³¸íÀ» ÀÔ·Â -> update
+		// scannerì—ì„œ ì €ì pk, ì €ì ì„¤ëª…ì„ ì…ë ¥ -> update
 		Scanner scanner = new Scanner(System.in);
 		selectAll();
-		System.out.println("¼öÁ¤ÇÒ ÀúÀÚ:");
+		System.out.println("ìˆ˜ì •í•  ì €ì:");
 		int id = scanner.nextInt();
-		System.out.println("¼öÁ¤ÇÒ ÀúÀÚ Á¤º¸:");
+		System.out.println("ìˆ˜ì •í•  ì €ì ì •ë³´:");
 		String desc = scanner.next();
 		
 		AuthorVO vo = new AuthorVO(Long.valueOf(id), null, desc);
@@ -91,7 +91,7 @@ public class AuthorApp {
 		
 		boolean sucess = dao.update(vo);
 		
-		System.out.println("UPDATE" + (sucess? "¼º°ø":"½ÇÆĞ"));
+		System.out.println("UPDATE" + (sucess? "ì„±ê³µ":"ì‹¤íŒ¨"));
 		
 		selectAll();
 		scanner.close();
@@ -102,7 +102,7 @@ public class AuthorApp {
 	private static void insertAuthor() {
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("ÀúÀÚ ÀÌ¸§:");
+		System.out.println("ì €ì ì´ë¦„:");
 		String name = scanner.next();
 		
 		AuthorVO vo = new AuthorVO(null, name);
@@ -110,7 +110,7 @@ public class AuthorApp {
 		
 		boolean sucess = dao.insert(vo);
 		
-		System.out.println("INSERT" + (sucess? "¼º°ø":"½ÇÆĞ"));
+		System.out.println("INSERT" + (sucess? "ì„±ê³µ":"ì‹¤íŒ¨"));
 		
 		selectAll();
 		scanner.close();
@@ -127,7 +127,7 @@ public class AuthorApp {
 		System.out.println("======== Author List");
 		
 		while(it.hasNext()) {
-			AuthorVO item = it.next(); // iterator¿¡¼­ ¿ä¼Ò ÃßÃâ
+			AuthorVO item = it.next(); // iteratorì—ì„œ ìš”ì†Œ ì¶”ì¶œ
 			System.out.printf("%d\t%s\t%s%n",item.getId(), item.getAuthorName(), item.getAuthorDesc());
 		}
 	}

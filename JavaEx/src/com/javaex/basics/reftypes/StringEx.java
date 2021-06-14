@@ -7,22 +7,22 @@ public class StringEx {
 	}
 
 	private static void stringBasic() {
-		//	¹®ÀÚ¿­ ¼±¾ğ
-		String str;	//	¼±¾ğ
-		str = "Java";	//	ÇÒ´ç	-> Literal (ÄÚµå¿¡ Á÷Á¢ ÀÔ·ÂÇÑ °ª)
-		String str2 = "Java";	//	¼±¾ğ + ÇÒ´ç -> Literal
-		String str3 = new String("Java");	//	»õ °´Ã¼ 
+		//	ë¬¸ìì—´ ì„ ì–¸
+		String str;	//	ì„ ì–¸
+		str = "Java";	//	í• ë‹¹	-> Literal (ì½”ë“œì— ì§ì ‘ ì…ë ¥í•œ ê°’)
+		String str2 = "Java";	//	ì„ ì–¸ + í• ë‹¹ -> Literal
+		String str3 = new String("Java");	//	ìƒˆ ê°ì²´ 
 
-		//	ÂüÁ¶ º¯¼ö´Â °´Ã¼ÀÇ ÁÖ¼Ò¸¦ °¡Áö°í ÀÖ´Ù
-		//	ÂüÁ¶ º¯¼öÀÇ ==, !=Àº ÁÖ¼Ò¸¦ ºñ±³ÇÏ´Â °Í
+		//	ì°¸ì¡° ë³€ìˆ˜ëŠ” ê°ì²´ì˜ ì£¼ì†Œë¥¼ ê°€ì§€ê³  ìˆë‹¤
+		//	ì°¸ì¡° ë³€ìˆ˜ì˜ ==, !=ì€ ì£¼ì†Œë¥¼ ë¹„êµí•˜ëŠ” ê²ƒ
 		//	Literal vs Literal
-		System.out.println("str == str2 ? " + (str == str2));	//	ÁÖ¼Ò°¡ °°´Ù
+		System.out.println("str == str2 ? " + (str == str2));	//	ì£¼ì†Œê°€ ê°™ë‹¤
 		//	Literal vs new String
 		System.out.println("str == str3 ? " + (str == str3));
 
-		//	ÂüÁ¶ º¯¼öÀÇ °ªÀÌ °°ÀºÁö¸¦ ºñ±³ -> equals
-		System.out.println("str°ú str2°¡ ³»¿ëÀÌ °°Àº°¡?" + str.equals(str2));
-		System.out.println("str°ú str3°¡ ³»¿ëÀÌ °°Àº°¡?" + str.equals(str3));
+		//	ì°¸ì¡° ë³€ìˆ˜ì˜ ê°’ì´ ê°™ì€ì§€ë¥¼ ë¹„êµ -> equals
+		System.out.println("strê³¼ str2ê°€ ë‚´ìš©ì´ ê°™ì€ê°€?" + str.equals(str2));
+		System.out.println("strê³¼ str3ê°€ ë‚´ìš©ì´ ê°™ì€ê°€?" + str.equals(str3));
 		System.out.println();
 	}
 

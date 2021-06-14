@@ -11,7 +11,7 @@ public class LangClassTest {
 		System.out.println(p1==p2);
 		System.out.println(p1.equals(
 				p2));
-		// equalsÀ» Çß´Â µ¥µµ false°¡ ³ª¿À´Â ÀÌÀ¯
+		// equalsì„ í–ˆëŠ” ë°ë„ falseê°€ ë‚˜ì˜¤ëŠ” ì´ìœ 
 		
 
 	}

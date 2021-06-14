@@ -14,39 +14,38 @@ public class BufferedCharStreamEx {
 	static String source = rootPath + "last-leaf.txt";
 	static String target = rootPath + "last-leaf-filtered.txt";
 
-	//	leaf, leaves°¡ Æ÷ÇÔµÈ ¶óÀÎÀ» -> last-leaf-filtered.txt·Î ÀúÀå
+	//	leaf, leavesê°€ í¬í•¨ëœ ë¼ì¸ì„ -> last-leaf-filtered.txtë¡œ ì €ì¥
 	public static void main(String[] args) throws IOException{
 		try {
-			//	ÁÖ½ºÆ®¸²
+			//	ì£¼ìŠ¤íŠ¸ë¦¼
 			Reader fr = new FileReader(source);
 			Writer fw = new FileWriter(target);
 
-			//	º¸Á¶ ½ºÆ®¸²
+			//	ë³´ì¡° ìŠ¤íŠ¸ë¦¼
 			BufferedReader br = new BufferedReader(fr);
 			BufferedWriter bw = new BufferedWriter(fw);
-			//	ÁÙ´ÜÀ§ ÀÔÃâ·Â¿¡ Æí¸®ÇÑ ºÎ°¡ ¸Ş¼­µå¸¦ Áö¿ø
+			//	ì¤„ë‹¨ìœ„ ì…ì¶œë ¥ì— í¸ë¦¬í•œ ë¶€ê°€ ë©”ì„œë“œë¥¼ ì§€ì›
 			String line = "";
 			while((line = br.readLine()) != null) {
-				//	´õÀÌ»ó ÀĞÀ» ¶óÀÎÀÌ ¾øÀ¸¸é null
-				//	leaf, leaves°¡ µé¾îÀÖ´Â ¶óÀÎ¸¸ Ãâ·Â, ÀúÀå
+				//	ë”ì´ìƒ ì½ì„ ë¼ì¸ì´ ì—†ìœ¼ë©´ null
+				//	leaf, leavesê°€ ë“¤ì–´ìˆëŠ” ë¼ì¸ë§Œ ì¶œë ¥, ì €ì¥
 				if (line.toLowerCase().contains("leaf") ||
 						line.toLowerCase().contains("leaves")) {
 					System.out.println("Found:" + line);
-					//	Ãâ·Â
+					//	ì¶œë ¥
 					bw.write(line);
-					bw.newLine(); //	°³Çà
+					bw.newLine(); //	ê°œí–‰
 				}
 			}
 
 			br.close();
 			bw.close();
 
-			System.out.println("ÇÊÅÍ¸µ ¿Ï·á!");
+			System.out.println("í•„í„°ë§ ì™„ë£Œ!");
 		} catch (FileNotFoundException e) {
-			System.err.println("ÆÄÀÏÀ» Ã£Áö ¸øÇß½À´Ï´Ù.");
+			System.err.println("íŒŒì¼ì„ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 
 
 	}
 	}
 }
-

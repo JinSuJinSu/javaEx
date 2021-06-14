@@ -19,18 +19,18 @@ public class FileStreamEx {
 			int data = 0;
 
 			while((data = is.read()) != -1) {
-				//	Ãâ·Â
+				//	ì¶œë ¥
 				os.write(data);
 			}
 
 			os.close();
 			is.close();
 
-			System.out.println("ÆÄÀÏÀ» º¹»çÇß¾î¿ä!");
+			System.out.println("íŒŒì¼ì„ ë³µì‚¬í–ˆì–´ìš”!");
 
-			//	TODO: ¼º´É °³¼± (º¸Á¶ ½ºÆ®¸² ÀÌ¿ë)
+			//	TODO: ì„±ëŠ¥ ê°œì„  (ë³´ì¡° ìŠ¤íŠ¸ë¦¼ ì´ìš©)
 		} catch (FileNotFoundException e) {
-			System.err.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾ø¾î¿ä!");
+			System.err.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ì–´ìš”!");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

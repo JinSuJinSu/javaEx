@@ -4,7 +4,7 @@ public class TVApp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//1¿¡¼­ 100±îÁöÀÇ ¼ö¿¡¼­ 5ÀÇ¹è¼öÀÌ¸é¼­ 7ÀÇ ¹è¼öÀÎ°ÍÀ» Ãâ·ÂÇÏ½Ã¿À
+		//1ì—ì„œ 100ê¹Œì§€ì˜ ìˆ˜ì—ì„œ 5ì˜ë°°ìˆ˜ì´ë©´ì„œ 7ì˜ ë°°ìˆ˜ì¸ê²ƒì„ ì¶œë ¥í•˜ì‹œì˜¤
 		
 		TV tv = new TV(7,20,false);
 		

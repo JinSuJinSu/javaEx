@@ -6,61 +6,61 @@ public class StringEx {
 	}
 	
 	private static void stringBasic() {
-		String s1 = "Java";	//	¸®ÅÍ·²
-		String s2 = new String("Java");	//	»õ °´Ã¼ 
-		String s3 = "Java";	//	¸®ÅÍ·²
+		String s1 = "Java";	//	ë¦¬í„°ëŸ´
+		String s2 = new String("Java");	//	ìƒˆ ê°ì²´ 
+		String s3 = "Java";	//	ë¦¬í„°ëŸ´
 		
-		System.out.println("s1 == s2 ? " + (s1 == s2)); //	¸®ÅÍ·² vs new
-		System.out.println("s1 == s3 ? " + (s1 == s3));	//	¸®ÅÍ·² vs ¸®ÅÍ·²
+		System.out.println("s1 == s2 ? " + (s1 == s2)); //	ë¦¬í„°ëŸ´ vs new
+		System.out.println("s1 == s3 ? " + (s1 == s3));	//	ë¦¬í„°ëŸ´ vs ë¦¬í„°ëŸ´
 		
-		//	valueOf() ¸Ş¼­µå : ±âº» Å¸ÀÔÀ» -> ¹®ÀÚ¿­·Î ¸®ÅÏ
+		//	valueOf() ë©”ì„œë“œ : ê¸°ë³¸ íƒ€ì…ì„ -> ë¬¸ìì—´ë¡œ ë¦¬í„´
 		String s4 = String.valueOf(Math.PI);
-		System.out.println("valueOf ¸Ş¼­µå:" + s4);
+		System.out.println("valueOf ë©”ì„œë“œ:" + s4);
 	}
 
 	private static void usefulMethods() {
 		String str = "Java Programming JavaScript Programming";
 
-		//	±æÀÌ¸¦ ÀâÀ» ¼ö ÀÖ°í, ÀÎµ¦½º Á¢±Ù °¡´É
+		//	ê¸¸ì´ë¥¼ ì¡ì„ ìˆ˜ ìˆê³ , ì¸ë±ìŠ¤ ì ‘ê·¼ ê°€ëŠ¥
 		System.out.println("LENGTH:" + str.length());
-		System.out.println("5¹ø ÀÎµ¦½ºÀÇ ±ÛÀÚ:" + str.charAt(5));
+		System.out.println("5ë²ˆ ì¸ë±ìŠ¤ì˜ ê¸€ì:" + str.charAt(5));
 
-		//	º¯È¯ ¸Ş¼­µå
-		System.out.println("¼Ò¹®ÀÚ º¯È¯:" + str.toLowerCase());
-		System.out.println("´ë¹®ÀÚ º¯È¯:" + str.toUpperCase());
+		//	ë³€í™˜ ë©”ì„œë“œ
+		System.out.println("ì†Œë¬¸ì ë³€í™˜:" + str.toLowerCase());
+		System.out.println("ëŒ€ë¬¸ì ë³€í™˜:" + str.toUpperCase());
 
-		//	°Ë»ö °ü·Ã(Áß¿ä)
+		//	ê²€ìƒ‰ ê´€ë ¨(ì¤‘ìš”)
 		int idx;
 		idx = str.indexOf("Java");
-		System.out.println("1¹øÂ° °Ë»ö:" + idx);
+		System.out.println("1ë²ˆì§¸ ê²€ìƒ‰:" + idx);
 		idx = str.indexOf("Java", idx + 4);
-		System.out.println("2¹øÂ° °Ë»ö:" + idx);
+		System.out.println("2ë²ˆì§¸ ê²€ìƒ‰:" + idx);
 		idx = str.indexOf("Java", idx + 4);
-		System.out.println("3¹øÂ° °Ë»ö:" + idx);	//	°Ë»ö¾î°¡ ¾øÀ» ¶§ -> -1
-		//	¿ª¹æÇâ °Ë»ö
-		System.out.println("¿ª¹æÇâ °Ë»ö:" + str.lastIndexOf("Java"));
+		System.out.println("3ë²ˆì§¸ ê²€ìƒ‰:" + idx);	//	ê²€ìƒ‰ì–´ê°€ ì—†ì„ ë•Œ -> -1
+		//	ì—­ë°©í–¥ ê²€ìƒ‰
+		System.out.println("ì—­ë°©í–¥ ê²€ìƒ‰:" + str.lastIndexOf("Java"));
 
-		//	¹®ÀÚ¿­ ÃßÃâ
-		System.out.println("substring:" + str.substring(5)); //	³¡±îÁö
+		//	ë¬¸ìì—´ ì¶”ì¶œ
+		System.out.println("substring:" + str.substring(5)); //	ëê¹Œì§€
 		System.out.println("substring:" + str.substring(5, 16));	//	5 ~ 16 - 1
 
-		//	Ä¡È¯
+		//	ì¹˜í™˜
 		System.out.println("replace:" + str.replaceAll("Java", "java"));
 
-		//	°ø¹é¹®ÀÚ Á¦°Å
+		//	ê³µë°±ë¬¸ì ì œê±°
 		String s2 = "          Hello           ";
 		String s3 = "         , Java          ";
 
 		System.out.println(s2.trim() + s3.trim());
 
-		//	ºĞÇÒ: split 
-		String[] chunks = str.split(" ");	//	°ø¹éÀ» ±âÁØÀ¸·Î ¹®ÀÚ¿­À» ºĞÇÒ
+		//	ë¶„í• : split 
+		String[] chunks = str.split(" ");	//	ê³µë°±ì„ ê¸°ì¤€ìœ¼ë¡œ ë¬¸ìì—´ì„ ë¶„í• 
 		for (String chunk: chunks) {
 			System.out.println("WORD:" + chunk);
 		}
 
-		//	¹®ÀÚ¿­ ºñ±³: Unicode ºñ±³
-		//	°°À¸¸é 0, ¾ÕÀÇ °ÍÀÌ ÀÛÀ¸¸é(¸ÕÀú) À½¼ö, ¾ÕÀÇ °ÍÀÌ Å©¸é(µÚ¸é) ¾ç¼ö
+		//	ë¬¸ìì—´ ë¹„êµ: Unicode ë¹„êµ
+		//	ê°™ìœ¼ë©´ 0, ì•ì˜ ê²ƒì´ ì‘ìœ¼ë©´(ë¨¼ì €) ìŒìˆ˜, ì•ì˜ ê²ƒì´ í¬ë©´(ë’¤ë©´) ì–‘ìˆ˜
 		System.out.println("ABC".compareTo("ABD"));
 	}
 

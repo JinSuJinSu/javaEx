@@ -17,7 +17,7 @@ public class DBConfig {
 			conn = DriverManager.getConnection(DBURL,DBUSER,DEPASS);
 		}
 		catch(ClassNotFoundException e){
-			System.err.println("µå¶óÀÌ¹ö ·Îµå ½ÇÆĞ!");
+			System.err.println("ì—ëŸ¬ ë°œìƒ! ì—ëŸ¬ ë°œìƒ!");
 			
 		}
 		

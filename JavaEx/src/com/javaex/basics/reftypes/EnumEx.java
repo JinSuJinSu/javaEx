@@ -10,45 +10,45 @@ public class EnumEx {
 	}
 	
 	private static void enumBasic() {
-		//enumÀÇ ¸Ş¼Òµå Á¾·ù
+		//enumì˜ ë©”ì†Œë“œ ì¢…ë¥˜
 		Week today = Week.TUESDAY;
 		System.out.printf("Today is %s(%d)%n",today.name(),today.ordinal());
 		String dayStr = "FRIDAY";
-		Week other = Week.valueOf(dayStr); //¹®ÀÚ¿­À» ¿­°Å»ó¼ö·Î º¯È¯
+		Week other = Week.valueOf(dayStr); //ë¬¸ìì—´ì„ ì—´ê±°ìƒìˆ˜ë¡œ ë³€í™˜
 		System.out.printf("Other is %s(%d)%n",other.name(),other.ordinal());
 		
 		int diff = today.compareTo(other);
-		System.out.println("today¿Í otherÀÇ ¼ø¹ø: " + diff);
+		System.out.println("todayì™€ otherì˜ ìˆœë²ˆ: " + diff);
 		
 	}
 	private static void enumEx() {
 		Week today = Week.TUESDAY;
 		String act = "";
 
-		//	MONDAY ~ THURSDAY : act <- ¿­°ø
-		//	FRIDAY : act <- ºÒ±İ
-		//	SATURDAY : act <- ÁÖ¸»
-		//	SUNDAY : act <- ÈŞ½Ä
-		//	³ª¸ÓÁö : act <- ?
+		//	MONDAY ~ THURSDAY : act <- ì—´ê³µ
+		//	FRIDAY : act <- ë¶ˆê¸ˆ
+		//	SATURDAY : act <- ì£¼ë§
+		//	SUNDAY : act <- íœ´ì‹
+		//	ë‚˜ë¨¸ì§€ : act <- ?
 		switch (today) {
 		case MONDAY:
 		case TUESDAY:
 		case WEDNESDAY:
 		case THURSDAY:
-			act = "¿­°ø";
+			act = "ì—´ê³µ";
 			break;
 		case FRIDAY:
-			act = "ºÒ±İ";
+			act = "ë¶ˆê¸ˆ";
 			break;
 		case SATURDAY:
-			act = "ÁÖ¸»";
+			act = "ì£¼ë§";
 			break;
 		case SUNDAY:
-			act = "ÈŞ½Ä";
+			act = "íœ´ì‹";
 			break;
 
 		}
-		System.out.printf("%s¿¡´Â %s%n",today.name(), act);
+		System.out.printf("%sì—ëŠ” %s%n",today.name(), act);
 
 		
 	}

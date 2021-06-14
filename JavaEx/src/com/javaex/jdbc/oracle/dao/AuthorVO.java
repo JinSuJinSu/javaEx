@@ -1,9 +1,9 @@
 package com.javaex.jdbc.oracle.dao;
 
-//DTO °´Ã¼: ÀÚ¹ÙÀÇ °èÃş°£ µ¥ÀÌÅÍ Àü¼ÛÀ» ´ã´çÇÏ´Â °´Ã¼
-// ÇÊµå, getter/setter, toString, equals Á¤µµÀÇ ¸Ş¼­µå¸¸ ÀÛ¼º
-// ¹İµå½Ã ±âº» »ı¼ºÀÚ°¡ ÀÖ¾î¾ß ÇÔ
-// ÀÏ¹İÀûÀ¸·Î ·ÎÁ÷ ¸Ş¼­µå´Â ÀÛ¼º ¾ÈÇÔ
+//DTO ê°ì²´: ìë°”ì˜ ê³„ì¸µê°„ ë°ì´í„° ì „ì†¡ì„ ë‹´ë‹¹í•˜ëŠ” ê°ì²´
+// í•„ë“œ, getter/setter, toString, equals ì •ë„ì˜ ë©”ì„œë“œë§Œ ì‘ì„±
+// ë°˜ë“œì‹œ ê¸°ë³¸ ìƒì„±ìê°€ ìˆì–´ì•¼ í•¨
+// ì¼ë°˜ì ìœ¼ë¡œ ë¡œì§ ë©”ì„œë“œëŠ” ì‘ì„± ì•ˆí•¨
 
 public class AuthorVO {
 	private Long id;
@@ -11,19 +11,19 @@ public class AuthorVO {
 	private String authorDesc;
 	
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public AuthorVO() {
 		
 	}
 	
-	// ÇÊ¼ö ÇÊµå »ı¼ºÀÚ
+	// í•„ìˆ˜ í•„ë“œ ìƒì„±ì
 	
 	public AuthorVO(Long id, String authorName) {
 		this.id = id;
 		this.authorName = authorName;
 	}
 	
-	// ÀüÃ¼ ÇÊµå »ı¼ºÀÚ
+	// ì „ì²´ í•„ë“œ ìƒì„±ì
 	public AuthorVO(Long id,String authorName, String authorDesc) {
 		this(id, authorName);
 		if(authorDesc == null) {
@@ -67,5 +67,4 @@ public class AuthorVO {
 		return "AuthorVO [id=" + id + ", authorName=" + authorName + ", authorDesc=" + authorDesc + "]";
 	}
 }
-	
 	

@@ -3,13 +3,13 @@ package com.javaex.jdbc.oracle.dao;
 import java.util.*;
 
 
-// ¼³°èµµ ÀÛ¼º
+// ì„¤ê³„ë„ ì‘ì„±
 public interface AuthorDAO {
-	public List<AuthorVO> getList(); //´Ü¼ø select
-	public List<AuthorVO> search(String keyword); // like °Ë»ö
-	public AuthorVO get(Long id); // pk·Î °¡Á®¿Â´Ù
+	public List<AuthorVO> getList(); //ë‹¨ìˆœ select
+	public List<AuthorVO> search(String keyword); // like ê²€ìƒ‰
+	public AuthorVO get(Long id); // pkë¡œ ê°€ì ¸ì˜¨ë‹¤
 	public boolean insert(AuthorVO vo); // INSERT
-	public boolean delete(Long id); //pk·Î »èÁ¦
+	public boolean delete(Long id); //pkë¡œ ì‚­ì œ
 	public boolean update(AuthorVO vo);
 	
 	

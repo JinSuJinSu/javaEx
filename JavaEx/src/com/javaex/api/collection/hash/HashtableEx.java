@@ -6,36 +6,36 @@ import java.util.Map;
 public class HashtableEx {
 
 	public static void main(String[] args) {
-		// »ı¼º	: Map ÀÎÅÍÆäÀÌ½º
+		// ìƒì„±	: Map ì¸í„°í˜ì´ìŠ¤
 		Map<String, ClassRoom> map =
-				new Hashtable<>();	//	Å°·Î String»ç¿ë, °ª ClassRoom
+				new Hashtable<>();	//	í‚¤ë¡œ Stringì‚¬ìš©, ê°’ ClassRoom
 
-		//	µ¥ÀÌÅÍ ´ã±â: put
+		//	ë°ì´í„° ë‹´ê¸°: put
 		map.put("101", new ClassRoom("Java", "R101"));
 		map.put("202", new ClassRoom("C", "R202"));
 		map.put("303", new ClassRoom("Python", "R303"));
 		map.put("404", new ClassRoom("Linux", "R404"));
 
-		//	Å°ÀÇ ¼ø¼­´Â ¾ø°í, Å°´Â Áßº¹µÉ ¼ö ¾ø´Ù
+		//	í‚¤ì˜ ìˆœì„œëŠ” ì—†ê³ , í‚¤ëŠ” ì¤‘ë³µë  ìˆ˜ ì—†ë‹¤
 		System.out.println(map);
 
-		//	°ªÀÇ º¯°æ
+		//	ê°’ì˜ ë³€ê²½
 		map.put("404", new ClassRoom("SQL", "R404"));
 		System.out.println(map);
 
-		//	Å°¿¡ ¿¬°áµÈ °ª °¡Á®¿À±â : get
+		//	í‚¤ì— ì—°ê²°ëœ ê°’ ê°€ì ¸ì˜¤ê¸° : get
 		System.out.println("303:" + map.get("303"));
 
-		//	Å°°¡ ÀÖ´ÂÁö È®ÀÎ : containsKey
-		System.out.println("303 ÀÌ ÀÖ´Â°¡? " + map.containsKey("303"));
-		System.out.println("505 °¡ ÀÖ´Â°¡? " + map.containsKey("505"));
+		//	í‚¤ê°€ ìˆëŠ”ì§€ í™•ì¸ : containsKey
+		System.out.println("303 ì´ ìˆëŠ”ê°€? " + map.containsKey("303"));
+		System.out.println("505 ê°€ ìˆëŠ”ê°€? " + map.containsKey("505"));
 
-		//	°ª Áß¿¡¼­ subject°¡ JavaÀÎ °ªÀÌ ÀÖ´Â°¡? : containsValue
-		System.out.println("Java°¡ °ª¿¡ ÀÖ´Â°¡? "
+		//	ê°’ ì¤‘ì—ì„œ subjectê°€ Javaì¸ ê°’ì´ ìˆëŠ”ê°€? : containsValue
+		System.out.println("Javaê°€ ê°’ì— ìˆëŠ”ê°€? "
 				+ map.containsValue(new ClassRoom("Java", "R101")));
 
 
-		//	¸Ê ºñ¿ì±â
+		//	ë§µ ë¹„ìš°ê¸°
 		map.clear();
 		System.out.println(map);
 	}

@@ -1,7 +1,7 @@
 package com.javaex.basics.reftypes;
 
 public enum Week {
-	// ¿­°Å »ó¼ö
+	// ìš”ì¼ì„ ë§Œë“¤ì–´ì¤€ë‹¤.
 	SUNDAY,
 	MONDAY,
 	TUESDAY,

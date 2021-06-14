@@ -1,11 +1,11 @@
 package com.javaex.oop.summary;
 
 public abstract class Animal {
-	// ÇÊµå
+	// í•„ë“œ
 	protected String name;
 	protected int age;
 	
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Animal(String name, int age) {
 		this.name = name;
 		this.age = age;

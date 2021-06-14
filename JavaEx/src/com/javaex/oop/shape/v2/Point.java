@@ -1,12 +1,12 @@
 package com.javaex.oop.shape.v2;
 
-//	ÀÎÅÍÆäÀÌ½º ±¸Çö : implements
+//	ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„ : implements
 public class Point implements Drawable {
-	//	ÇÊµå
+	//	í•„ë“œ
 	protected int x;
 	protected int y;
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -15,6 +15,6 @@ public class Point implements Drawable {
 	@Override
 	public void draw() {
 		System.out.printf(
-				"Á¡[x=%d, y=%d]À» ±×·È½À´Ï´Ù.", x, y);
+				"ì [x=%d, y=%d]ì„ ê·¸ë ¸ìŠµë‹ˆë‹¤.", x, y);
 	}
 }

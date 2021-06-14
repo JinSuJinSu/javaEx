@@ -16,30 +16,30 @@ public class BufferedStreamEx {
 
 	public static void main(String[] args) {
 		try {
-			InputStream fis = new FileInputStream(source);	//	ÁÖ½ºÆ®¸²
-			OutputStream fos = new FileOutputStream(target);	//	ÁÖ½ºÆ®¸²
+			InputStream fis = new FileInputStream(source);	//	ì£¼ìŠ¤íŠ¸ë¦¼
+			OutputStream fos = new FileOutputStream(target);	//	ì£¼ìŠ¤íŠ¸ë¦¼
 
-			//	º¸Á¶ ½ºÆ®¸² : ÁÖ½ºÆ®¸²À¸·ÎºÎÅÍ StreamÀ» ¾ò¾î¿Â´ô
+			//	ë³´ì¡° ìŠ¤íŠ¸ë¦¼ : ì£¼ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œë¶€í„° Streamì„ ì–»ì–´ì˜¨ëŒœ
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 
-			//	µ¥ÀÌÅÍ ÀĞ¾î¿À±â
+			//	ë°ì´í„° ì½ì–´ì˜¤ê¸°
 //			int data = 0;
-			byte[] data = new byte[10240];	//	10KB Â¥¸® ¹öÆÛ
-			int size = 0;	//	ÀĞ¾î¿Â µ¥ÀÌÅÍ ¹ÙÀÌÆ® ¼ö
+			byte[] data = new byte[10240];	//	10KB ì§œë¦¬ ë²„í¼
+			int size = 0;	//	ì½ì–´ì˜¨ ë°ì´í„° ë°”ì´íŠ¸ ìˆ˜
 
 			while((size = bis.read(data)) != -1) {
-				bos.write(data);	//	Ãâ·Â
-				System.out.println(size + "¹ÙÀÌÆ® º¹»çÇß½À´Ï´Ù");
+				bos.write(data);	//	ì¶œë ¥
+				System.out.println(size + "ë°”ì´íŠ¸ ë³µì‚¬í–ˆìŠµë‹ˆë‹¤");
 			}
 
 			bis.close();
 			bos.close();
-			//	º¸Á¶ ½ºÆ®¸²À» ´İÀ¸¸é ±â¹İ ½ºÆ®¸²µµ ´İÈù´Ù
+			//	ë³´ì¡° ìŠ¤íŠ¸ë¦¼ì„ ë‹«ìœ¼ë©´ ê¸°ë°˜ ìŠ¤íŠ¸ë¦¼ë„ ë‹«íŒë‹¤
 
-			System.out.println("ÆÄÀÏÀ» º¹»çÇß½À´Ï´Ù!");
+			System.out.println("íŒŒì¼ì„ ë³µì‚¬í–ˆìŠµë‹ˆë‹¤!");
 		} catch (FileNotFoundException e) {
-			System.err.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.err.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

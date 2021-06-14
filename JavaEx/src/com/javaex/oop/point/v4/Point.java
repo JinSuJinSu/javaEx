@@ -1,12 +1,12 @@
 package com.javaex.oop.point.v4;
 
-//	v2. »ı¼ºÀÚ
+//	v2. ìƒì„±ì
 public class Point {
-	//	ÇÊµå
+	//	í•„ë“œ
 	protected int x;
 	protected int y;
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -29,19 +29,19 @@ public class Point {
 		this.y = y;
 	}
 
-	//	¸Ş¼­µå
+	//	ë©”ì„œë“œ
 	public void draw() {
-		System.out.printf("Á¡[x=%d, y=%d]À» ±×·È½À´Ï´Ù.%n", x, y);
+		System.out.printf("ì [x=%d, y=%d]ì„ ê·¸ë ¸ìŠµë‹ˆë‹¤.%n", x, y);
 	}
 
-	//	¸Ş¼­µå ¿À¹ö·Îµù
-	//	´ÙÇü¼ºÀÇ ÀÏºÎ: ´Ù¸¥ ¸Ş¼­µå¿Í °°Àº ÀÌ¸§ÀÌÁö¸¸ ¸Å°³º¯¼öÀÇ Å¸ÀÔ, °¹¼ö, ¼ø¼­¸¸ ´Ù¸¥ ¸Ş¼­µå¸¦ »ı¼º
+	//	ë©”ì„œë“œ ì˜¤ë²„ë¡œë”©
+	//	ë‹¤í˜•ì„±ì˜ ì¼ë¶€: ë‹¤ë¥¸ ë©”ì„œë“œì™€ ê°™ì€ ì´ë¦„ì´ì§€ë§Œ ë§¤ê°œë³€ìˆ˜ì˜ íƒ€ì…, ê°¯ìˆ˜, ìˆœì„œë§Œ ë‹¤ë¥¸ ë©”ì„œë“œë¥¼ ìƒì„±
 	public void draw(boolean show) {
-		String message = String.format("Á¡[x=%d, y=%d]À» ", x, y);
+		String message = String.format("ì [x=%d, y=%d]ì„ ", x, y);
 		if (show) {
-			message += "±×·È½À´Ï´Ù.";
+			message += "ê·¸ë ¸ìŠµë‹ˆë‹¤.";
 		} else {
-			message += "Áö¿ü½À´Ï´Ù.";
+			message += "ì§€ì› ìŠµë‹ˆë‹¤.";
 		}
 		System.out.println(message);
 	}

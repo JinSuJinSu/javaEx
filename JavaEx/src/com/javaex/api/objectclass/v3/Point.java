@@ -1,9 +1,9 @@
 package com.javaex.api.objectclass.v3;
 
 
-//clone ¸Ş¼­µå¸¦ »ç¿ëÇÏ±â À§ÇØ¼± Cloneable ÀÎÅÍÆäÀÌ½º¸¦ ±¸Çö
-//¾èÀº º¹Á¦ : ÇÊµåÀÇ °ª¸¸À» º¹»ç
-//±íÀº º¹Á¦ : 
+//clone ë©”ì„œë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„  Cloneable ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„
+//ì–•ì€ ë³µì œ : í•„ë“œì˜ ê°’ë§Œì„ ë³µì‚¬
+//ê¹Šì€ ë³µì œ : 
 public class Point implements Cloneable{
 	private int x;
 	private int y;

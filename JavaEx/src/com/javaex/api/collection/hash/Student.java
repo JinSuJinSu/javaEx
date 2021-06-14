@@ -1,12 +1,12 @@
 package com.javaex.api.collection.hash;
 
-//	°´Ã¼ µ¿µî¼ºÀÇ ºñ±³
-//	1. °´Ã¼ÀÇ hashCode()ÀÇ ¹İÈ¯°ªÀ» ºñ±³
-//	2. °´Ã¼ÀÇ equals() ¸Ş¼­µå·Î °ªÀÇ µ¿ÀÏ¼ºÀ» ºñ±³
-//	1, 2 Á¶°ÇÀ» ¸ğµÎ Åë°úÇÏ¸é µÎ °´Ã¼´Â µ¿µîÇÑ °´Ã¼·Î ÆÇº°
+//	ê°ì²´ ë™ë“±ì„±ì˜ ë¹„êµ
+//	1. ê°ì²´ì˜ hashCode()ì˜ ë°˜í™˜ê°’ì„ ë¹„êµ
+//	2. ê°ì²´ì˜ equals() ë©”ì„œë“œë¡œ ê°’ì˜ ë™ì¼ì„±ì„ ë¹„êµ
+//	1, 2 ì¡°ê±´ì„ ëª¨ë‘ í†µê³¼í•˜ë©´ ë‘ ê°ì²´ëŠ” ë™ë“±í•œ ê°ì²´ë¡œ íŒë³„
 public class Student {
 	String name;
-	int id;	//	ÇĞ¹ø
+	int id;	//	í•™ë²ˆ
 
 	public Student(String name, int id) {
 		this.name = name;
@@ -20,13 +20,13 @@ public class Student {
 
 	@Override
 	public int hashCode() {
-		// °´Ã¼ ½Äº°À» À§ÇÑ ÇÏ³ªÀÇ Á¤¼ö°ª
-		return id; 	//	ÇĞ»ıÀº ÇĞ¹øÀ¸·Î ½Äº°ÇÒ ¼ö ÀÖ´Ù
+		// ê°ì²´ ì‹ë³„ì„ ìœ„í•œ í•˜ë‚˜ì˜ ì •ìˆ˜ê°’
+		return id; 	//	í•™ìƒì€ í•™ë²ˆìœ¼ë¡œ ì‹ë³„í•  ìˆ˜ ìˆë‹¤
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		// µÎ Student °´Ã¼ÀÇ ÇÊµå°ªÀ» ºñ±³
+		// ë‘ Student ê°ì²´ì˜ í•„ë“œê°’ì„ ë¹„êµ
 		if (obj instanceof Student) {
 			Student other = (Student)obj;
 			return name == other.name && id == other.id;

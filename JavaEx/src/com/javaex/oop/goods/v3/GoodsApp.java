@@ -3,23 +3,23 @@ package com.javaex.oop.goods.v3;
 public class GoodsApp {
 
 	public static void main(String[] args) {
-		//	»ı¼ºÀÚ¸¦ ÀÌ¿ëÇÑ °´Ã¼ÀÇ ÃÊ±âÈ­
+		//	ìƒì„±ìë¥¼ ì´ìš©í•œ ê°ì²´ì˜ ì´ˆê¸°í™”
 		Goods notebook = new Goods("LG Gram", 1500000);
 
 		Goods smartphone = new Goods("iPhone", 1000000);
 
-		System.out.printf("%s, %d¿ø%n", 
+		System.out.printf("%s, %dì›%n", 
 				notebook.getName(),
 				notebook.getPrice());
-		System.out.printf("%s, %d¿ø%n", 
+		System.out.printf("%s, %dì›%n", 
 				smartphone.getName(),
 				smartphone.getPrice());
 
-		//	price, name ÇÊµå´Â ÀĞ±â Àü¿ë ÇÊµå µ¥ÀÌÅÍ¸¦ º¯°æÇÒ ¼ö ¾ø´Ù
+		//	price, name í•„ë“œëŠ” ì½ê¸° ì „ìš© í•„ë“œ ë°ì´í„°ë¥¼ ë³€ê²½í•  ìˆ˜ ì—†ë‹¤
 //		notebook.setPrice(15000);
 //		smartphone.setPrice(10000);
 
-		//	³»Àå ¸Ş¼­µå È£Ãâ
+		//	ë‚´ì¥ ë©”ì„œë“œ í˜¸ì¶œ
 		notebook.showInfo();
 		smartphone.showInfo();
 	}

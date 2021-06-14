@@ -1,6 +1,6 @@
 package com.javaex.api.arrayclass;
 
-//	»ç¿ëÀÚ Á¤ÀÇ °´Ã¼ÀÇ ºñ±³¸¦ À§ÇØ¼­´Â Comparable ÀÎÅÍÆäÀÌ½º ±¸Çö
+//	ì‚¬ìš©ì ì •ì˜ ê°ì²´ì˜ ë¹„êµë¥¼ ìœ„í•´ì„œëŠ” Comparable ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„
 public class Member implements Comparable {
 	String name;
 
@@ -15,9 +15,9 @@ public class Member implements Comparable {
 
 	@Override
 	public int compareTo(Object o) {
-		//	°á°ú°¡ 0ÀÌ¸é µÎ °´Ã¼´Â ¼ø¼­°¡ °°´Ù
-		//		-1ÀÌ¸é(À½¼ö) ¾ÕÀÇ °´Ã¼°¡ ¸ÕÀú
-		//		1ÀÌ¸é(¾ç¼ö) ¾ÕÀÇ °´Ã¼°¡ ³ªÁß 
+		//	ê²°ê³¼ê°€ 0ì´ë©´ ë‘ ê°ì²´ëŠ” ìˆœì„œê°€ ê°™ë‹¤
+		//		-1ì´ë©´(ìŒìˆ˜) ì•ì˜ ê°ì²´ê°€ ë¨¼ì €
+		//		1ì´ë©´(ì–‘ìˆ˜) ì•ì˜ ê°ì²´ê°€ ë‚˜ì¤‘ 
 		if (o instanceof Member) {
 			Member other = (Member)o;
 			return name.compareTo(other.name);

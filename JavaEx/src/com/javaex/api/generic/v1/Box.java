@@ -1,6 +1,7 @@
+  
 package com.javaex.api.generic.v1;
 
-//	¸ğµç °´Ã¼¸¦ ´ãÀ» ¼ö ÀÖ´Â Box ¼³°è
+//	ëª¨ë“  ê°ì²´ë¥¼ ë‹´ì„ ìˆ˜ ìˆëŠ” Box ì„¤ê³„
 public class Box {
 	Object content;
 

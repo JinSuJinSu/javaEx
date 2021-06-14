@@ -38,79 +38,79 @@ public class MongodbTest {
 		
 	}
 	
-	//Á¶°Ç ¸¸Á· ¸ğµç ¹®¼­ ¾÷µ¥ÀÌÆ®
+	//ì¡°ê±´ ë§Œì¡± ëª¨ë“  ë¬¸ì„œ ì—…ë°ì´íŠ¸
 	private static void testUpdateMany() {
-		// gender == FEMALEÀÎ ¸ğµç ¹®¼­ ¾÷µ¥ÀÌÆ®
+		// gender == FEMALEì¸ ëª¨ë“  ë¬¸ì„œ ì—…ë°ì´íŠ¸
 		// method = updateMany
-		// db.textCollectionl.update({Á¶°Ç},{"$set:{¹®¼­}})
+		// db.textCollectionl.update({ì¡°ê±´},{"$set:{ë¬¸ì„œ}})
 		
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
 		Bson filter = Filters.eq("gender","FEMALE");
 		
-		//ÁÖÀÇ : ¾÷µ¥ÀÌÆ®½Ã &set ¿¬»êÀÚ¸¦ »ç¿ëÇØ¾ß Á¤»óÀûÀ¸·Î updateµÈ´Ù.
+		//ì£¼ì˜ : ì—…ë°ì´íŠ¸ì‹œ &set ì—°ì‚°ìë¥¼ ì‚¬ìš©í•´ì•¼ ì •ìƒì ìœ¼ë¡œ updateëœë‹¤.
 		
 		Bson doc = new Document("$set", new Document("method","updateMany"));
 		
 		UpdateResult result = coll.updateMany(filter, doc);
 		
 		
-		//¹®¼­°¡ Á¶°Ç¿¡ ¸ÅÄª µÇ¾îµµ ³»¿ëÀÌ ´Ù¸£Áö ¾ÊÀ¸¸é ¾÷µ¥ÀÌµå°¡ µÇÁö ¾Ê´Â´Ù
-		System.out.println(result.getMatchedCount() + "°³ÀÇ ¹®¼­¸¦ Ã£À½");
+		//ë¬¸ì„œê°€ ì¡°ê±´ì— ë§¤ì¹­ ë˜ì–´ë„ ë‚´ìš©ì´ ë‹¤ë¥´ì§€ ì•Šìœ¼ë©´ ì—…ë°ì´ë“œê°€ ë˜ì§€ ì•ŠëŠ”ë‹¤
+		System.out.println(result.getMatchedCount() + "ê°œì˜ ë¬¸ì„œë¥¼ ì°¾ìŒ");
 		
-		System.out.println(result.getModifiedCount() + "°³ ·¹ÄÚµå ¾÷µ¥ÀÌÆ®");
+		System.out.println(result.getModifiedCount() + "ê°œ ë ˆì½”ë“œ ì—…ë°ì´íŠ¸");
 		
 		
 	}
 
 	
 	
-	// ÇÑ°³ ¹®¼­ ¾÷µ¥ÀÌÆ®(updateOne)
+	// í•œê°œ ë¬¸ì„œ ì—…ë°ì´íŠ¸(updateOne)
 	private static void testUpdateOne() {
-		//species == °ø·æÀÎ ¹®¼­ ÇÑ°³ ¾÷µ¥ÀÌÆ®
-		// method ÇÊµå updateOne
-		// db.textCollectionl.update({Á¶°Ç},{"$set:{¹®¼­}})
+		//species == ê³µë£¡ì¸ ë¬¸ì„œ í•œê°œ ì—…ë°ì´íŠ¸
+		// method í•„ë“œ updateOne
+		// db.textCollectionl.update({ì¡°ê±´},{"$set:{ë¬¸ì„œ}})
 		
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
-		Bson filter = Filters.eq("species","ÀÎ°£");
+		Bson filter = Filters.eq("species","ì¸ê°„");
 		
-		//ÁÖÀÇ : ¾÷µ¥ÀÌÆ®½Ã &set ¿¬»êÀÚ¸¦ »ç¿ëÇØ¾ß Á¤»óÀûÀ¸·Î updateµÈ´Ù.
+		//ì£¼ì˜ : ì—…ë°ì´íŠ¸ì‹œ &set ì—°ì‚°ìë¥¼ ì‚¬ìš©í•´ì•¼ ì •ìƒì ìœ¼ë¡œ updateëœë‹¤.
 		
 		Bson doc = new Document("$set", new Document("method","updateOne"));
 		
 		UpdateResult result = coll.updateOne(filter, doc);
 		
-		System.out.println(result.getModifiedCount() + "°³ ·¹ÄÚµå ¾÷µ¥ÀÌÆ®");
+		System.out.println(result.getModifiedCount() + "ê°œ ë ˆì½”ë“œ ì—…ë°ì´íŠ¸");
 		
 		
 	}
 
-	//	Á¶°Ç¿¡ ¸¸Á·ÇÏ´Â ¹®¼­ °¡Á®¿À±â
+	//	ì¡°ê±´ì— ë§Œì¡±í•˜ëŠ” ë¬¸ì„œ ê°€ì ¸ì˜¤ê¸°
 	private static void testFindFilter() {
-		//	species°¡ ÀÎ°£ÀÌ°í gender°¡ FEMALEÀÎ ¹®¼­ - $and
+		//	speciesê°€ ì¸ê°„ì´ê³  genderê°€ FEMALEì¸ ë¬¸ì„œ - $and
 		/*
 		db.javaMongo.find({ $and: 
 								[
-									{"species": "ÀÎ°£"},
+									{"species": "ì¸ê°„"},
 									{"gender": "FEMALE"
 								]
 							})
 		*/
 
-		//	Á¶°Ç Bson »ı¼º
+		//	ì¡°ê±´ Bson ìƒì„±
 //		Bson bsonFilter = Filters.and(
-//					Filters.eq("species", "ÀÎ°£"),
+//					Filters.eq("species", "ì¸ê°„"),
 //					Filters.eq("gender", "FEMALE")
 //				);
 
-		//	species == ÀÎ°£ or gender == FEMALEÀÎ ¹®¼­µé
+		//	species == ì¸ê°„ or gender == FEMALEì¸ ë¬¸ì„œë“¤
 		Bson bsonFilter = Filters.or(
-					Filters.eq("species", "ÀÎ°£"),
+					Filters.eq("species", "ì¸ê°„"),
 					Filters.eq("gender", "FEMALE")
 				);
 		System.out.println("Filter:" + bsonFilter);
 
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
-		//	Á¶°Ç °Ë»ö
+		//	ì¡°ê±´ ê²€ìƒ‰
 		MongoCursor<Document> cursor = coll.find(bsonFilter).iterator();
 
 		while(cursor.hasNext()) {
@@ -120,21 +120,21 @@ public class MongodbTest {
 		cursor.close();
 	}
 
-	//	ÀüÃ¼ ¹®¼­ °¡Á®¿À±â
+	//	ì „ì²´ ë¬¸ì„œ ê°€ì ¸ì˜¤ê¸°
 	private static void testFindAll() {
 		//	db.javaMongo.find()
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
 
 		MongoCursor<Document> cursor = coll.find().iterator();
 		//	loop
-		while(cursor.hasNext()) {	//	µÚ¿¡ ³²¾Æ ÀÖ´Â ¹®¼­°¡ ÀÖÀ¸¸é
+		while(cursor.hasNext()) {	//	ë’¤ì— ë‚¨ì•„ ìˆëŠ” ë¬¸ì„œê°€ ìˆìœ¼ë©´
 			Document doc = cursor.next();
 			System.out.println(doc.toJson());
 		}
 		cursor.close();
 	}
 
-	//	¹®¼­ ÇÑ °³ °¡Á®¿À±â: findOne
+	//	ë¬¸ì„œ í•œ ê°œ ê°€ì ¸ì˜¤ê¸°: findOne
 	private static void testFindFirst() {
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
 
@@ -142,7 +142,7 @@ public class MongodbTest {
 		System.out.println("DOC:" + doc);
 		System.out.println("JSON:" + doc.toJson());
 
-		//	ÇÊµå °ª °¡Á®¿À±â .get
+		//	í•„ë“œ ê°’ ê°€ì ¸ì˜¤ê¸° .get
 		System.out.printf("%s, %s, %s, %s\n", 
 				doc.get("_id"),
 				doc.get("name"),
@@ -150,68 +150,68 @@ public class MongodbTest {
 				doc.get("gender"));
 	}
 
-	//	¿©·¯ °³ ¹®¼­ insert 
+	//	ì—¬ëŸ¬ ê°œ ë¬¸ì„œ insert 
 	private static void testInsertMany() {
 		/*
 		 db.javaMongo.insertMany([
-		 	{ ¹®¼­ }, { ¹®¼­ }
+		 	{ ë¬¸ì„œ }, { ë¬¸ì„œ }
 		 ]);
 		 */
-		List<Document> docs = new ArrayList<>();	//	List »ı¼º
-		Document doc = new Document("name", "°í±æµ¿")
-									.append("species", "ÀÎ°£")
+		List<Document> docs = new ArrayList<>();	//	List ìƒì„±
+		Document doc = new Document("name", "ê³ ê¸¸ë™")
+									.append("species", "ì¸ê°„")
 									.append("gender", "MALE");
-		//	¸®½ºÆ®¿¡ Ãß°¡
+		//	ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€
 		docs.add(doc);
 
-		doc = new Document("name", "¶ÇÄ¡")
-							.append("species", "Á¶·ù")
+		doc = new Document("name", "ë˜ì¹˜")
+							.append("species", "ì¡°ë¥˜")
 							.append("gender", "FEMALE");
 		docs.add(doc);
 
-		doc = new Document("name", "µµ¿ì³Ê")
-							.append("species", "¿Ü°èÀÎ")
+		doc = new Document("name", "ë„ìš°ë„ˆ")
+							.append("species", "ì™¸ê³„ì¸")
 							.append("gender", "MALE");
 		docs.add(doc);
 
-		doc = new Document("name", "°í¿µÈñ")
-							.append("species", "ÀÎ°£")
+		doc = new Document("name", "ê³ ì˜í¬")
+							.append("species", "ì¸ê°„")
 							.append("gender", "FEMALE");
 		docs.add(doc);
 		System.out.println("DOCUMENTS:" + docs);
 
-		//	¿©·¯ ¹®¼­ INSERT
-		//	db.javaMongo.insertMany([ ¹®¼­ÀÇ ¹è¿­ ])
+		//	ì—¬ëŸ¬ ë¬¸ì„œ INSERT
+		//	db.javaMongo.insertMany([ ë¬¸ì„œì˜ ë°°ì—´ ])
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
-		coll.insertMany(docs);	//	¸®½ºÆ® Àü´Ş
+		coll.insertMany(docs);	//	ë¦¬ìŠ¤íŠ¸ ì „ë‹¬
 	}
 
-	//	1°³ ¹®¼­ insert
+	//	1ê°œ ë¬¸ì„œ insert
 	private static void testInsert() {
-		//	»ğÀÔ ¹®¼­ »ı¼º
+		//	ì‚½ì… ë¬¸ì„œ ìƒì„±
 		//	Bson -> Document
 		/*
-		{ name: "µÑ¸®", species: "°ø·æ", gender: "MALE" }
+		{ name: "ë‘˜ë¦¬", species: "ê³µë£¡", gender: "MALE" }
 		 */
-		Document doc = new Document("name", "µÑ¸®")
-							.append("species", "°ø·æ")
+		Document doc = new Document("name", "ë‘˜ë¦¬")
+							.append("species", "ê³µë£¡")
 							.append("gender", "MALE");
 		System.out.println("DOC:" + doc);
 		System.out.println("JSON:" + doc.toJson());
-		// DB Á¢¼Ó -> ÄÃ·º¼Ç -> insert
+		// DB ì ‘ì† -> ì»¬ë ‰ì…˜ -> insert
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
-		//	1°³ÀÇ ¹®¼­ insert
+		//	1ê°œì˜ ë¬¸ì„œ insert
 		coll.insertOne(doc); //	db.testCollection.insert({})
 	}
 
 	private static MongoCollection<Document> getCollection(
 			String databaseName, String collectionName) {
-		//	Á¢¼Ó
+		//	ì ‘ì†
 		MongoClient client = connect();
-		//	use µ¥ÀÌÅÍº£ÀÌ½º
+		//	use ë°ì´í„°ë² ì´ìŠ¤
 		MongoDatabase db = client.getDatabase(databaseName);	//	use javaMongo
 		System.out.println("DATABASE:" + db);
-		//	ÄÃ·º¼Ç Á¢¼Ó
+		//	ì»¬ë ‰ì…˜ ì ‘ì†
 		MongoCollection<Document> coll = 
 				db.getCollection(collectionName);
 		System.out.println("COLLECTION:" + coll);
@@ -219,14 +219,14 @@ public class MongodbTest {
 	}
 	
 	private static MongoClient connect() {
-		//	¸ù°í DB Á¢¼Ó
-//		MongoClient client = MongoClients.create();	//	±âº» Á¢¼Ó
-		//	±âº»°ª »ç¿ë: ip -> localhost, port -> 27017
+		//	ëª½ê³  DB ì ‘ì†
+//		MongoClient client = MongoClients.create();	//	ê¸°ë³¸ ì ‘ì†
+		//	ê¸°ë³¸ê°’ ì‚¬ìš©: ip -> localhost, port -> 27017
 
-		//	»ç¿ëÀÚ Á¤ÀÇ ¼³Ä¡
-		//	Mongodb ip localhost°¡ ÀÌ´Ï°í, 
-		//	port 27017 ¾Æ´Ï´Ù
-		MongoClient client = MongoClients.create(	//	¼­¹ö Á¤º¸
+		//	ì‚¬ìš©ì ì •ì˜ ì„¤ì¹˜
+		//	Mongodb ip localhostê°€ ì´ë‹ˆê³ , 
+		//	port 27017 ì•„ë‹ˆë‹¤
+		MongoClient client = MongoClients.create(	//	ì„œë²„ ì •ë³´
 				MongoClientSettings.builder()
 					.applyToClusterSettings(builder -> 
 						builder.hosts(
@@ -241,25 +241,25 @@ public class MongodbTest {
 		return client;
 	}
 	
-	//»èÁ¦ÇÏ±â
+	//ì‚­ì œí•˜ê¸°
 	private static void testDelete() {
-		// db.javaMongo.delete({Á¶¼±})
-		// ÀüÃ¼ »èÁ¦: db.testCollection.delete({})
-		// »èÁ¦ Á¶°Ç -> gender == MALE
+		// db.javaMongo.delete({ì¡°ì„ })
+		// ì „ì²´ ì‚­ì œ: db.testCollection.delete({})
+		// ì‚­ì œ ì¡°ê±´ -> gender == MALE
 		
 		MongoCollection<Document> coll = getCollection(DB_NAME, COLL_NAME);
 		
-		//filterÇÏ±â
+		//filterí•˜ê¸°
 //		Bson filter = Filters.eq("gender","MALE");
 //		DeleteResult result = coll.deleteMany(filter);
 //		
-//		System.out.println("»èÁ¦ °á°ú:" + result);
-//		System.out.println(result.getDeletedCount() + "°³ÀÇ ·¹ÄÚµå »èÁ¦!");
+//		System.out.println("ì‚­ì œ ê²°ê³¼:" + result);
+//		System.out.println(result.getDeletedCount() + "ê°œì˜ ë ˆì½”ë“œ ì‚­ì œ!");
 		
-		//ÀüÃ¼ »èÁ¦ÇÏ±â
+		//ì „ì²´ ì‚­ì œí•˜ê¸°
 		DeleteResult result = coll.deleteMany(new Document());
-		System.out.println("»èÁ¦ °á°ú:" + result);
-		System.out.println(result.getDeletedCount() + "°³ÀÇ ·¹ÄÚµå »èÁ¦!");
+		System.out.println("ì‚­ì œ ê²°ê³¼:" + result);
+		System.out.println(result.getDeletedCount() + "ê°œì˜ ë ˆì½”ë“œ ì‚­ì œ!");
 		
 	}
 }

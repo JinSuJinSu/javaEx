@@ -7,21 +7,21 @@ import java.sql.Statement;
 import java.util.Date;
 import java.util.Scanner;
 
-//	Scanner·Î Å°¿öµå ÀÔ·Â
-//	first_name, last_name ÇÊµå ´ë»ó ºÎºĞ °Ë»ö
-//	ÀÌ¸§ ¼º, Email, ÀüÈ­¹øÈ£, ÀÔ»çÀÏ Ãâ·Â
+//	Scannerë¡œ í‚¤ì›Œë“œ ì…ë ¥
+//	first_name, last_name í•„ë“œ ëŒ€ìƒ ë¶€ë¶„ ê²€ìƒ‰
+//	ì´ë¦„ ì„±, Email, ì „í™”ë²ˆí˜¸, ì…ì‚¬ì¼ ì¶œë ¥
 public class HRSearchEmployees {
 
 	public static void main(String[] args) {
-		Connection conn = null;	//	Ä¿³Ø¼Ç
-		Statement stmt = null;	//	¹®¸Æ
-		ResultSet rs = null;	//	°á°ú ¼Â
+		Connection conn = null;	//	ì»¤ë„¥ì…˜
+		Statement stmt = null;	//	ë¬¸ë§¥
+		ResultSet rs = null;	//	ê²°ê³¼ ì…‹
 		Scanner scanner = new Scanner(System.in);
 
 		try {
 			conn = DBConfig.getConnection();
 
-			System.out.print("°Ë»ö¾î:");
+			System.out.print("ê²€ìƒ‰ì–´:");
 			String keyword = scanner.next();
 
 			String sql = "SELECT first_name, last_name, " +
@@ -32,7 +32,7 @@ public class HRSearchEmployees {
 			System.out.println("QUERY:" + sql);
 
 			stmt = conn.createStatement();
-			//	Äõ¸® ¼öÇà
+			//	ì¿¼ë¦¬ ìˆ˜í–‰
 			rs = stmt.executeQuery(sql);
 			//	Loop
 			while(rs.next()) {
@@ -42,7 +42,7 @@ public class HRSearchEmployees {
 				String phoneNumber = rs.getString("phone_number");
 				String hireDate = rs.getString("hire_date");	//	java.util.Date
 
-				//	Ãâ·Â
+				//	ì¶œë ¥
 				System.out.printf("%s %s: %s, %s, %s%n", 
 						firstName, lastName, email, phoneNumber, hireDate);
 			}

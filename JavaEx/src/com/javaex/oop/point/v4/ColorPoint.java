@@ -1,46 +1,46 @@
 package com.javaex.oop.point.v4;
 
-//	»ó¼Ó ¹Ş±â 
+//	ìƒì† ë°›ê¸° 
 public class ColorPoint extends Point {
-	//	ºÎ¸ğ·ÎºÎÅÍ ÇÊµå¿Í ¸Ş¼­µå¸¦ ¹°·Á¹ŞÀ½
+	//	ë¶€ëª¨ë¡œë¶€í„° í•„ë“œì™€ ë©”ì„œë“œë¥¼ ë¬¼ë ¤ë°›ìŒ
 	private String color;
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public ColorPoint(int x, 
 			int y,
 			String color) {
-		//	¸í½ÃÇÏÁö ¾ÊÀ¸¸é ºÎ¸ğÀÇ ±âº» »ı¼ºÀÚ¸¦
-		//	¼±ÅÃ
-		super(x, y);	//	¸í½ÃÀûÀ¸·Î ºÎ¸ğÀÇ »ı¼ºÀÚ È£Ãâ
+		//	ëª…ì‹œí•˜ì§€ ì•Šìœ¼ë©´ ë¶€ëª¨ì˜ ê¸°ë³¸ ìƒì„±ìë¥¼
+		//	ì„ íƒ
+		super(x, y);	//	ëª…ì‹œì ìœ¼ë¡œ ë¶€ëª¨ì˜ ìƒì„±ì í˜¸ì¶œ
 		this.color = color;
 	}
 
-	//	¹°·Á¹ŞÀº ¸â¹ö¸¦ ¹«½ÃÇÏ°í ÀÚÃ¼ÀûÀ¸·Î Àç±¸Çö
+	//	ë¬¼ë ¤ë°›ì€ ë©¤ë²„ë¥¼ ë¬´ì‹œí•˜ê³  ìì²´ì ìœ¼ë¡œ ì¬êµ¬í˜„
 	@Override
 	public void draw() {
-		/* ¹æ¹ı 1
-		System.out.printf("»ö»óÁ¡[x=%d, y=%d, color=%s]À» ±×·È½À´Ï´Ù.%n", 
-				super.getX(),	//	ºÎ¸ğÀÇ ¸Ş¼­µå È£Ãâ 
+		/* ë°©ë²• 1
+		System.out.printf("ìƒ‰ìƒì [x=%d, y=%d, color=%s]ì„ ê·¸ë ¸ìŠµë‹ˆë‹¤.%n", 
+				super.getX(),	//	ë¶€ëª¨ì˜ ë©”ì„œë“œ í˜¸ì¶œ 
 				super.getY(), 
 				color);
 				*/
 
-		/* ¹æ¹ı 2. ºÎ¸ğÀÇ ÇÊµå Á¢±Ù Á¦ÇÑÀÚ¸¦ protected·Î º¯°æ */
-		System.out.printf("»ö»óÁ¡[x=%d, y=%d, color=%s]À» ±×·È½À´Ï´Ù.%n", 
-				x,	//	ºÎ¸ğÀÇ ¸Ş¼­µå È£Ãâ 
+		/* ë°©ë²• 2. ë¶€ëª¨ì˜ í•„ë“œ ì ‘ê·¼ ì œí•œìë¥¼ protectedë¡œ ë³€ê²½ */
+		System.out.printf("ìƒ‰ìƒì [x=%d, y=%d, color=%s]ì„ ê·¸ë ¸ìŠµë‹ˆë‹¤.%n", 
+				x,	//	ë¶€ëª¨ì˜ ë©”ì„œë“œ í˜¸ì¶œ 
 				y, 
 				color);
 	}
 
 	@Override
 	public void draw(boolean show) {
-		String message = String.format("»ö»óÁ¡[x=%d, y=%d, color=%s]À» ", 
+		String message = String.format("ìƒ‰ìƒì [x=%d, y=%d, color=%s]ì„ ", 
 				x, y, color);
-		message += show ? "±×·È½À´Ï´Ù.": "Áö¿ü½À´Ï´Ù.";
+		message += show ? "ê·¸ë ¸ìŠµë‹ˆë‹¤.": "ì§€ì› ìŠµë‹ˆë‹¤.";
 		System.out.println(message);
 
-		//	Override¸¦ ÇØµµ ºÎ¸ğÀÇ ¸Ş¼­µå°¡ Áö¿öÁö´Â °ÍÀº ¾Æ´Ï´Ù.
-		//	¸í½ÃÀûÀ¸·Î super Å°¿öµå¸¦ ÀÌ¿ëÇØ ºÎ¸ğÀÇ ¸Ş¼­µå¿¡ Á¢±ÙÇÒ ¼ö ÀÖ´Ù.
-//		System.out.println("ºÎ¸ğÀÇ ¸Ş¼­µå È£Ãâ:");
+		//	Overrideë¥¼ í•´ë„ ë¶€ëª¨ì˜ ë©”ì„œë“œê°€ ì§€ì›Œì§€ëŠ” ê²ƒì€ ì•„ë‹ˆë‹¤.
+		//	ëª…ì‹œì ìœ¼ë¡œ super í‚¤ì›Œë“œë¥¼ ì´ìš©í•´ ë¶€ëª¨ì˜ ë©”ì„œë“œì— ì ‘ê·¼í•  ìˆ˜ ìˆë‹¤.
+//		System.out.println("ë¶€ëª¨ì˜ ë©”ì„œë“œ í˜¸ì¶œ:");
 //		super.draw(show);
 	}
 

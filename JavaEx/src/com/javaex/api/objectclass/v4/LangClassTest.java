@@ -6,17 +6,17 @@ public class LangClassTest {
 		Scoreboard s1 = new Scoreboard(new int[] { 10, 20, 30, 40 });
 		System.out.println("s1 = " + s1);
 
-		//	ÂüÁ¶ º¹Á¦: °°Àº °´Ã¼ 
+		//	ì°¸ì¡° ë³µì œ: ê°™ì€ ê°ì²´ 
 		Scoreboard s2 = s1;
 		System.out.println("s1 == s2 ? " + (s1 == s2));
 
-		//	¾èÀº º¹Á¦
+		//	ì–•ì€ ë³µì œ
 		s2 = s1.getClone();
 		System.out.println("s2 = " + s2);
 
-		//	È®ÀÎ
+		//	í™•ì¸
 		System.out.println("s1 == s2 ? " + (s1 == s2));
-		//	¾èÀº º¹Á¦ÀÇ °æ¿ì ÂüÁ¶ ÇÊµå´Â ÁÖ¼Ò °ªÀÌ º¹»ç
+		//	ì–•ì€ ë³µì œì˜ ê²½ìš° ì°¸ì¡° í•„ë“œëŠ” ì£¼ì†Œ ê°’ì´ ë³µì‚¬
 		System.out.println("s1.scores == s2.scores ? " 
 				+ (s1.getScores() == s2.getScores()));
 		s2.getScores()[2] = 100;

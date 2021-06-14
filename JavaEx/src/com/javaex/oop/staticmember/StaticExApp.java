@@ -3,26 +3,26 @@ package com.javaex.oop.staticmember;
 public class StaticExApp {
 
 	public static void main(String[] args) {
-		// È£Ãâ ¼ø¼­ : static ºí·Ï -> »ı¼ºÀÚ
-		//			µÎ ¹øÂ° ºÎÅÍ´Â staticÀº È£Ãâ ¾ÈµÊ
+		// í˜¸ì¶œ ìˆœì„œ : static ë¸”ë¡ -> ìƒì„±ì
+		//			ë‘ ë²ˆì§¸ ë¶€í„°ëŠ” staticì€ í˜¸ì¶œ ì•ˆë¨
 		StaticEx s1 = new StaticEx();
-		System.out.println("ÂüÁ¶ Ä«¿îÆ®:" + StaticEx.refCount);	//	s1.refCount
-		//	static ¸â¹ö´Â °´Ã¼ »ı¼º(new) ¾øÀÌµµ Á¢±ÙÇÒ ¼ö ÀÖ´Ù
+		System.out.println("ì°¸ì¡° ì¹´ìš´íŠ¸:" + StaticEx.refCount);	//	s1.refCount
+		//	static ë©¤ë²„ëŠ” ê°ì²´ ìƒì„±(new) ì—†ì´ë„ ì ‘ê·¼í•  ìˆ˜ ìˆë‹¤
 
 		StaticEx s2 = new StaticEx();
-		System.out.println("ÂüÁ¶ Ä«¿îÆ®:" + StaticEx.refCount);
+		System.out.println("ì°¸ì¡° ì¹´ìš´íŠ¸:" + StaticEx.refCount);
 
-		//	ÂüÁ¶ ÇØÁ¦
+		//	ì°¸ì¡° í•´ì œ
 		s1 = null;
-		System.out.println("s1 ÇØÁ¦!");
-		System.out.println("ÂüÁ¶ Ä«¿îÆ®:" + StaticEx.refCount);
-		//	°­Á¦·Î GC È£Ãâ
-		//	ÁÖÀÇ: ÀÚ¹Ù°¡ °´Ã¼¸¦ °ü¸®ÇÏ´Â ¼ø¼­¸¦ º¸¿©µå¸®±â À§ÇÑ ÄÚµå
-		//		°­Á¦·Î Garbage Collector¸¦ È£ÃâÇÏÁö´Â ¸»ÀÚ!
-		System.gc(); //	Âü°í ÄÚµå·Î¸¸ È°¿ë!
+		System.out.println("s1 í•´ì œ!");
+		System.out.println("ì°¸ì¡° ì¹´ìš´íŠ¸:" + StaticEx.refCount);
+		//	ê°•ì œë¡œ GC í˜¸ì¶œ
+		//	ì£¼ì˜: ìë°”ê°€ ê°ì²´ë¥¼ ê´€ë¦¬í•˜ëŠ” ìˆœì„œë¥¼ ë³´ì—¬ë“œë¦¬ê¸° ìœ„í•œ ì½”ë“œ
+		//		ê°•ì œë¡œ Garbage Collectorë¥¼ í˜¸ì¶œí•˜ì§€ëŠ” ë§ì!
+		System.gc(); //	ì°¸ê³  ì½”ë“œë¡œë§Œ í™œìš©!
 		try {
-			Thread.sleep(3000);	//	3ÃÊ ´ë±â
-			System.out.println("ÂüÁ¶ Ä«¿îÆ®:" + StaticEx.refCount);
+			Thread.sleep(3000);	//	3ì´ˆ ëŒ€ê¸°
+			System.out.println("ì°¸ì¡° ì¹´ìš´íŠ¸:" + StaticEx.refCount);
 		} catch (Exception e) {
 
 		}

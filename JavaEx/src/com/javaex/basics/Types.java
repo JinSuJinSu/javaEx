@@ -28,7 +28,7 @@ public class Types {
 	}
 	
 	private static void floatTypes() {
-		//½Ç¼ö ¿¬»ê
+		//ì‹¤ìˆ˜ ì—°ì‚°
 		float num1 = 3.12345f;
 		double num2 = 3.12345;
 		System.out.println(num1+num2);
@@ -44,9 +44,9 @@ public class Types {
 	}
 	
 	private static void charEX() {
-		//Âü °ÅÁş ÆÇº°
+		//ì°¸ ê±°ì§“ íŒë³„
 		char ch1 = 'A';
-		char ch2 = 'ÇÑ';
+		char ch2 = 'í•œ';
 		System.out.println(ch1);
 		System.out.println(ch2);
 	
@@ -57,7 +57,7 @@ public class Types {
 	
 	
 	private static void constantEx() {
-		//Âü °ÅÁş ÆÇº°
+		//ì°¸ ê±°ì§“ íŒë³„
 		float PI = 3.14159f;
 		final int SPEED_LIMIT = 110;
 		int speed = 105;

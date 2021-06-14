@@ -7,10 +7,10 @@ public class SummaryApp {
 		
 		KungfuSkill dojang[];
 		
-		Human h1 = new Human("°í±æµ¿",50);
-		Human h2= new TheOne("³×¿À",40);
-		Panda p1 = new Panda("ÆÇ´ÙÀÇ ¿À¸¥ÆÈ",30);
-		Panda p2 = new KungfuPanda("ÆÇ´ÙÀÇ ¿ŞÆÈ",30);
+		Human h1 = new Human("ê³ ê¸¸ë™",50);
+		Human h2= new TheOne("ë„¤ì˜¤",40);
+		Panda p1 = new Panda("íŒë‹¤ì˜ ì˜¤ë¥¸íŒ”",30);
+		Panda p2 = new KungfuPanda("íŒë‹¤ì˜ ì™¼íŒ”",30);
 		
 		fight(h1);
 		fight(h2);
@@ -24,9 +24,9 @@ public class SummaryApp {
 		
 		
 		
-		//	Kungfu ÇÒ ¼ö ÀÖ´Â °´Ã¼¸¦ dojang
+		//	Kungfu í•  ìˆ˜ ìˆëŠ” ê°ì²´ë¥¼ dojang
 		dojang = new KungfuSkill[] {
-//				(KungfuSkill)h1,	//	-> KungfuSillÀ» ±¸ÇöÇÏÁö ¾ÊÀ½
+//				(KungfuSkill)h1,	//	-> KungfuSillì„ êµ¬í˜„í•˜ì§€ ì•ŠìŒ
 				(KungfuSkill)h2,
 //				(KungfuSkill)p1,
 				(KungfuSkill)p2
@@ -45,7 +45,7 @@ public class SummaryApp {
 			((KungfuSkill)actor).kungfu();
 		}
 		else {
-			System.out.println(actor.name + " : ÄôÇª ¸øÇÑ´Ù ¸ÁÇÒ ÀÎ°£¾Æ!!");
+			System.out.println(actor.name + " : ì¿µí‘¸ ëª»í•œë‹¤ ë§í•  ì¸ê°„ì•„!!");
 		}
 	}
 	
@@ -54,7 +54,7 @@ public class SummaryApp {
 			((Flyable)actor).fly();
 		}
 		else {
-			System.out.println(actor.name + " : ³¯Áö ¸ø ÇÑ´Ù ¸ÁÇÒ ÀÎ°£¾Æ!!");
+			System.out.println(actor.name + " : ë‚ ì§€ ëª» í•œë‹¤ ë§í•  ì¸ê°„ì•„!!");
 		}
 	}
 

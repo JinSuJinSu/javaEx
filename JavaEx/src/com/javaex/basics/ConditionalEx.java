@@ -13,48 +13,48 @@ public class ConditionalEx {
 	}
 
 	private static void switchEx3() {
-		//	ÄÚµå °ªÀ» ¹®ÀÚ¿­·Î Àü´ŞÇÏ´Â °æ¿ì
-		//	-> ¿ÀÅ¸ ¹ß»ı °¡´É, ¿øÇÏÁö ¾Ê´Â ÀÔ·ÂÀÌ ³Ñ¾î¿À´Â °æ¿ì°¡ ÀÖ´Ù
-		//	ÄÚµåÀÇ ÁıÇÕÀ» º°µµ ¼±¾ğ, ÀÔ·Â °ªÀ» Á¦ÇÑÇØ¾ß ÇÑ´Ù
-		//	-> TODO: enum ¿­°ÅÇüÀ¸·Î ÀçÀÛ¼ºÀ» ÇØ º¼ °Í
+		//	ì½”ë“œ ê°’ì„ ë¬¸ìì—´ë¡œ ì „ë‹¬í•˜ëŠ” ê²½ìš°
+		//	-> ì˜¤íƒ€ ë°œìƒ ê°€ëŠ¥, ì›í•˜ì§€ ì•ŠëŠ” ì…ë ¥ì´ ë„˜ì–´ì˜¤ëŠ” ê²½ìš°ê°€ ìˆë‹¤
+		//	ì½”ë“œì˜ ì§‘í•©ì„ ë³„ë„ ì„ ì–¸, ì…ë ¥ ê°’ì„ ì œí•œí•´ì•¼ í•œë‹¤
+		//	-> TODO: enum ì—´ê±°í˜•ìœ¼ë¡œ ì¬ì‘ì„±ì„ í•´ ë³¼ ê²ƒ
 		String day = "MONDAY";
 		String act = "";
 
-		//	MONDAY ~ THURSDAY : act <- ¿­°ø
-		//	FRIDAY : act <- ºÒ±İ
-		//	SATURDAY : act <- ÁÖ¸»
-		//	SUNDAY : act <- ÈŞ½Ä
-		//	³ª¸ÓÁö : act <- ?
+		//	MONDAY ~ THURSDAY : act <- ì—´ê³µ
+		//	FRIDAY : act <- ë¶ˆê¸ˆ
+		//	SATURDAY : act <- ì£¼ë§
+		//	SUNDAY : act <- íœ´ì‹
+		//	ë‚˜ë¨¸ì§€ : act <- ?
 		switch (day) {
 		case "MONDAY":
 		case "TUESDAY":
 		case "WEDNESDAY":
 		case "THURSDAY":
-			act = "¿­°ø";
+			act = "ì—´ê³µ";
 			break;
 		case "FRIDAY":
-			act = "ºÒ±İ";
+			act = "ë¶ˆê¸ˆ";
 			break;
 		case "SATURDAY":
-			act = "ÁÖ¸»";
+			act = "ì£¼ë§";
 			break;
 		case "SUNDAY":
-			act = "ÈŞ½Ä";
+			act = "íœ´ì‹";
 			break;
 		default:
 			act = "?";
 		}
 
-		System.out.println(day + "¿¡´Â " + act);
+		System.out.println(day + "ì—ëŠ” " + act);
 	}
 
 	private static void switchEx2() {
-		//	¿ùÀ» ÀÔ·Â ¹Ş¾Æ
-		//	1, 3, 5, 7, 8, 10, 12¿ù -> 31ÀÏ
-		//	4, 6, 9, 11 -> 30ÀÏ
-		//	2 -> 28ÀÏ
+		//	ì›”ì„ ì…ë ¥ ë°›ì•„
+		//	1, 3, 5, 7, 8, 10, 12ì›” -> 31ì¼
+		//	4, 6, 9, 11 -> 30ì¼
+		//	2 -> 28ì¼
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("¿ùÀ» ÀÔ·Â:");
+		System.out.print("ì›”ì„ ì…ë ¥:");
 
 		int month = scanner.nextInt();
 
@@ -67,16 +67,16 @@ public class ConditionalEx {
 		case 10:
 		case 12:
 			//	month == 1 || month == 3 || ...
-			System.out.println("31ÀÏ");
+			System.out.println("31ì¼");
 			break;
 		case 4:
 		case 6:
 		case 9:
 		case 11:
-			System.out.println("30ÀÏ");
+			System.out.println("30ì¼");
 			break;
 		case 2:
-			System.out.println("28ÀÏ");
+			System.out.println("28ì¼");
 			break;
 		default:
 			System.out.println("?");
@@ -86,13 +86,13 @@ public class ConditionalEx {
 	}
 
 	private static void switchEx() {
-		//	ifElseEx3¸¦ switch ¹®À¸·Î ¸¸µé¾î º¾½Ã´Ù
+		//	ifElseEx3ë¥¼ switch ë¬¸ìœ¼ë¡œ ë§Œë“¤ì–´ ë´…ì‹œë‹¤
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("°ú¸ñ 1. Java, 2. C, 3. C++, 4. ÆÄÀÌ½ã");
+		System.out.println("ê³¼ëª© 1. Java, 2. C, 3. C++, 4. íŒŒì´ì¬");
 		int subject = scanner.nextInt();
 
-		//	switch ~ case ¹®À¸·Î ±¸Çö
-		//	Æ¯º°ÇÑ °æ¿ì°¡ ¾Æ´Ï¸é case¹®°ú break¹®Àº ½ÖÀ¸·Î »ı°¢
+		//	switch ~ case ë¬¸ìœ¼ë¡œ êµ¬í˜„
+		//	íŠ¹ë³„í•œ ê²½ìš°ê°€ ì•„ë‹ˆë©´ caseë¬¸ê³¼ breakë¬¸ì€ ìŒìœ¼ë¡œ ìƒê°
 		switch(subject) {
 		case 1:	//	subject == 1
 			System.out.println("R101");
@@ -106,8 +106,8 @@ public class ConditionalEx {
 		case 4:	//	subject == 4
 			System.out.println("R404");
 			break;
-		default:	//	else ¹® -> À§¿¡ ÀÏÄ¡ÇÏ´Â °ªÀÌ ¾øÀ» ¶§ ¼öÇà
-			System.out.println("°ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇÏ¼¼¿ä");
+		default:	//	else ë¬¸ -> ìœ„ì— ì¼ì¹˜í•˜ëŠ” ê°’ì´ ì—†ì„ ë•Œ ìˆ˜í–‰
+			System.out.println("ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜í•˜ì„¸ìš”");
 		}
 
 		scanner.close();
@@ -115,7 +115,7 @@ public class ConditionalEx {
 
 	private static void ifElseEx3() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("°ú¸ñ 1. Java, 2. C, 3. C++, 4. ÆÄÀÌ½ã");
+		System.out.println("ê³¼ëª© 1. Java, 2. C, 3. C++, 4. íŒŒì´ì¬");
 		int subject = scanner.nextInt();
 
 		if (subject == 1) {
@@ -127,36 +127,36 @@ public class ConditionalEx {
 		} else if (subject == 4) {
 			System.out.println("R404");
 		} else {
-			System.out.println("»ó´ã¿ø¿¡°Ô ¹®ÀÇÇÏ¼¼¿ä");
+			System.out.println("ìƒë‹´ì›ì—ê²Œ ë¬¸ì˜í•˜ì„¸ìš”");
 		}
 
 		scanner.close();
 	}
 
 	private static void ifElseEx2() {
-		//	Á¤¼ö ÀÔ·Â
-		//	¾ç¼öÀÏ ¶§
-		//		Â¦¼ö, È¦¼ö
-		//	À½¼öÀÏ ¶§ -> À½¼ö
-		//	0ÀÌ¸é 0
+		//	ì •ìˆ˜ ì…ë ¥
+		//	ì–‘ìˆ˜ì¼ ë•Œ
+		//		ì§ìˆ˜, í™€ìˆ˜
+		//	ìŒìˆ˜ì¼ ë•Œ -> ìŒìˆ˜
+		//	0ì´ë©´ 0
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		
 		int num = scanner.nextInt();
 		
 		if (num > 0) {
-			//	¾ç¼ö
+			//	ì–‘ìˆ˜
 			if (num % 2 == 0) {
-				System.out.println("Â¦¼ö");
+				System.out.println("ì§ìˆ˜");
 			} else {
-				System.out.println("È¦¼ö");
+				System.out.println("í™€ìˆ˜");
 			}
 		} else {
-			//	À½¼ö or 0
+			//	ìŒìˆ˜ or 0
 			if (num == 0) {
-				System.out.println("0ÀÔ´Ï´Ù.");
-			} else {	//	À½¼ö 
-				System.out.println("À½¼öÀÔ´Ï´Ù.");
+				System.out.println("0ì…ë‹ˆë‹¤.");
+			} else {	//	ìŒìˆ˜ 
+				System.out.println("ìŒìˆ˜ì…ë‹ˆë‹¤.");
 			}
 		}
 		
@@ -164,33 +164,33 @@ public class ConditionalEx {
 	}
 	
 	private static void ifElseEx() {
-		//	Á¤¼ö¸¦ ÀÔ·Â ¹Ş¾Æ¼­
-		//	¾ç¼ö, À½¼ö, 0À» Ãâ·Â
+		//	ì •ìˆ˜ë¥¼ ì…ë ¥ ë°›ì•„ì„œ
+		//	ì–‘ìˆ˜, ìŒìˆ˜, 0ì„ ì¶œë ¥
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		
 		int num = scanner.nextInt();
 		
 		/*
-		if (num > 0) {	//	Á¶°Ç 1
-			System.out.println("¾ç¼öÀÔ´Ï´Ù.");
-		} else if (num < 0) {	//	Á¶°Ç 2
-			System.out.println("À½¼öÀÔ´Ï´Ù.");
+		if (num > 0) {	//	ì¡°ê±´ 1
+			System.out.println("ì–‘ìˆ˜ì…ë‹ˆë‹¤.");
+		} else if (num < 0) {	//	ì¡°ê±´ 2
+			System.out.println("ìŒìˆ˜ì…ë‹ˆë‹¤.");
 		} else {
-			//	À§ Á¶°ÇÀÌ ÇÏ³ªµµ ¸ÂÁö ¾ÊÀ» ¶§
-			System.out.println("0ÀÔ´Ï´Ù.");
+			//	ìœ„ ì¡°ê±´ì´ í•˜ë‚˜ë„ ë§ì§€ ì•Šì„ ë•Œ
+			System.out.println("0ì…ë‹ˆë‹¤.");
 		}
 		*/
 		
-		//	ÁßÃ¸ if 
+		//	ì¤‘ì²© if 
 		if (num == 0) {
-			System.out.println("0ÀÔ´Ï´Ù.");
-		} else {	//	0ÀÌ ¾Æ´Ñ °ª
+			System.out.println("0ì…ë‹ˆë‹¤.");
+		} else {	//	0ì´ ì•„ë‹Œ ê°’
 			if (num > 0) {
-				//	¾ç¼ö
-				System.out.println("¾ç¼öÀÔ´Ï´Ù.");
+				//	ì–‘ìˆ˜
+				System.out.println("ì–‘ìˆ˜ì…ë‹ˆë‹¤.");
 			} else {
-				System.out.println("À½¼öÀÔ´Ï´Ù.");
+				System.out.println("ìŒìˆ˜ì…ë‹ˆë‹¤.");
 			}
 		}
 		

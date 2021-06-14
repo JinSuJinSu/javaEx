@@ -5,18 +5,18 @@ import java.sql.*;
 
 public class AuthorDAOImpl implements AuthorDAO {
 	
-	//°øÅë Á¢¼Ó ¸Ş¼Òµå
+	//ê³µí†µ ì ‘ì† ë©”ì†Œë“œ
 	private Connection getConnection() throws SQLException{
 		Connection conn = null;
 		try {
-			// µå¶óÀÌ¹ö ·Îµå
+			// ë“œë¼ì´ë²„ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
 			conn = DriverManager.getConnection(dburl,"C##hajinsu","1234");
 			
 		}
 		catch(ClassNotFoundException e) {
-			System.err.println("µå¶óÀÌ¹ö ·Îµå ½ÇÆĞ!!");
+			System.err.println("ë“œë¼ì´ë²„ ë¡œë“œ ì‹¤íŒ¨!!");
 		}
 		
 		return conn;
@@ -32,26 +32,26 @@ public class AuthorDAOImpl implements AuthorDAO {
 		//select
 		ResultSet rs = null;
 		
-		//°á°ú °´Ã¼
+		//ê²°ê³¼ ê°ì²´
 		List<AuthorVO> list = new ArrayList<>();
 		
 		try {
 			conn = getConnection();
 			stmt = conn.createStatement();
 			
-			//Äõ¸® ÀÛ¼º
+			//ì¿¼ë¦¬ ì‘ì„±
 			String sql = "select author_id, author_name, author_desc from author";
 			
-			//Äõ¸® ½ÇÇà
+			//ì¿¼ë¦¬ ì‹¤í–‰
 			rs = stmt.executeQuery(sql);
 			
-			//ResultSetÀ» ÀÚ¹Ù °´Ã¼·Î º¯È¯
+			//ResultSetì„ ìë°” ê°ì²´ë¡œ ë³€í™˜
 			while(rs.next()) {
 				long id = rs.getLong(1);
 				String authorName = rs.getString(2);
 				String authorDesc = rs.getString(3);
 				
-				//DTO °´Ã¼
+				//DTO ê°ì²´
 				AuthorVO vo = new AuthorVO(id, authorName, authorDesc);
 				list.add(vo);
 				
@@ -66,7 +66,7 @@ public class AuthorDAOImpl implements AuthorDAO {
 				conn.close();
 			}
 			catch(Exception e) {
-				System.err.println("¿¡·¯! ¿¡·¯!");
+				System.err.println("ì—ëŸ¬! ì—ëŸ¬!");
 				
 			}
 			
@@ -95,16 +95,16 @@ public class AuthorDAOImpl implements AuthorDAO {
 
 			pstmt.setString(1, "%" + keyword + "%");
 
-			//	Äõ¸® ¼öÇà
+			//	ì¿¼ë¦¬ ìˆ˜í–‰
 			rs = pstmt.executeQuery();
 
-			//	º¯È¯ 
+			//	ë³€í™˜ 
 			while(rs.next()) {
 				Long id = rs.getLong("author_id");
 				String authorName = rs.getString("author_name");
 				String authorDesc = rs.getString("author_desc");
 
-				//	VO °´Ã¼
+				//	VO ê°ì²´
 				AuthorVO vo = new AuthorVO(id, authorName, authorDesc);
 				list.add(vo);
 			}
@@ -138,8 +138,8 @@ public class AuthorDAOImpl implements AuthorDAO {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setLong(1, id);
 
-			rs = pstmt.executeQuery();	//	Äõ¸® ½ÇÇà
-//			rs.next();	//	Ã¹ ¹øÂ° ·¹ÄÚµå?
+			rs = pstmt.executeQuery();	//	ì¿¼ë¦¬ ì‹¤í–‰
+//			rs.next();	//	ì²« ë²ˆì§¸ ë ˆì½”ë“œ?
 
 			if (rs.next()) {
 				Long authorId = rs.getLong(1);
@@ -172,14 +172,14 @@ public class AuthorDAOImpl implements AuthorDAO {
 		
 		try {
 			conn = getConnection();
-			// ½ÇÇà Äõ¸®
+			// ì‹¤í–‰ ì¿¼ë¦¬
 			String sql = "insert into author values(seq_author_id.nextval,?,?)";
 			pstmt = conn.prepareStatement(sql);
-			// µ¥ÀÌÅÍ ¹ÙÀÎµù
+			// ë°ì´í„° ë°”ì¸ë”©
 			pstmt.setString(1, vo.getAuthorName());
 			pstmt.setString(2, vo.getAuthorDesc());
 			
-			//Äõ¸® ½ÇÇà
+			//ì¿¼ë¦¬ ì‹¤í–‰
 			insertedCount = pstmt.executeUpdate();
 		}
 			
@@ -215,10 +215,10 @@ public class AuthorDAOImpl implements AuthorDAO {
 		
 		try {
 			conn = getConnection();
-			// ½ÇÇà °èÈ¹
+			// ì‹¤í–‰ ê³„íš
 			String sql = "delete from author where author_id=?";
 			pstmt = conn.prepareStatement(sql);
-			// ÆÄ¶ó¹ÌÅÍ ¹ÙÀÎµù
+			// íŒŒë¼ë¯¸í„° ë°”ì¸ë”©
 			pstmt.setLong(1, id);
 			
 			
@@ -249,10 +249,10 @@ public class AuthorDAOImpl implements AuthorDAO {
 		
 		try {
 			conn = getConnection();
-			// ½ÇÇà °èÈ¹
+			// ì‹¤í–‰ ê³„íš
 			String sql = "update author set author_desc=? where author_id=?";
 			pstmt = conn.prepareStatement(sql);
-			// ÆÄ¶ó¹ÌÅÍ ¹ÙÀÎµù
+			// íŒŒë¼ë¯¸í„° ë°”ì¸ë”©
 			pstmt.setString(1, vo.getAuthorDesc());
 			pstmt.setLong(2, vo.getId());
 			
@@ -276,4 +276,3 @@ public class AuthorDAOImpl implements AuthorDAO {
 	}
 
 }
-	

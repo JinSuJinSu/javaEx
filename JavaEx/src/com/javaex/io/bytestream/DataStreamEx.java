@@ -19,16 +19,16 @@ public class DataStreamEx {
 	}
 
 	private static void readPrimitives() {
-		//	ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ ºÒ·¯¿Í¼­ ±âº»Å¸ÀÔÀ¸·Î º¹¿ø
+		//	ì €ì¥ëœ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì™€ì„œ ê¸°ë³¸íƒ€ì…ìœ¼ë¡œ ë³µì›
 		try {
 			InputStream fis = new FileInputStream(filename);
 			DataInputStream dis = new DataInputStream(fis);
 
 			for (int i = 0; i < 2; i++) {
-				//	ÁÖÀÇ: Ãâ·ÂÇÑ ¼ø¼­¿¡ ¸Â°Ô ÀÔ·Â ¹Ş¾Æ¾ß ÇÑ´Ù
-				String s = dis.readUTF(); // ¹®ÀÚ¿­
-				boolean b = dis.readBoolean(); // ³í¸®Çü
-				int val = dis.readInt(); // Á¤¼öÇü
+				//	ì£¼ì˜: ì¶œë ¥í•œ ìˆœì„œì— ë§ê²Œ ì…ë ¥ ë°›ì•„ì•¼ í•œë‹¤
+				String s = dis.readUTF(); // ë¬¸ìì—´
+				boolean b = dis.readBoolean(); // ë…¼ë¦¬í˜•
+				int val = dis.readInt(); // ì •ìˆ˜í˜•
 				float f = dis.readFloat(); // Float
 
 //				double d = dis.readDouble();	-> Error
@@ -38,7 +38,7 @@ public class DataStreamEx {
 
 			dis.close();
 		} catch (FileNotFoundException e) {
-			System.err.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.err.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -46,28 +46,28 @@ public class DataStreamEx {
 
 	private static void writePrimitives() {
 		try {
-			//	ÁÖ½ºÆ®¸²
+			//	ì£¼ìŠ¤íŠ¸ë¦¼
 			OutputStream fos = new FileOutputStream(filename);
-			//	º¸Á¶½ºÆ®¸²
+			//	ë³´ì¡°ìŠ¤íŠ¸ë¦¼
 			DataOutputStream dos = new DataOutputStream(fos);
 
-			//	°¢ ±âº»Å¸ÀÔ ÀúÀåÀ» À§ÇÑ write ¸Ş¼­µå°¡ ¸¶·ÃµÇ¾î ÀÖ´Ù
-			dos.writeUTF("È«±æµ¿"); //	¹®ÀÚ¿­
-			dos.writeBoolean(false); //	³í¸®Çü
-			dos.writeInt(25); //	Á¤¼öÇü
-			dos.writeFloat(80.9f); //	½Ç¼öÇü 
+			//	ê° ê¸°ë³¸íƒ€ì… ì €ì¥ì„ ìœ„í•œ write ë©”ì„œë“œê°€ ë§ˆë ¨ë˜ì–´ ìˆë‹¤
+			dos.writeUTF("í™ê¸¸ë™"); //	ë¬¸ìì—´
+			dos.writeBoolean(false); //	ë…¼ë¦¬í˜•
+			dos.writeInt(25); //	ì •ìˆ˜í˜•
+			dos.writeFloat(80.9f); //	ì‹¤ìˆ˜í˜• 
 
-			dos.writeUTF("°í±æµ¿"); //	¹®ÀÚ¿­
-			dos.writeBoolean(true); //	³í¸®Çü
-			dos.writeInt(45); //	Á¤¼öÇü
-			dos.writeFloat(99.9f); //	½Ç¼öÇü
+			dos.writeUTF("ê³ ê¸¸ë™"); //	ë¬¸ìì—´
+			dos.writeBoolean(true); //	ë…¼ë¦¬í˜•
+			dos.writeInt(45); //	ì •ìˆ˜í˜•
+			dos.writeFloat(99.9f); //	ì‹¤ìˆ˜í˜•
 
 			dos.close();
 
-			System.out.println("±âº»µ¥ÀÌÅÍ Å¸ÀÔ ÀúÀå!");
+			System.out.println("ê¸°ë³¸ë°ì´í„° íƒ€ì… ì €ì¥!");
 
 		} catch (FileNotFoundException e) {
-			System.err.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.err.println("íŒŒì¼ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

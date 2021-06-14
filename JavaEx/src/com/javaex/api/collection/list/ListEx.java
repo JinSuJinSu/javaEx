@@ -6,36 +6,36 @@ import java.util.List;
 public class ListEx {
 
 	public static void main(String[] args) {
-		// ¼±¾ğ
+		// ì„ ì–¸
 //		List<String> lst = new LinkedList<>();
-		List<String> lst = new ArrayList<>();	//	´ÙÇü¼º
+		List<String> lst = new ArrayList<>();	//	ë‹¤í˜•ì„±
 
-		//	°´Ã¼ Ãß°¡
-		lst.add("Java");	//	add -> ¸Ç µÚ¿¡ »õ ³ëµå Ãß°¡
+		//	ê°ì²´ ì¶”ê°€
+		lst.add("Java");	//	add -> ë§¨ ë’¤ì— ìƒˆ ë…¸ë“œ ì¶”ê°€
 		lst.add("C");
 		lst.add("C++");
 		lst.add("Python");
 
 		System.out.println(lst);
 
-		//	°´Ã¼ÀÇ »ğÀÔ(Áß°£¿¡ °´Ã¼ »ğÀÔ)
-		lst.add(2, "C#");  //	2¹ø ÀÎµ¦½º À§Ä¡¿¡ C#À» Ãß°¡
+		//	ê°ì²´ì˜ ì‚½ì…(ì¤‘ê°„ì— ê°ì²´ ì‚½ì…)
+		lst.add(2, "C#");  //	2ë²ˆ ì¸ë±ìŠ¤ ìœ„ì¹˜ì— C#ì„ ì¶”ê°€
 
-		lst.add("Java");	//	Áßº¹ »ğÀÔ Çã¿ë
+		lst.add("Java");	//	ì¤‘ë³µ ì‚½ì… í—ˆìš©
 		System.out.println(lst);
 
-		//	¿ä¼ÒÀÇ °¹¼ö È®ÀÎ
-		System.out.println("¿ä¼ÒÀÇ °¹¼ö:" + lst.size()); //	capacity´Â È®ÀÎ x
+		//	ìš”ì†Œì˜ ê°¯ìˆ˜ í™•ì¸
+		System.out.println("ìš”ì†Œì˜ ê°¯ìˆ˜:" + lst.size()); //	capacityëŠ” í™•ì¸ x
 
-		//	¿ä¼ÒÀÇ »èÁ¦
-		lst.remove(2);	//	ÀÎµ¦½º¸¦ ÀÌ¿ëÇÑ »èÁ¦
-		//	°´Ã¼ÀÇ »èÁ¦: ÁÖ¾îÁø °´Ã¼ °ªÀ¸·Î »èÁ¦
+		//	ìš”ì†Œì˜ ì‚­ì œ
+		lst.remove(2);	//	ì¸ë±ìŠ¤ë¥¼ ì´ìš©í•œ ì‚­ì œ
+		//	ê°ì²´ì˜ ì‚­ì œ: ì£¼ì–´ì§„ ê°ì²´ ê°’ìœ¼ë¡œ ì‚­ì œ
 		lst.remove("Python");
 		System.out.println(lst);
 
-		//	TODO: ·çÇÁ
+		//	TODO: ë£¨í”„
 
-		//	ºñ¿ö º¾½Ã´Ù:
+		//	ë¹„ì›Œ ë´…ì‹œë‹¤:
 		lst.clear();
 		System.out.println(lst);
 	}

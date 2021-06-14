@@ -1,25 +1,25 @@
 package com.javaex.oop.goods.v4;
 
-//	v4. this: °´Ã¼ ÀÚ½ÅÀ» ÁöÄª
-//		this() : °´Ã¼ ÀÚ½ÅÀÇ ´Ù¸¥ »ı¼ºÀÚ¸¦ ÁöÄªÇÒ ¶§ »ç¿ë
+//	v4. this: ê°ì²´ ìì‹ ì„ ì§€ì¹­
+//		this() : ê°ì²´ ìì‹ ì˜ ë‹¤ë¥¸ ìƒì„±ìë¥¼ ì§€ì¹­í•  ë•Œ ì‚¬ìš©
 public class Goods {
-	//	ÇÊµå
+	//	í•„ë“œ
 	private String name;
 	private int price;
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public Goods(String name) {
 		this.name = name;
 	}
 
 	public Goods(String name, int price) {
-		//	Å¬·¡½º ³»ºÎÀÇ ´Ù¸¥ »ı¼ºÀÚ¸¦ È£ÃâÇÒ ¶§´Â this()
+		//	í´ë˜ìŠ¤ ë‚´ë¶€ì˜ ë‹¤ë¥¸ ìƒì„±ìë¥¼ í˜¸ì¶œí•  ë•ŒëŠ” this()
 		this(name);
 		this.price = price;
 	}
 
 	//	Getter
-	//		Setter °¡ ¾øÀ» °æ¿ì, ÀĞ±â Àü¿ëÀÌ µÈ´Ù
+	//		Setter ê°€ ì—†ì„ ê²½ìš°, ì½ê¸° ì „ìš©ì´ ëœë‹¤
 	public String getName() {
 		return name;
 	}
@@ -36,10 +36,10 @@ public class Goods {
 //		this.price = price;
 //	}
 
-	//	¸Ş¼­µå
+	//	ë©”ì„œë“œ
 	public void showInfo() {
-		System.out.println("»óÇ°¸í:" + name);
-		System.out.println("°¡°İ:" + price);
+		System.out.println("ìƒí’ˆëª…:" + name);
+		System.out.println("ê°€ê²©:" + price);
 	}
 
 }

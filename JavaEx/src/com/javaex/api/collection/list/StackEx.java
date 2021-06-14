@@ -2,31 +2,31 @@ package com.javaex.api.collection.list;
 
 import java.util.Stack;
 
-//	Stack ÀÚ·áÇü: ÀÔ·Â°ú Ãâ·ÂÀÌ ÇÑÂÊ ¹æÇâ¿¡¼­¸¸ ÀÌ·ç¾îÁø´Ù
-//		Áß°£¿¡ »ğÀÔ, »èÁ¦ ºÒ°¡
+//	Stack ìë£Œí˜•: ì…ë ¥ê³¼ ì¶œë ¥ì´ í•œìª½ ë°©í–¥ì—ì„œë§Œ ì´ë£¨ì–´ì§„ë‹¤
+//		ì¤‘ê°„ì— ì‚½ì…, ì‚­ì œ ë¶ˆê°€
 public class StackEx {
 
 	public static void main(String[] args) {
-		//	Stack ¼±¾ğ
+		//	Stack ì„ ì–¸
 		Stack<Integer> stack = new Stack<>();
 
-		//	10°³ µ¥ÀÌÅÍ¸¦ ÀÔ·Â
+		//	10ê°œ ë°ì´í„°ë¥¼ ì…ë ¥
 		for (int i = 1; i <= 10; i++) {
-			//	½ºÅØ¿¡ µ¥ÀÌÅÍ ÀÔ·Â : push
+			//	ìŠ¤í…ì— ë°ì´í„° ì…ë ¥ : push
 			stack.push(i);
 			System.out.println("PUSH:" + stack);
 		}
 
-		//	°¡Àå À§ÀÇ µ¥ÀÌÅÍ È®ÀÎ : peek -> »èÁ¦ÇÏÁö ¾ÊÀ½
+		//	ê°€ì¥ ìœ„ì˜ ë°ì´í„° í™•ì¸ : peek -> ì‚­ì œí•˜ì§€ ì•ŠìŒ
 		System.out.println("PEEK:" + stack.peek());
 		System.out.println("Stack:" + stack);
 
-		//	µ¥ÀÌÅÍÀÇ ÀÎÃâ : pop -> °ªÀ» »èÁ¦
+		//	ë°ì´í„°ì˜ ì¸ì¶œ : pop -> ê°’ì„ ì‚­ì œ
 		System.out.println("POP:" + stack.pop());
 		System.out.println("Stack:" + stack);
 
-		//	ÁÖÀÇ: ºñ¾îÀÖ´Â stack¿¡¼­ pop -> EmptyStackException
-		while(!stack.empty()) {	//	½ºÅÃÀÌ ºñ¾îÀÖÁö ¾ÊÀ¸¸é ½ÇÇà
+		//	ì£¼ì˜: ë¹„ì–´ìˆëŠ” stackì—ì„œ pop -> EmptyStackException
+		while(!stack.empty()) {	//	ìŠ¤íƒì´ ë¹„ì–´ìˆì§€ ì•Šìœ¼ë©´ ì‹¤í–‰
 			System.out.println("POP:" + stack.pop());
 			System.out.println("Stack:" + stack);
 		}

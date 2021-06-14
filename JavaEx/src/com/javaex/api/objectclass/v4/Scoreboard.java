@@ -2,13 +2,13 @@ package com.javaex.api.objectclass.v4;
 
 import java.util.Arrays;
 
-//	v4. ±íÀº º¹Á¦
-//	¾èÀº º¹Á¦ : ÇÊµå °ª¸¸ º¹Á¦ -> ÂüÁ¶ Å¸ÀÔ ÇÊµå´Â ÁÖ¼Ò°¡ º¹»ç
-//		ÂüÁ¶ Å¸ÀÔÀÇ ÇÊµå´Â °°Àº °´Ã¼¸¦ ÂüÁ¶ÇÏ°Ô µÈ´Ù
-//	±íÀº º¹Á¦ : ³»ºÎ¿¡ ÀÖ´Â ÂüÁ¶ ÇÊµåµµ º¹»ç »õ·Î¿î ÁÖ¼Ò¸¦ ÂüÁ¶ÇØ¾ß ÇÑ´Ù
-//		Object °´Ã¼ÀÇ clone ¸Ş¼­µå¸¦ Override
+//	v4. ê¹Šì€ ë³µì œ
+//	ì–•ì€ ë³µì œ : í•„ë“œ ê°’ë§Œ ë³µì œ -> ì°¸ì¡° íƒ€ì… í•„ë“œëŠ” ì£¼ì†Œê°€ ë³µì‚¬
+//		ì°¸ì¡° íƒ€ì…ì˜ í•„ë“œëŠ” ê°™ì€ ê°ì²´ë¥¼ ì°¸ì¡°í•˜ê²Œ ëœë‹¤
+//	ê¹Šì€ ë³µì œ : ë‚´ë¶€ì— ìˆëŠ” ì°¸ì¡° í•„ë“œë„ ë³µì‚¬ ìƒˆë¡œìš´ ì£¼ì†Œë¥¼ ì°¸ì¡°í•´ì•¼ í•œë‹¤
+//		Object ê°ì²´ì˜ clone ë©”ì„œë“œë¥¼ Override
 public class Scoreboard implements Cloneable {
-	private int scores[];	//	ÂüÁ¶ Å¸ÀÔ ÇÊµå
+	private int scores[];	//	ì°¸ì¡° íƒ€ì… í•„ë“œ
 
 	public Scoreboard(int[] scores) {
 		this.scores = scores;
@@ -17,9 +17,9 @@ public class Scoreboard implements Cloneable {
 
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		//	1. ¸ÕÀú ¾èÀº º¹Á¦¸¦ ½Ãµµ
+		//	1. ë¨¼ì € ì–•ì€ ë³µì œë¥¼ ì‹œë„
 		Scoreboard clone = (Scoreboard)super.clone();
-		//	2. ³»ºÎÀÇ ÂüÁ¶ °´Ã¼ º¹Á¦, »õ·Î ÇÒ´ç
+		//	2. ë‚´ë¶€ì˜ ì°¸ì¡° ê°ì²´ ë³µì œ, ìƒˆë¡œ í• ë‹¹
 		clone.scores = Arrays.copyOf(scores, scores.length);
 
 		return clone;
@@ -30,7 +30,7 @@ public class Scoreboard implements Cloneable {
 		Scoreboard clone = null;
 
 		try {
-			clone = (Scoreboard)clone();	//	º¹Á¦
+			clone = (Scoreboard)clone();	//	ë³µì œ
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}

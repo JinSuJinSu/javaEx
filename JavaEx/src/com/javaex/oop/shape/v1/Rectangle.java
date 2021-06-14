@@ -1,12 +1,12 @@
 package com.javaex.oop.shape.v1;
 
-//	Ãß»ó Å¬·¡½º »ó¼Ó½Ã ºÎ¸ğ Å¬·¡½ºÀÇ Ãß»ó ¸Ş¼­µå´Â ¹İµå½Ã ±¸ÇöÇØ ÁÖ¾î¾ß 
+//	ì¶”ìƒ í´ë˜ìŠ¤ ìƒì†ì‹œ ë¶€ëª¨ í´ë˜ìŠ¤ì˜ ì¶”ìƒ ë©”ì„œë“œëŠ” ë°˜ë“œì‹œ êµ¬í˜„í•´ ì£¼ì–´ì•¼ 
 public class Rectangle extends Shape {
-	//	ÇÊµå
+	//	í•„ë“œ
 	protected int width;
 	protected int height;
 
-	// »ı¼ºÀÚ
+	// ìƒì„±ì
 	public Rectangle(int x, int y, int width, int height) {
 		super(x, y);
 		this.width = width;
@@ -16,7 +16,7 @@ public class Rectangle extends Shape {
 	@Override
 	public void draw() {
 		System.out.printf(
-				"»ç°¢Çü[x=%d, y=%d, w=%d, h=%d, area=%.2f]À» ±×·È¾î¿ä%n",
+				"ì‚¬ê°í˜•[x=%d, y=%d, w=%d, h=%d, area=%.2f]ì„ ê·¸ë ¸ì–´ìš”%n",
 				x, y, width, height, area());
 	}
 

@@ -3,20 +3,20 @@ package com.javaex.oop.casting;
 public class AnimalApp {
 
 	public static void main(String[] args) {
-		// ÀÚ½Ä Å¸ÀÔÀÇ °´Ã¼¸¦ ºÎ¸ğ Å¸ÀÓ Å¬·¡½º·Î ÂüÁ¶ÇÒ ¼ö ÀÖ´Ù
+		// ìì‹ íƒ€ì…ì˜ ê°ì²´ë¥¼ ë¶€ëª¨ íƒ€ì„ í´ë˜ìŠ¤ë¡œ ì°¸ì¡°í•  ìˆ˜ ìˆë‹¤
 		Dog dog1 = new Dog("Snoopy");
 
 		dog1.eat();
 		dog1.walk();
 		dog1.bark();
 
-		//	ÀÚ½Ä °´Ã¼¸¦ ºÎ¸ğ Å¸ÀÔÀ¸·Î ÂüÁ¶ÇÏ´Â °Í -> Upcasting
+		//	ìì‹ ê°ì²´ë¥¼ ë¶€ëª¨ íƒ€ì…ìœ¼ë¡œ ì°¸ì¡°í•˜ëŠ” ê²ƒ -> Upcasting
 		Animal dog2 = new Dog("Doogy");
 		dog2.eat();
 		dog2.walk();
-//		dog2.bark();	-> Animal ¼³°èµµ¿¡ ¾øÀ½, ½ÇÇà ºÒ°¡
+//		dog2.bark();	-> Animal ì„¤ê³„ë„ì— ì—†ìŒ, ì‹¤í–‰ ë¶ˆê°€
 
-		//	¿ø·¡´ë·Î µ¹·Á³õ±â -> ´Ù¿î Ä³½ºÆÃ
+		//	ì›ë˜ëŒ€ë¡œ ëŒë ¤ë†“ê¸° -> ë‹¤ìš´ ìºìŠ¤íŒ…
 		((Dog)dog2).bark();
 
 		Animal pet = new Dog("Azi");
@@ -27,11 +27,11 @@ public class AnimalApp {
 		pet.eat();
 		pet.walk();
 
-		//	Áß¿ä:´Ù¿îÄ³½ºÆÃ½Ã, ½ÇÁ¦ °´Ã¼¸¦ È®ÀÎÇØ¾ß ÇÒ ÇÊ¿ä
-		//	instanceof ¿¬»êÀÚ È°¿ë
-		if (pet instanceof Dog) {	//	petÀÌ DogÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º?
+		//	ì¤‘ìš”:ë‹¤ìš´ìºìŠ¤íŒ…ì‹œ, ì‹¤ì œ ê°ì²´ë¥¼ í™•ì¸í•´ì•¼ í•  í•„ìš”
+		//	instanceof ì—°ì‚°ì í™œìš©
+		if (pet instanceof Dog) {	//	petì´ Dogí´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤?
 			((Dog)pet).bark();
-		} else if (pet instanceof Cat) {	//	petÀÌ CatÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º?
+		} else if (pet instanceof Cat) {	//	petì´ Catí´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤?
 			((Cat)pet).meow();
 		}
 

@@ -4,7 +4,7 @@ public class ClassRoom {
 	private String subject;
 	private String roomName;
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public ClassRoom(String subject) {
 		this.subject = subject;
 	}
@@ -16,7 +16,7 @@ public class ClassRoom {
 	}
 
 	//	ContainsValue
-	//	°´Ã¼ÀÇ µ¿µî¼º ºñ±³
+	//	ê°ì²´ì˜ ë™ë“±ì„± ë¹„êµ
 	@Override
 	public int hashCode() {
 		return subject.hashCode();

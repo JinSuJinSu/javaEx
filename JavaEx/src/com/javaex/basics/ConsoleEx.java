@@ -1,7 +1,7 @@
 package com.javaex.basics;
 
-import java.util.Scanner;	//	java.util ÆĞÅ°ÁöÀÇ Scanner Å¬·¡½º¸¦ ·ÎµåÇØ¶ó
-//	ÇÊ¿äÇÑ Å¬·¡½º µé¾îÀÖ´Â ÆĞÅ°Áö¸¦ Á¤È®ÇÏ°Ô ÁöÄªÇØ¾ß ÇÑ´Ù
+import java.util.Scanner;	//	java.util íŒ¨í‚¤ì§€ì˜ Scanner í´ë˜ìŠ¤ë¥¼ ë¡œë“œí•´ë¼
+//	í•„ìš”í•œ í´ë˜ìŠ¤ ë“¤ì–´ìˆëŠ” íŒ¨í‚¤ì§€ë¥¼ ì •í™•í•˜ê²Œ ì§€ì¹­í•´ì•¼ í•œë‹¤
 
 public class ConsoleEx {
 
@@ -12,45 +12,45 @@ public class ConsoleEx {
 	}
 
 	private static void consoleInputEx() {
-		//	ÆÁ1. Ctrl + Shift + O
-		//	ÆÁ2. ÀÚµ¿ ¿Ï¼º ±â´É È°¿ë : Ctrl + Space
-		Scanner scanner = new Scanner(System.in);	//	Ç¥ÁØ ÀÔ·ÂÀ¸·ÎºÎÅÍ µ¥ÀÌÅÍ ÀÔ·Â
+		//	íŒ1. Ctrl + Shift + O
+		//	íŒ2. ìë™ ì™„ì„± ê¸°ëŠ¥ í™œìš© : Ctrl + Space
+		Scanner scanner = new Scanner(System.in);	//	í‘œì¤€ ì…ë ¥ìœ¼ë¡œë¶€í„° ë°ì´í„° ì…ë ¥
 
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä");
-		System.out.print("ÀÌ¸§:");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”");
+		System.out.print("ì´ë¦„:");
 
 		String name = scanner.next();
 
-		System.out.print("³ªÀÌ:");
+		System.out.print("ë‚˜ì´:");
 
 		int age = scanner.nextInt();
 
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº " + name + "ÀÌ°í " + age + "»ìÀÔ´Ï´Ù.");
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì€ " + name + "ì´ê³  " + age + "ì‚´ì…ë‹ˆë‹¤.");
 
-		//	¾²°í ³ª¸é ´İ¾ÆÁÖÀÚ!
+		//	ì“°ê³  ë‚˜ë©´ ë‹«ì•„ì£¼ì!
 		scanner.close();
 	}
 
 	private static void consoleOutputEx() {
-		//	ÄÜ¼Ö Ãâ·Â
-		//	System.out -> Ç¥ÁØ Ãâ·Â
-		//	System.err -> Ç¥ÁØ ¿¡·¯
+		//	ì½˜ì†” ì¶œë ¥
+		//	System.out -> í‘œì¤€ ì¶œë ¥
+		//	System.err -> í‘œì¤€ ì—ëŸ¬
 		
-		//	print ¸Ş¼­µå -> Ãâ·Â ÈÄ °³Çà ¾ÈÇÔ
-		//	println ¸Ş¼­µå -> Ãâ·Â ÈÄ °³Çà ÇÔ
-		//	printf ¸Ş¼­µå -> Çü½ÄÈ­µÈ Ãâ·Â -> TODO: µÚÂÊ String Ç×¸ñ¿¡¼­ Á¤¸®
+		//	print ë©”ì„œë“œ -> ì¶œë ¥ í›„ ê°œí–‰ ì•ˆí•¨
+		//	println ë©”ì„œë“œ -> ì¶œë ¥ í›„ ê°œí–‰ í•¨
+		//	printf ë©”ì„œë“œ -> í˜•ì‹í™”ëœ ì¶œë ¥ -> TODO: ë’¤ìª½ String í•­ëª©ì—ì„œ ì •ë¦¬
 		System.out.print("Hello "); 
 		System.out.println("Java");
 		
-		//	ÀÌ½ºÄÉÀÌÇÁ ¹®ÀÚ: Æ¯¼öÇÑ ÀÇ¹Ì¸¦ °¡Áø ¹®ÀÚ
-		System.out.println("Hello\nJava");	//	\n -> °­Á¦ °³Çà
-		System.out.println("Hello\tJava");	//	\t -> ÅÇ¹®ÀÚ
+		//	ì´ìŠ¤ì¼€ì´í”„ ë¬¸ì: íŠ¹ìˆ˜í•œ ì˜ë¯¸ë¥¼ ê°€ì§„ ë¬¸ì
+		System.out.println("Hello\nJava");	//	\n -> ê°•ì œ ê°œí–‰
+		System.out.println("Hello\tJava");	//	\t -> íƒ­ë¬¸ì
 		
 		System.out.println("Hello, \"Java\"");	//	\" -> "
-		//	\ ÀÚÃ¼¸¦ Ç¥±âÇÏ°íÀÚ ÇÒ ¶§
+		//	\ ìì²´ë¥¼ í‘œê¸°í•˜ê³ ì í•  ë•Œ
 		String dir = "C:\\Windows\\System";	//	\\ -> \
 		System.out.println(dir);
 		
-		System.err.println("Ç¥ÁØ ¿¡·¯ Ãâ·Â!");
+		System.err.println("í‘œì¤€ ì—ëŸ¬ ì¶œë ¥!");
 	}
 }

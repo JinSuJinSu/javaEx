@@ -9,146 +9,146 @@ public class OperEx {
 		conditionalOper();
 	}
 
-	//	3Ç× ¿¬»êÀÚ : Á¶°ÇºÎ ¿¬»ê
+	//	3í•­ ì—°ì‚°ì : ì¡°ê±´ë¶€ ì—°ì‚°
 	private static void conditionalOper() {
 		int a = 10;
 
-		//	a°¡ Â¦¼ö(2ÀÇ ¹è¼ö)¸é Â¦¼ö, ¾Æ´Ï¸é È¦¼ö
+		//	aê°€ ì§ìˆ˜(2ì˜ ë°°ìˆ˜)ë©´ ì§ìˆ˜, ì•„ë‹ˆë©´ í™€ìˆ˜
 		String message;
-		//	Á¶°Ç½Ä ? ÂüÀÏ ¶§ÀÇ °ª: °ÅÁşÀÏ ¶§ÀÇ °ª
-		message = a % 2 == 0 ? "Â¦¼ö": "È¦¼ö";
+		//	ì¡°ê±´ì‹ ? ì°¸ì¼ ë•Œì˜ ê°’: ê±°ì§“ì¼ ë•Œì˜ ê°’
+		message = a % 2 == 0 ? "ì§ìˆ˜": "í™€ìˆ˜";
 
-		System.out.println(a + "´Â " + message);
+		System.out.println(a + "ëŠ” " + message);
 
 		int score = 40;
 
-		//	80Á¡ ÀÌ»óÀÌ¸é Good
-		//		80 ~ 50 ÀÌ¸é Pass
-		//		±× ÀÌÇÏ¸é Fail
+		//	80ì  ì´ìƒì´ë©´ Good
+		//		80 ~ 50 ì´ë©´ Pass
+		//		ê·¸ ì´í•˜ë©´ Fail
 		message = score >= 80 ? "Good":
 							score >= 50 ? "Pass" : "Fail";
-		System.out.println("Á¡¼ö:" + score + ", °á°ú:" + message);
+		System.out.println("ì ìˆ˜:" + score + ", ê²°ê³¼:" + message);
 
 	}
 
-	//	ºñÆ® ½ÃÇÁÆ® ¿¬»êÀÚ
-	//	ºñÆ® ´ÜÀ§ ÀÌµ¿
+	//	ë¹„íŠ¸ ì‹œí”„íŠ¸ ì—°ì‚°ì
+	//	ë¹„íŠ¸ ë‹¨ìœ„ ì´ë™
 	private static void bitShift() {
 		int data = 1;
 
 		System.out.println(data);
-		System.out.println("1ºñÆ® ¿ŞÂÊ ½ÃÇÁÆ®:" + 
+		System.out.println("1ë¹„íŠ¸ ì™¼ìª½ ì‹œí”„íŠ¸:" + 
 				Integer.toBinaryString(data << 1));	
-		System.out.println("4ºñÆ® ¿ŞÂÊ ½ÃÇÁÆ®:" +
+		System.out.println("4ë¹„íŠ¸ ì™¼ìª½ ì‹œí”„íŠ¸:" +
 				Integer.toBinaryString(data << 4));
 
 		data = 0b1000;
-		System.out.println("¿øº»:" +
+		System.out.println("ì›ë³¸:" +
 				Integer.toBinaryString(data));
-		System.out.println("1ºñÆ® ¿ìÃø ½ÃÇÁÆ®:" +
+		System.out.println("1ë¹„íŠ¸ ìš°ì¸¡ ì‹œí”„íŠ¸:" +
 				Integer.toBinaryString(data >> 1));
-		System.out.println("3ºñÆ® ¿ìÃø ½ÃÇÁÆ®:" +
+		System.out.println("3ë¹„íŠ¸ ìš°ì¸¡ ì‹œí”„íŠ¸:" +
 				Integer.toBinaryString(data >> 3));
 	}
 
-	//	ºñÆ® ¿¬»êÀÚ
-	//	ºñÆ®´ÜÀ§·Î ¹Ì¼¼ÇÑ Á¶ÀÛÀÌ ÇÊ¿äÇÒ ¶§ »ç¿ë
-	//	ÇÏµå¿ş¾î Á¦¾î, ÀÌ¹ÌÁö ÇÁ·Î¼¼½Ì
+	//	ë¹„íŠ¸ ì—°ì‚°ì
+	//	ë¹„íŠ¸ë‹¨ìœ„ë¡œ ë¯¸ì„¸í•œ ì¡°ì‘ì´ í•„ìš”í•  ë•Œ ì‚¬ìš©
+	//	í•˜ë“œì›¨ì–´ ì œì–´, ì´ë¯¸ì§€ í”„ë¡œì„¸ì‹±
 	private static void bitOper() {
 		byte b1 = 0b1101;
 		byte b2 = 0b0111;
 		
 		System.out.println("b1:" + Integer.toBinaryString(b1));
 		System.out.println("b2:" + Integer.toBinaryString(b2));
-		int result = b1 & b2;	//	ºñÆ® ³í¸® °ö: µÑ´Ù 1ÀÌ¾î¾ß 1ºñÆ®·Î ¼¼ÆÃ
+		int result = b1 & b2;	//	ë¹„íŠ¸ ë…¼ë¦¬ ê³±: ë‘˜ë‹¤ 1ì´ì–´ì•¼ 1ë¹„íŠ¸ë¡œ ì„¸íŒ…
 		System.out.println("b1&b2:" + Integer.toBinaryString(result));
-		result = b1 | b2;		//	ºñÆ® ³í¸® ÇÕ: µÑ Áß ÇÑ °³¸¸ 1ÀÌ¸é 1ºñÆ® ¼¼ÆÃ
+		result = b1 | b2;		//	ë¹„íŠ¸ ë…¼ë¦¬ í•©: ë‘˜ ì¤‘ í•œ ê°œë§Œ 1ì´ë©´ 1ë¹„íŠ¸ ì„¸íŒ…
 		System.out.println("b1|b2:" + Integer.toBinaryString(result));
-		result = ~b1;	//	ºñÆ® ³í¸® ºÎÁ¤ : 1 <-> 0
+		result = ~b1;	//	ë¹„íŠ¸ ë…¼ë¦¬ ë¶€ì • : 1 <-> 0
 		System.out.println("~b1:" + Integer.toBinaryString(result));
 	}
 	
-	//	ºñ±³¿¬»ê, ³í¸®¿¬»ê
-	//	°á°ú·Î boolean ¹İÈ¯, ³í¸®°ªÀ¸·Î ÇÁ·Î±×·¥ÀÇ Èå¸§Á¦¾î -> Áß¿ä
+	//	ë¹„êµì—°ì‚°, ë…¼ë¦¬ì—°ì‚°
+	//	ê²°ê³¼ë¡œ boolean ë°˜í™˜, ë…¼ë¦¬ê°’ìœ¼ë¡œ í”„ë¡œê·¸ë¨ì˜ íë¦„ì œì–´ -> ì¤‘ìš”
 	private static void logicOper() {
-		//	ºñ±³ ¿¬»êÀÚ >, >=, <, <=, ==(°°´Ù), !=(°°Áö ¾Ê´Ù)
+		//	ë¹„êµ ì—°ì‚°ì >, >=, <, <=, ==(ê°™ë‹¤), !=(ê°™ì§€ ì•Šë‹¤)
 		int n1 = 7;
 		int n2 = 3;
 		
-		System.out.println("a°¡ b¿Í °°Àº°¡? " + (n1 == n2));
-		System.out.println("a°¡ b¿Í °°Áö ¾ÊÀº°¡? " + (n1 != n2));
+		System.out.println("aê°€ bì™€ ê°™ì€ê°€? " + (n1 == n2));
+		System.out.println("aê°€ bì™€ ê°™ì§€ ì•Šì€ê°€? " + (n1 != n2));
 		
-		//	³í¸® ¿¬»ê : AND(³í¸®°ö: &&), OR(³í¸®ÇÕ: ||), NOT(³í¸®ºÎÁ¤: !)
-		//	-> ÁıÇÕÀ» ¶°¿Ã¸®ÀÚ
+		//	ë…¼ë¦¬ ì—°ì‚° : AND(ë…¼ë¦¬ê³±: &&), OR(ë…¼ë¦¬í•©: ||), NOT(ë…¼ë¦¬ë¶€ì •: !)
+		//	-> ì§‘í•©ì„ ë– ì˜¬ë¦¬ì
 		int n3 = 5;
 		
-		//	n3´Â 0ÃÊ°ú, 10¹Ì¸¸ÀÇ °ªÀÎ°¡?
-		//		Á¶°Ç 1: n3 > 0
-		//		Á¶°Ç 2: n3 < 10
-		//		-> Á¶°Ç 1 and Á¶°Ç 2 : ±³ÁıÇÕ ¿µ¿ª
-		boolean r1 = n3 > 0;	//	Á¶°Ç 1
-		boolean r2 = n3 < 10;	//	Á¶°Ç 2
+		//	n3ëŠ” 0ì´ˆê³¼, 10ë¯¸ë§Œì˜ ê°’ì¸ê°€?
+		//		ì¡°ê±´ 1: n3 > 0
+		//		ì¡°ê±´ 2: n3 < 10
+		//		-> ì¡°ê±´ 1 and ì¡°ê±´ 2 : êµì§‘í•© ì˜ì—­
+		boolean r1 = n3 > 0;	//	ì¡°ê±´ 1
+		boolean r2 = n3 < 10;	//	ì¡°ê±´ 2
 		boolean r1andr2 = r1 && r2;	//	n3 > 0 && n3 < 10
-		System.out.println("n3°¡ 0 ÃÊ°ú 10 ¹Ì¸¸ ¿µ¿ª¿¡ ÀÖ´Â°¡? " + r1andr2);
+		System.out.println("n3ê°€ 0 ì´ˆê³¼ 10 ë¯¸ë§Œ ì˜ì—­ì— ìˆëŠ”ê°€? " + r1andr2);
 		
-		//	n3´Â 0ÀÌÇÏÀÌ°Å³ª 10ÀÌ»óÀÇ °ªÀÎ°¡?
-		//		Á¶°Ç 1: n3 <= 0
-		//		Á¶°Ç 2: n3 >= 10
-		//		-> Á¶°Ç 1 or Á¶°Ç 2 : ÇÕÁıÇÕ ¿µ¿ª
-		r1 = n3 <= 0;	//	Á¶°Ç 1
-		r2 = n3 >= 10;	//	Á¶°Ç 2
+		//	n3ëŠ” 0ì´í•˜ì´ê±°ë‚˜ 10ì´ìƒì˜ ê°’ì¸ê°€?
+		//		ì¡°ê±´ 1: n3 <= 0
+		//		ì¡°ê±´ 2: n3 >= 10
+		//		-> ì¡°ê±´ 1 or ì¡°ê±´ 2 : í•©ì§‘í•© ì˜ì—­
+		r1 = n3 <= 0;	//	ì¡°ê±´ 1
+		r2 = n3 >= 10;	//	ì¡°ê±´ 2
 		boolean r1orr2 = r1 || r2;	//	n3 <= 0 || n3 >= 10
-		System.out.println("n3°¡ 0ÀÌÇÏÀÌ°Å³ª n3°¡ 10ÀÌ»óÀÇ ¿µ¿ª? " + r1orr2);
+		System.out.println("n3ê°€ 0ì´í•˜ì´ê±°ë‚˜ n3ê°€ 10ì´ìƒì˜ ì˜ì—­? " + r1orr2);
 		
-		//	not ³í¸® ºÎÁ¤ -> true <-> false ¹İÀü
-		boolean rNot = !(n3 > 0 && n3 < 10);	//	¿©ÁıÇÕ ¿µ¿ª
+		//	not ë…¼ë¦¬ ë¶€ì • -> true <-> false ë°˜ì „
+		boolean rNot = !(n3 > 0 && n3 < 10);	//	ì—¬ì§‘í•© ì˜ì—­
 		//	-> n3 <= 0 || n3 >= 0
-		System.out.println("³í¸®ºÎÁ¤:" + rNot);
+		System.out.println("ë…¼ë¦¬ë¶€ì •:" + rNot);
 	}
 	
-	//	»ê¼ú ¿¬»êÀÚ
+	//	ì‚°ìˆ  ì—°ì‚°ì
 	private static void arithOperEx() {
 		int a = 7;
 		int b = 3;
 		
-		//	ºÎÈ£¿¬»êÀÚ: +, -
+		//	ë¶€í˜¸ì—°ì‚°ì: +, -
 		System.out.println(-a);	//	a * -1
 		
-		//	»çÄ¢¿¬»ê +, -, *, /
-		System.out.println(a + "/" + b + "=" + (a / b));	//	Á¤¼ö ³ª´°¼ÀÀÇ ¸ò
-		System.out.println("a¸¦ b·Î ³ª´« ³ª¸ÓÁö:" + (a % b));	//	Á¤¼ö ³ª´°¼ÀÀÇ ³ª¸ÓÁö
+		//	ì‚¬ì¹™ì—°ì‚° +, -, *, /
+		System.out.println(a + "/" + b + "=" + (a / b));	//	ì •ìˆ˜ ë‚˜ëˆ—ì…ˆì˜ ëª«
+		System.out.println("aë¥¼ bë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€:" + (a % b));	//	ì •ìˆ˜ ë‚˜ëˆ—ì…ˆì˜ ë‚˜ë¨¸ì§€
 		
-		//	Á¤¼ö / Á¤¼ö -> Á¤¼ö
+		//	ì •ìˆ˜ / ì •ìˆ˜ -> ì •ìˆ˜
 		
-		//	½ÇÁ¦ ³ª´°¼ÀÀÇ °á°ú´Â?
-		System.out.println((float)a / (float)b);	//	int -> float·Î º¯È¯
-		System.out.println((float)a / b);	//	b´Â float·Î ÀÚµ¿ º¯È¯
+		//	ì‹¤ì œ ë‚˜ëˆ—ì…ˆì˜ ê²°ê³¼ëŠ”?
+		System.out.println((float)a / (float)b);	//	int -> floatë¡œ ë³€í™˜
+		System.out.println((float)a / b);	//	bëŠ” floatë¡œ ìë™ ë³€í™˜
 		
 		System.out.println("----------");
-		//	Áõ°¨¿¬»êÀÚ ++, --
-		//	À§Ä¡¿¡ µû¶ó ¿¬»ê¼ø¼­°¡ ´Ş¶óÁø´Ù 
+		//	ì¦ê°ì—°ì‚°ì ++, --
+		//	ìœ„ì¹˜ì— ë”°ë¼ ì—°ì‚°ìˆœì„œê°€ ë‹¬ë¼ì§„ë‹¤ 
 		a = 7;
 		System.out.println("a:" + a);
-		System.out.println("ÀüÀ§ Áõ°¨¿¬»ê:" + (++a));
-		System.out.println("ÃÖÁ¾ a:" + a);
+		System.out.println("ì „ìœ„ ì¦ê°ì—°ì‚°:" + (++a));
+		System.out.println("ìµœì¢… a:" + a);
 		
 		a = 7;
 		System.out.println("a:" + a);
-		System.out.println("ÈÄÀ§ Áõ°¨¿¬»ê:" + (a++));
-		System.out.println("ÃÖÁ¾ a:" + a);
+		System.out.println("í›„ìœ„ ì¦ê°ì—°ì‚°:" + (a++));
+		System.out.println("ìµœì¢… a:" + a);
 		
-		//	³ª´°¼À º¸Ãæ
+		//	ë‚˜ëˆ—ì…ˆ ë³´ì¶©
 		a = 7;
-//		System.out.println(a / 0); -> Á¤¼ö¸¦ 0À¸·Î ³ª´©¸é ArithmeticException
+//		System.out.println(a / 0); -> ì •ìˆ˜ë¥¼ 0ìœ¼ë¡œ ë‚˜ëˆ„ë©´ ArithmeticException
 		System.out.println((float)a / 0);	//	Infinity
 		
-		//	Infinity°¡ Æ÷ÇÔµÈ ¿¬»ê½ÄÀº Ç×»ó Infinity
-		//	InfinityÀÇ Ã¼Å©
-		System.out.println("7.0 / 0Àº À¯ÇÑ¼öÀÎ°¡? " + Double.isFinite(7.0/0));
-		//	Infinity°¡ Æ÷ÇÔµÈ ¿¬»ê½Ä -> Infinity
+		//	Infinityê°€ í¬í•¨ëœ ì—°ì‚°ì‹ì€ í•­ìƒ Infinity
+		//	Infinityì˜ ì²´í¬
+		System.out.println("7.0 / 0ì€ ìœ í•œìˆ˜ì¸ê°€? " + Double.isFinite(7.0/0));
+		//	Infinityê°€ í¬í•¨ëœ ì—°ì‚°ì‹ -> Infinity
 		
 		System.out.println("0.0 / 0.0 ? " + (0.0 / 0.0));	//	Not A Number
-		//	NaN°¡ Æ÷ÇÔµÈ ¿¬»ê½Ä -> NaN : ¿¬»ê ºÒ°¡ÀÇ ÀÇ¹Ì
+		//	NaNê°€ í¬í•¨ëœ ì—°ì‚°ì‹ -> NaN : ì—°ì‚° ë¶ˆê°€ì˜ ì˜ë¯¸
 		System.out.println("0.0 / 0.0 is NaN ? " + Double.isNaN(0.0 / 0.0));
 		System.out.println(0.0 / 0.0 + 10);
 	}

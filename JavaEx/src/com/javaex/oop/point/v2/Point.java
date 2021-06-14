@@ -1,12 +1,12 @@
 package com.javaex.oop.point.v2;
 
-//	v2. »ı¼ºÀÚ
+//	v2. ìƒì„±ì
 public class Point {
-	//	ÇÊµå
+	//	í•„ë“œ
 	private int x;
 	private int y;
 
-	//	»ı¼ºÀÚ
+	//	ìƒì„±ì
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -29,8 +29,8 @@ public class Point {
 		this.y = y;
 	}
 
-	//	¸Ş¼­µå
+	//	ë©”ì„œë“œ
 	public void draw() {
-		System.out.printf("Á¡[x=%d, y=%d]À» ±×·È½À´Ï´Ù.%n", x, y);
+		System.out.printf("ì [x=%d, y=%d]ì„ ê·¸ë ¸ìŠµë‹ˆë‹¤.%n", x, y);
 	}
 }
